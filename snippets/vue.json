@@ -1,0 +1,29 @@
+{
+    "template": {
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "\t$1",
+            "</template>"
+        ],
+        "description": "Vue element"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "\t$1",
+            "</script>"
+        ],
+        "description": "Vue element"
+    },
+    "style": {
+        "prefix": "style",
+        "body": [
+            "<style>",
+            "\t$1",
+            "</style>"
+        ],
+        "description": "Vue element"
+    }
+}

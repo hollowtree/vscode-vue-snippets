@@ -1,0 +1,440 @@
+{
+    "vue": {
+        "prefix": "Vue",
+        "body": [
+            "new Vue({",
+            "\t$1",
+            "})"
+        ],
+        "description": "new Vue()"
+    },
+    "silent": {
+        "prefix": "Vue.config.silent",
+        "body": [
+            "Vue.config.silent = ${1:true}"
+        ],
+        "description": "Vue.config.silent"
+    },
+    "optionMergeStrategies": {
+        "prefix": "Vue.config.optionMergeStrategies",
+        "body": [
+            "Vue.config.optionMergeStrategies$1"
+        ],
+        "description": "Vue.config.optionMergeStrategies"
+    },
+    "devtools": {
+        "prefix": "Vue.config.devtools",
+        "body": [
+            "Vue.config.devtools = ${1:true}"
+        ],
+        "description": "Vue.config.devtools"
+    },
+    "errorHandler": {
+        "prefix": "Vue.config.errorHandler",
+        "body": [
+            "Vue.config.errorHandler = function (err, vm) {",
+            "\t${1:// handle error}",
+            "}"
+        ],
+        "description": "Vue.config.errorHandler"
+    },
+    "keyCodes": {
+        "prefix": "Vue.config.keyCodes",
+        "body": [
+            "Vue.config.keyCodes = {$1}"
+        ],
+        "description": "Vue.config.keyCodes"
+    },
+
+    "extend": {
+        "prefix": "vue.extend",
+        "body": [
+            "Vue.extend({",
+            "\ttemplate:${1:template}",
+            "})"
+        ],
+        "description": "Vue.extend( options )"
+    },
+    "nextTick": {
+        "prefix": "Vue.nextTick",
+        "body": [
+            "Vue.nextTick({",
+            "\t$1",
+            "})"
+        ],
+        "description": "Vue.nextTick( callback, [context] )"
+    },
+    "set": {
+        "prefix": "Vue.set",
+        "body": [
+            "Vue.set({$1, $2, $3})"
+        ],
+        "description": "Vue.set( object, key, value )"
+    },
+    "delete": {
+        "prefix": "Vue.delete",
+        "body": [
+            "Vue.delete($1, $2)"
+        ],
+        "description": "Vue.delete( object, key )"
+    },
+    "directive": {
+        "prefix": "Vue.directive",
+        "body": [
+            "Vue.directive(${1:id}${2:, [definition]})"
+        ],
+        "description": "Vue.directive( id, [definition] )"
+    },
+    "filter": {
+        "prefix": "Vue.filter",
+        "body": [
+            "Vue.filter(${1:id}${2:, [definition]})"
+        ],
+        "description": "Vue.filter( id, [definition] )"
+    },
+    "component": {
+        "prefix": "Vue.component",
+        "body": [
+            "Vue.component(${1:id}{2:, [definition]})"
+        ],
+        "description": "Vue.component( id, [definition] )"
+    },
+    "use": {
+        "prefix": "Vue.use",
+        "body": [
+            "Vue.use(${1:plugin})"
+        ],
+        "description": "Vue.use( plugin )"
+    },
+    "mixin": {
+        "prefix": "Vue.mixin",
+        "body": [
+            "Vue.mixin(${1:mixin})"
+        ],
+        "description": "Vue.mixin( mixin )"
+    },
+    "compile": {
+        "prefix": "Vue.compile",
+        "body": [
+            "Vue.compile(${1:template})"
+        ],
+        "description": "Vue.compile( template )"
+    },
+
+    "data": {
+        "prefix": "data",
+        "body": [
+            "data"
+        ]
+    },
+    "props": {
+        "prefix": "props",
+        "body": [
+            "props"
+        ]
+    },
+    "propsData": {
+        "prefix": "propsData",
+        "body": [
+            "propsData"
+        ]
+    },
+    "computed": {
+        "prefix": "computed",
+        "body": [
+            "computed"
+        ]
+    },
+    "methods": {
+        "prefix": "methods",
+        "body": [
+            "methods"
+        ]
+    },
+    "watch": {
+        "prefix": "watch",
+        "body": [
+            "watch"
+        ]
+    },
+    "el": {
+        "prefix": "el",
+        "body": [
+            "el"
+        ]
+    },
+    "template": {
+        "prefix": "template",
+        "body": [
+            "template"
+        ]
+    },
+    "render": {
+        "prefix": "render",
+        "body": [
+            "render"
+        ]
+    },
+    "beforeCreate": {
+        "prefix": "beforeCreate",
+        "body": [
+            "beforeCreate"
+        ]
+    },
+    "created": {
+        "prefix": "created",
+        "body": [
+            "created"
+        ]
+    },
+    "beforeMount": {
+        "prefix": "beforeMount",
+        "body": [
+            "beforeMount"
+        ]
+    },
+    "mounted": {
+        "prefix": "mounted",
+        "body": [
+            "mounted"
+        ]
+    },
+    "beforeUpdate": {
+        "prefix": "beforeUpdate",
+        "body": [
+            "beforeUpdate"
+        ]
+    },
+    "updated": {
+        "prefix": "updated",
+        "body": [
+            "updated"
+        ]
+    },
+    "activated": {
+        "prefix": "activated",
+        "body": [
+            "activated"
+        ]
+    },
+    "deactivated": {
+        "prefix": "deactivated",
+        "body": [
+            "deactivated"
+        ]
+    },
+    "beforeDestroy": {
+        "prefix": "beforeDestroy",
+        "body": [
+            "beforeDestroy"
+        ]
+    },
+    "destroyed": {
+        "prefix": "destroyed",
+        "body": [
+            "destroyed"
+        ]
+    },
+
+    "directives": {
+        "prefix": "directives",
+        "body": [
+            "directives"
+        ]
+    },
+    "filters": {
+        "prefix": "filters",
+        "body": [
+            "filters"
+        ]
+    },
+    "components": {
+        "prefix": "components",
+        "body": [
+            "components"
+        ]
+    },
+
+    "parent": {
+        "prefix": "parent",
+        "body": [
+            "parent"
+        ]
+    },
+    "mixins": {
+        "prefix": "mixins",
+        "body": [
+            "mixins"
+        ]
+    },
+    "name": {
+        "prefix": "name",
+        "body": [
+            "name"
+        ]
+    },
+    "extends": {
+        "prefix": "extends",
+        "body": [
+            "extends"
+        ]
+    },
+    "delimiters": {
+        "prefix": "delimiters",
+        "body": [
+            "delimiters"
+        ]
+    },
+    "functional": {
+        "prefix": "functional",
+        "body": [
+            "functional"
+        ]
+    },
+
+    "vm.$data": {
+        "prefix": "vm.$data",
+        "body": [
+            "${1:vm}.$data$2"
+        ],
+        "description": "Type: Object"
+    },
+    "vm.$el": {
+        "prefix": "vm.$el",
+        "body": [
+            "${1:vm}.$el$2"
+        ],
+        "description": "Type: HTMLElement"
+    },
+    "vm.$options": {
+        "prefix": "vm.$options",
+        "body": [
+            "${1:vm}.$options$2"
+        ],
+        "description": "Type: Object"
+    },
+    "vm.$parent": {
+        "prefix": "vm.$parent",
+        "body": [
+            "${1:vm}.$parent$2"
+        ],
+        "description": "Type: Vue instance"
+    },
+    "vm.$root": {
+        "prefix": "vm.$root",
+        "body": [
+            "${1:vm}.$root$2"
+        ],
+        "description": "Type: Vue instance"
+    },
+    "vm.$children": {
+        "prefix": "vm.$children",
+        "body": [
+            "${1:vm}.$children$2"
+        ],
+        "description": "Type: Array<Vue instance>"
+    },
+    "vm.$slots": {
+        "prefix": "vm.$slots",
+        "body": [
+            "${1:vm}.$slots$2"
+        ],
+        "description": "Type: Object"
+    },
+    "vm.$refs": {
+        "prefix": "vm.$refs",
+        "body": [
+            "${1:vm}.$refs$2"
+        ],
+        "description": "Type: Object"
+    },
+    "vm.$isServer": {
+        "prefix": "vm.$isServer",
+        "body": [
+            "${1:vm}.$isServer$2"
+        ],
+        "description": "Type: boolean"
+    },
+
+    "vm.$watch": {
+        "prefix": "vm.$watch",
+        "body": [
+            "${1:vm}.$watch(${2:expOrFn}, ${3:callback})"
+        ],
+        "description": "vm.$watch( expOrFn, callback, [options] )"
+    },
+    "vm.$set": {
+        "prefix": "set",
+        "body": [
+            "${1:vm}.$set(${2:object}, ${3:key}, ${4:value})"
+        ],
+        "description": "vm.$set( object, key, value )"
+    },
+    "vm.$delete": {
+        "prefix": "vm.$delete",
+        "body": [
+            "${1:vm}.$delete(${2:object}, ${3:key})"
+        ],
+        "description": "vm.$delete( object, key )"
+    },
+
+    "vm.$on": {
+        "prefix": "vm.$on",
+        "body": [
+            "${1:vm}.$on('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$on( event, callback )"
+    },
+    "vm.$once": {
+        "prefix": "vm.$once",
+        "body": [
+            "${1:vm}.$once('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$once( event, callback )"
+    },
+    "vm.$off": {
+        "prefix": "vm.$off",
+        "body": [
+            "${1:vm}.$off('${2:event}', ${3:callback})$4"
+        ],
+        "description": "vm.$off( [event, callback] )"
+    },
+    "vm.$emit": {
+        "prefix": "vm.$emit",
+        "body": [
+            "${1:vm}.$emit('${2:event}'${3:, […args]})$4"
+        ],
+        "description": "vm.$emit( event, […args] )"
+    },
+
+    "vm.$mount": {
+        "prefix": "vm.$mount",
+        "body": [
+            "${1:vm}.$mount$2"
+        ],
+        "description": "vm.$mount( [elementOrSelector] )"
+    },
+    "vm.$forceUpdate": {
+        "prefix": "vm.$forceUpdate",
+        "body": [
+            "${1:vm}.$forceUpdate()"
+        ],
+        "description": "vm.$forceUpdate()"
+    },
+    "vm.$nextTick": {
+        "prefix": "vm.$nextTick",
+        "body": [
+            "${1:vm}.$nextTick(${2:callback})"
+        ],
+        "description": "vm.$nextTick( callback )"
+    },
+    "vm.$destroy": {
+        "prefix": "vm.$destroy",
+        "body": [
+            "${1:vm}.$destroy()$2"
+        ],
+        "description": "vm.$destroy()"
+    }
+
+
+}

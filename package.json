@@ -1,0 +1,56 @@
+{
+    "name": "vue-snippets",
+    "author": "hollowtree",
+    "publisher": "hollowtree",
+    "icon": "img/logo.png",
+    "description": "A Vue.js Snippets Extension",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "0.10.1"
+    },
+    "keywords": [
+        "vue"
+    ],
+    "categories": [
+        "Snippets"
+    ],
+    "repository": {},
+    "contributes": {
+        "languages": [{
+            "id": "vue",
+            "aliases": [
+                "Vue",
+                "vue"
+            ],
+            "extensions": [
+                ".vue"
+            ],
+            "configuration": "./syntaxes/vue.configuration.json"
+        }],
+        "grammars": [{
+            "language": "vue",
+            "scopeName": "text.html.vue",
+            "path": "./syntaxes/vue.tmLanguage"
+        }],
+        "snippets": [{
+            "language": "javascript",
+            "path": "./snippets/javascript.json"
+        }, {
+            "language": "typescript",
+            "path": "./snippets/javascript.json"
+        }, {
+            "language": "html",
+            "path": "./snippets/html.json"
+        }, {
+            "language": "vue",
+            "path": "./snippets/javascript.json"
+        }, {
+            "language": "vue",
+            "path": "./snippets/html.json"
+        }, {
+            "language": "vue",
+            "path": "./snippets/vue.json"
+        }]
+    },
+    "license": "MIT"
+}
