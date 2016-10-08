@@ -1,4 +1,6 @@
-# Canvas Snippets for Visual Studio code
+# Vue 2 Snippets for Visual Studio code
+
+[![](http://vsmarketplacebadge.apphb.com/installs/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 
 It looks like:
 ![](img/show.png)
