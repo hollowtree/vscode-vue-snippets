@@ -1,4 +1,11 @@
 {
+    "import": {
+        "prefix": "import",
+        "body": [
+            "import $1 from '$2'"
+        ],
+        "description": "import ... from ..."
+    },
     "vue": {
         "prefix": "Vue",
         "body": [
@@ -9,28 +16,28 @@
         "description": "new Vue()"
     },
     "silent": {
-        "prefix": "Vue.config.silent",
+        "prefix": "VueConfigSilent",
         "body": [
             "Vue.config.silent = ${1:true}"
         ],
         "description": "Vue.config.silent"
     },
     "optionMergeStrategies": {
-        "prefix": "Vue.config.optionMergeStrategies",
+        "prefix": "VueConfigOptionMergeStrategies",
         "body": [
             "Vue.config.optionMergeStrategies$1"
         ],
         "description": "Vue.config.optionMergeStrategies"
     },
     "devtools": {
-        "prefix": "Vue.config.devtools",
+        "prefix": "VueConfigDevtools",
         "body": [
             "Vue.config.devtools = ${1:true}"
         ],
         "description": "Vue.config.devtools"
     },
     "errorHandler": {
-        "prefix": "Vue.config.errorHandler",
+        "prefix": "VueConfigErrorHandler",
         "body": [
             "Vue.config.errorHandler = function (err, vm) {",
             "\t${1:// handle error}",
@@ -39,7 +46,7 @@
         "description": "Vue.config.errorHandler"
     },
     "keyCodes": {
-        "prefix": "Vue.config.keyCodes",
+        "prefix": "VueConfigKeyCodes",
         "body": [
             "Vue.config.keyCodes = {$1}"
         ],
@@ -47,7 +54,7 @@
     },
 
     "extend": {
-        "prefix": "vue.extend",
+        "prefix": "vueExtend",
         "body": [
             "Vue.extend({",
             "\ttemplate:${1:template}",
@@ -56,7 +63,7 @@
         "description": "Vue.extend( options )"
     },
     "nextTick": {
-        "prefix": "Vue.nextTick",
+        "prefix": "VueNextTick",
         "body": [
             "Vue.nextTick({",
             "\t$1",
@@ -65,56 +72,56 @@
         "description": "Vue.nextTick( callback, [context] )"
     },
     "set": {
-        "prefix": "Vue.set",
+        "prefix": "VueSet",
         "body": [
             "Vue.set({$1, $2, $3})"
         ],
         "description": "Vue.set( object, key, value )"
     },
     "delete": {
-        "prefix": "Vue.delete",
+        "prefix": "VueDelete",
         "body": [
             "Vue.delete($1, $2)"
         ],
         "description": "Vue.delete( object, key )"
     },
     "directive": {
-        "prefix": "Vue.directive",
+        "prefix": "VueDirective",
         "body": [
             "Vue.directive(${1:id}${2:, [definition]})"
         ],
         "description": "Vue.directive( id, [definition] )"
     },
     "filter": {
-        "prefix": "Vue.filter",
+        "prefix": "VueFilter",
         "body": [
             "Vue.filter(${1:id}${2:, [definition]})"
         ],
         "description": "Vue.filter( id, [definition] )"
     },
     "component": {
-        "prefix": "Vue.component",
+        "prefix": "VueComponent",
         "body": [
             "Vue.component(${1:id}{2:, [definition]})"
         ],
         "description": "Vue.component( id, [definition] )"
     },
     "use": {
-        "prefix": "Vue.use",
+        "prefix": "VueUse",
         "body": [
             "Vue.use(${1:plugin})"
         ],
         "description": "Vue.use( plugin )"
     },
     "mixin": {
-        "prefix": "Vue.mixin",
+        "prefix": "VueMixin",
         "body": [
             "Vue.mixin(${1:mixin})"
         ],
         "description": "Vue.mixin( mixin )"
     },
     "compile": {
-        "prefix": "Vue.compile",
+        "prefix": "VueCompile",
         "body": [
             "Vue.compile(${1:template})"
         ],
@@ -125,231 +132,259 @@
         "prefix": "data",
         "body": [
             "data"
-        ]
+        ],
+        "description": "just a word"
     },
     "props": {
         "prefix": "props",
         "body": [
             "props"
-        ]
+        ],
+        "description": "just a word"
     },
     "propsData": {
         "prefix": "propsData",
         "body": [
             "propsData"
-        ]
+        ],
+        "description": "just a word"
     },
     "computed": {
         "prefix": "computed",
         "body": [
             "computed"
-        ]
+        ],
+        "description": "just a word"
     },
     "methods": {
         "prefix": "methods",
         "body": [
             "methods"
-        ]
+        ],
+        "description": "just a word"
     },
     "watch": {
         "prefix": "watch",
         "body": [
             "watch"
-        ]
+        ],
+        "description": "just a word"
     },
     "el": {
         "prefix": "el",
         "body": [
             "el"
-        ]
+        ],
+        "description": "just a word"
     },
     "template": {
         "prefix": "template",
         "body": [
             "template"
-        ]
+        ],
+        "description": "just a word"
     },
     "render": {
         "prefix": "render",
         "body": [
             "render"
-        ]
+        ],
+        "description": "just a word"
     },
     "beforeCreate": {
         "prefix": "beforeCreate",
         "body": [
             "beforeCreate"
-        ]
+        ],
+        "description": "just a word"
     },
     "created": {
         "prefix": "created",
         "body": [
             "created"
-        ]
+        ],
+        "description": "just a word"
     },
     "beforeMount": {
         "prefix": "beforeMount",
         "body": [
             "beforeMount"
-        ]
+        ],
+        "description": "just a word"
     },
     "mounted": {
         "prefix": "mounted",
         "body": [
             "mounted"
-        ]
+        ],
+        "description": "just a word"
     },
     "beforeUpdate": {
         "prefix": "beforeUpdate",
         "body": [
             "beforeUpdate"
-        ]
+        ],
+        "description": "just a word"
     },
     "updated": {
         "prefix": "updated",
         "body": [
             "updated"
-        ]
+        ],
+        "description": "just a word"
     },
     "activated": {
         "prefix": "activated",
         "body": [
             "activated"
-        ]
+        ],
+        "description": "just a word"
     },
     "deactivated": {
         "prefix": "deactivated",
         "body": [
             "deactivated"
-        ]
+        ],
+        "description": "just a word"
     },
     "beforeDestroy": {
         "prefix": "beforeDestroy",
         "body": [
             "beforeDestroy"
-        ]
+        ],
+        "description": "just a word"
     },
     "destroyed": {
         "prefix": "destroyed",
         "body": [
             "destroyed"
-        ]
+        ],
+        "description": "just a word"
     },
 
     "directives": {
         "prefix": "directives",
         "body": [
             "directives"
-        ]
+        ],
+        "description": "just a word"
     },
     "filters": {
         "prefix": "filters",
         "body": [
             "filters"
-        ]
+        ],
+        "description": "just a word"
     },
     "components": {
         "prefix": "components",
         "body": [
             "components"
-        ]
+        ],
+        "description": "just a word"
     },
 
     "parent": {
         "prefix": "parent",
         "body": [
             "parent"
-        ]
+        ],
+        "description": "just a word"
     },
     "mixins": {
         "prefix": "mixins",
         "body": [
             "mixins"
-        ]
+        ],
+        "description": "just a word"
     },
     "name": {
         "prefix": "name",
         "body": [
             "name"
-        ]
+        ],
+        "description": "just a word"
     },
     "extends": {
         "prefix": "extends",
         "body": [
             "extends"
-        ]
+        ],
+        "description": "just a word"
     },
     "delimiters": {
         "prefix": "delimiters",
         "body": [
             "delimiters"
-        ]
+        ],
+        "description": "just a word"
     },
     "functional": {
         "prefix": "functional",
         "body": [
             "functional"
-        ]
+        ],
+        "description": "just a word"
     },
 
     "vm.$data": {
-        "prefix": "vm.$data",
+        "prefix": "vmData",
         "body": [
             "${1:vm}.$data$2"
         ],
         "description": "Type: Object"
     },
     "vm.$el": {
-        "prefix": "vm.$el",
+        "prefix": "vmEl",
         "body": [
             "${1:vm}.$el$2"
         ],
         "description": "Type: HTMLElement"
     },
     "vm.$options": {
-        "prefix": "vm.$options",
+        "prefix": "vmOptions",
         "body": [
             "${1:vm}.$options$2"
         ],
         "description": "Type: Object"
     },
     "vm.$parent": {
-        "prefix": "vm.$parent",
+        "prefix": "vmParent",
         "body": [
             "${1:vm}.$parent$2"
         ],
         "description": "Type: Vue instance"
     },
     "vm.$root": {
-        "prefix": "vm.$root",
+        "prefix": "vmRoot",
         "body": [
             "${1:vm}.$root$2"
         ],
         "description": "Type: Vue instance"
     },
     "vm.$children": {
-        "prefix": "vm.$children",
+        "prefix": "vmChildren",
         "body": [
             "${1:vm}.$children$2"
         ],
         "description": "Type: Array<Vue instance>"
     },
     "vm.$slots": {
-        "prefix": "vm.$slots",
+        "prefix": "vmSlots",
         "body": [
             "${1:vm}.$slots$2"
         ],
         "description": "Type: Object"
     },
     "vm.$refs": {
-        "prefix": "vm.$refs",
+        "prefix": "vmRefs",
         "body": [
             "${1:vm}.$refs$2"
         ],
         "description": "Type: Object"
     },
     "vm.$isServer": {
-        "prefix": "vm.$isServer",
+        "prefix": "vmIsServer",
         "body": [
             "${1:vm}.$isServer$2"
         ],
@@ -357,21 +392,21 @@
     },
 
     "vm.$watch": {
-        "prefix": "vm.$watch",
+        "prefix": "vmWatch",
         "body": [
             "${1:vm}.$watch(${2:expOrFn}, ${3:callback})"
         ],
         "description": "vm.$watch( expOrFn, callback, [options] )"
     },
     "vm.$set": {
-        "prefix": "set",
+        "prefix": "vmSet",
         "body": [
             "${1:vm}.$set(${2:object}, ${3:key}, ${4:value})"
         ],
         "description": "vm.$set( object, key, value )"
     },
     "vm.$delete": {
-        "prefix": "vm.$delete",
+        "prefix": "vmDelete",
         "body": [
             "${1:vm}.$delete(${2:object}, ${3:key})"
         ],
@@ -379,28 +414,28 @@
     },
 
     "vm.$on": {
-        "prefix": "vm.$on",
+        "prefix": "vmOn",
         "body": [
             "${1:vm}.$on('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$on( event, callback )"
     },
     "vm.$once": {
-        "prefix": "vm.$once",
+        "prefix": "vmOnce",
         "body": [
             "${1:vm}.$once('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$once( event, callback )"
     },
     "vm.$off": {
-        "prefix": "vm.$off",
+        "prefix": "vmOff",
         "body": [
             "${1:vm}.$off('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$off( [event, callback] )"
     },
     "vm.$emit": {
-        "prefix": "vm.$emit",
+        "prefix": "vmEmit",
         "body": [
             "${1:vm}.$emit('${2:event}'${3:, […args]})$4"
         ],
@@ -408,28 +443,28 @@
     },
 
     "vm.$mount": {
-        "prefix": "vm.$mount",
+        "prefix": "vmMount",
         "body": [
             "${1:vm}.$mount$2"
         ],
         "description": "vm.$mount( [elementOrSelector] )"
     },
     "vm.$forceUpdate": {
-        "prefix": "vm.$forceUpdate",
+        "prefix": "vmForceUpdate",
         "body": [
             "${1:vm}.$forceUpdate()"
         ],
         "description": "vm.$forceUpdate()"
     },
     "vm.$nextTick": {
-        "prefix": "vm.$nextTick",
+        "prefix": "vmNextTick",
         "body": [
             "${1:vm}.$nextTick(${2:callback})"
         ],
         "description": "vm.$nextTick( callback )"
     },
     "vm.$destroy": {
-        "prefix": "vm.$destroy",
+        "prefix": "vmDestroy",
         "body": [
             "${1:vm}.$destroy()$2"
         ],

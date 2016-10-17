@@ -1,56 +1,79 @@
 {
     "name": "vue-snippets",
+    "displayName": "Vue 2 Snippets",
     "author": "hollowtree",
     "publisher": "hollowtree",
     "icon": "img/logo.png",
-    "description": "A Vue.js Snippets Extension",
-    "version": "0.0.1",
+    "description": "A Vue.js 2 Extension",
+    "license": "MIT",
+    "version": "0.0.5",
     "engines": {
-        "vscode": "0.10.1"
+        "vscode": "^0.10.1"
     },
     "keywords": [
-        "vue"
+        "javascript",
+        "snippet",
+        "vue",
+        "vue 2"
     ],
     "categories": [
+        "Languages",
         "Snippets"
     ],
-    "repository": {},
-    "contributes": {
-        "languages": [{
-            "id": "vue",
-            "aliases": [
-                "Vue",
-                "vue"
-            ],
-            "extensions": [
-                ".vue"
-            ],
-            "configuration": "./syntaxes/vue.configuration.json"
-        }],
-        "grammars": [{
-            "language": "vue",
-            "scopeName": "text.html.vue",
-            "path": "./syntaxes/vue.tmLanguage"
-        }],
-        "snippets": [{
-            "language": "javascript",
-            "path": "./snippets/javascript.json"
-        }, {
-            "language": "typescript",
-            "path": "./snippets/javascript.json"
-        }, {
-            "language": "html",
-            "path": "./snippets/html.json"
-        }, {
-            "language": "vue",
-            "path": "./snippets/javascript.json"
-        }, {
-            "language": "vue",
-            "path": "./snippets/html.json"
-        }, {
-            "language": "vue",
-            "path": "./snippets/vue.json"
-        }]
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/hollowtree/vscode-vue-snippets"
     },
-    "license": "MIT"
+    "bugs": {
+        "url": "https://github.com/hollowtree/vscode-vue-snippets/issues",
+        "email": "smalltree@outlook.com"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "vue",
+                "aliases": [
+                    "Vue",
+                    "vue"
+                ],
+                "extensions": [
+                    ".vue"
+                ],
+                "configuration": "./syntaxes/vue.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vue",
+                "scopeName": "text.html.vue",
+                "path": "./syntaxes/vue.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "javascript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "typescript",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/javascript.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/html.json"
+            },
+            {
+                "language": "vue",
+                "path": "./snippets/vue.json"
+            }
+        ]
+    }
 }
