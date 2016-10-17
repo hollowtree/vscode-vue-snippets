@@ -37,7 +37,7 @@
     "v-for": {
         "prefix": "v-for",
         "body": [
-            "v-for=\"${1:item}\" in \"${2:items}\""
+            "v-for=\"${1:item} in ${2:items}\""
         ],
         "description": "Expects: Array | Object | number | string"
     },
