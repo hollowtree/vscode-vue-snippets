@@ -1,86 +1,114 @@
 {
     "v-text": {
-        "prefix": "v-text",
+        "prefix": "vText",
         "body": [
             "v-text=\"${1:msg}\""
         ],
         "description": "Expects: string"
     },
     "v-html": {
-        "prefix": "v-html",
+        "prefix": "vHtml",
         "body": [
             "v-html=\"${1:html}\""
         ],
         "description": "Expects: string"
     },
     "v-if": {
-        "prefix": "v-if",
+        "prefix": "vIf",
         "body": [
             "v-if=\"${1:condition}\""
         ],
         "description": "Expects: any"
     },
     "v-show": {
-        "prefix": "v-show",
+        "prefix": "vShow",
         "body": [
             "v-show=\"${1:condition}\""
         ],
         "description": "Expects: any"
     },
     "v-else": {
-        "prefix": "v-else",
+        "prefix": "vElse",
         "body": [
             "v-else"
         ],
         "description": "Does not expect expression"
     },
     "v-for": {
-        "prefix": "v-for",
+        "prefix": "vFor",
         "body": [
             "v-for=\"${1:item} in ${2:items}\""
         ],
         "description": "Expects: Array | Object | number | string"
     },
     "v-on": {
-        "prefix": "v-on",
+        "prefix": "vOn",
         "body": [
             "v-on:${1:event}=\"${2:handle}\""
         ],
         "description": "Expects: Function | Inline Statement"
     },
     "v-bind": {
-        "prefix": "v-bind",
+        "prefix": "vBind",
         "body": [
             "v-bind$1=\"${2}\""
         ],
         "description": "Expects: any (with argument) | Object (without argument)"
     },
     "v-model": {
-        "prefix": "v-model",
+        "prefix": "vModel",
         "body": [
             "v-model=\"${1:something}\""
         ],
         "description": "Expects: varies based on value of form inputs element or output of components"
     },
     "v-pre": {
-        "prefix": "v-pre",
+        "prefix": "vPre",
         "body": [
             "v-pre"
         ],
         "description": "Does not expect expression"
     },
     "v-cloak": {
-        "prefix": "v-cloak",
+        "prefix": "vCloak",
         "body": [
             "v-cloak"
         ],
         "description": "Does not expect expression"
     },
     "v-once": {
-        "prefix": "v-once",
+        "prefix": "vOnce",
         "body": [
             "v-once"
         ],
         "description": "Does not expect expression"
-    }
+    },
+
+    "keep-alive": {
+        "prefix": "keepAlive",
+        "body": [
+            "<keep-alive$1>",
+            "$2",
+            "</keep-alive>"
+        ],
+        "description": "keep-alive element"
+    },
+    "transition": {
+        "prefix": "transition",
+        "body": [
+            "<transition$1>",
+            "$2",
+            "</transition>"
+        ],
+        "description": "transition element"
+    },
+    "transition-group": {
+        "prefix": "transitionGroup",
+        "body": [
+            "<transition-group$1>",
+            "$2",
+            "</transition-group>"
+        ]
+    },
+    "description": "transition-group element"
 }

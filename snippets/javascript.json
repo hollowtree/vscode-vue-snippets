@@ -469,7 +469,23 @@
             "${1:vm}.$destroy()$2"
         ],
         "description": "vm.$destroy()"
-    }
+    },
 
+    "preventDefault":{
+        "prefix":"preventDefault",
+        "body":[
+            "preventDefault();",
+            "$1"
+        ],
+        "description":"preventDefault()"
+    },
+    "stopPropagation": {
+        "prefix": "stopPropagation",
+        "body": [
+            "stopPropagation();",
+            "$1"
+        ]
+    },
+    "description":"stopPropagation()"
 
 }
