@@ -1,16 +1,14 @@
-# Vue 2 Snippets for Visual Studio code
+# Vue 2 Snippets for Visual Studio Code
 
 This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio Code.
 
 这个插件基于最新的 [Vue 官方语法高亮文件](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)添加了Syntax Highlight，并且依据 Vue 2 的 API 添加了Code Snippets。
 
-[![](http://vsmarketplacebadge.apphb.com/version/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
-[![](http://vsmarketplacebadge.apphb.com/installs/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 
 ### It looks like:
-![](img/show1.png)
+![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show1.png)
 
-![](img/show2.png)
+![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show2.png)
 
 The menu under **File > Preferences (Code > Preferences on Mac)** provides entries to configure settings([Reference](https://code.visualstudio.com/docs/languages/overview#_adding-a-file-extension-to-a-language)). Please add the .vue file extension to the vue identifier like this:
 ```
@@ -94,17 +92,16 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `keepAlive` | `<keep-alive></keep-alive>` |
 | `transition` | `<transition></transition>` |
 | `transitionGroup` | `<transition-group></transition-group>` |
+| `` | ``|
 
 ### Supported languages
 * vue(.vue)
 * HTML(.html)
-
 * javascript(.js)
 * typescript(.ts)
 
 ### Base on
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
-
 
 --------------------------------------
 ##### 2016/12/31 (0.0.10)

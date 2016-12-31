@@ -45,6 +45,15 @@
         ],
         "description": "Vue.config.errorHandler"
     },
+    "ignoredElements": {
+        "prefix": "VueConfigIgnoredElements",
+        "body": [
+            "Vue.config.ignoredElements = [",
+            "\t'${1}'",
+            "]$0"
+        ],
+        "description": "Vue.config.ignoredElements"
+    },
     "keyCodes": {
         "prefix": "VueConfigKeyCodes",
         "body": [
@@ -102,14 +111,13 @@
     "component": {
         "prefix": "VueComponent",
         "body": [
-            "Vue.component(${1:id}{2:, [definition]})"
         ],
         "description": "Vue.component( id, [definition] )"
     },
     "use": {
         "prefix": "VueUse",
         "body": [
-            "Vue.use(${1:plugin})"
+            "Vue.use(${1:plugin})$0"
         ],
         "description": "Vue.use( plugin )"
     },
@@ -149,6 +157,13 @@
         ],
         "description": "just a word"
     },
+    "scopedSlots": {
+        "prefix": "scopedSlots",
+        "body": [
+            "scopedSlots"
+        ],
+        "description": "just a word"
+    },
     "computed": {
         "prefix": "computed",
         "body": [
@@ -170,6 +185,7 @@
         ],
         "description": "just a word"
     },
+
     "el": {
         "prefix": "el",
         "body": [
@@ -191,6 +207,7 @@
         ],
         "description": "just a word"
     },
+
     "beforeCreate": {
         "prefix": "beforeCreate",
         "body": [
@@ -330,63 +347,72 @@
     "vm.$data": {
         "prefix": "vmData",
         "body": [
-            "${1:vm}.$data$2"
+            "${1:vm}.\\$data$2"
         ],
         "description": "Type: Object"
     },
     "vm.$el": {
         "prefix": "vmEl",
         "body": [
-            "${1:vm}.$el$2"
+            "${1:vm}.\\$el$2"
         ],
         "description": "Type: HTMLElement"
     },
     "vm.$options": {
         "prefix": "vmOptions",
         "body": [
-            "${1:vm}.$options$2"
+            "${1:vm}.\\$options$2"
         ],
         "description": "Type: Object"
     },
     "vm.$parent": {
         "prefix": "vmParent",
         "body": [
-            "${1:vm}.$parent$2"
+            "${1:vm}.\\$parent$2"
         ],
         "description": "Type: Vue instance"
     },
     "vm.$root": {
         "prefix": "vmRoot",
         "body": [
-            "${1:vm}.$root$2"
+            "${1:vm}.\\$root$2"
         ],
         "description": "Type: Vue instance"
     },
     "vm.$children": {
         "prefix": "vmChildren",
         "body": [
-            "${1:vm}.$children$2"
+            "${1:vm}.\\$children$2"
         ],
         "description": "Type: Array<Vue instance>"
     },
     "vm.$slots": {
         "prefix": "vmSlots",
         "body": [
-            "${1:vm}.$slots$2"
+            "${1:vm}.\\$slots$2"
         ],
         "description": "Type: Object"
+    },
+    "vm.$scopedSlots": {
+        "prefix": "vmScopedSlots",
+        "body": [
+            "$this.\\$scopedSlots.default({",
+            "\t",
+            "})"
+        ],
+        "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
     },
     "vm.$refs": {
         "prefix": "vmRefs",
         "body": [
-            "${1:vm}.$refs$2"
+            "${1:vm}.\\$refs$2"
         ],
         "description": "Type: Object"
     },
     "vm.$isServer": {
         "prefix": "vmIsServer",
         "body": [
-            "${1:vm}.$isServer$2"
+            "${1:vm}.\\$isServer$2"
         ],
         "description": "Type: boolean"
     },
@@ -394,21 +420,21 @@
     "vm.$watch": {
         "prefix": "vmWatch",
         "body": [
-            "${1:vm}.$watch(${2:expOrFn}, ${3:callback})"
+            "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
         ],
         "description": "vm.$watch( expOrFn, callback, [options] )"
     },
     "vm.$set": {
         "prefix": "vmSet",
         "body": [
-            "${1:vm}.$set(${2:object}, ${3:key}, ${4:value})"
+            "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
         ],
         "description": "vm.$set( object, key, value )"
     },
     "vm.$delete": {
         "prefix": "vmDelete",
         "body": [
-            "${1:vm}.$delete(${2:object}, ${3:key})"
+            "${1:vm}.\\$delete(${2:object}, ${3:key})"
         ],
         "description": "vm.$delete( object, key )"
     },
@@ -416,28 +442,28 @@
     "vm.$on": {
         "prefix": "vmOn",
         "body": [
-            "${1:vm}.$on('${2:event}', ${3:callback})$4"
+            "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$on( event, callback )"
     },
     "vm.$once": {
         "prefix": "vmOnce",
         "body": [
-            "${1:vm}.$once('${2:event}', ${3:callback})$4"
+            "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$once( event, callback )"
     },
     "vm.$off": {
         "prefix": "vmOff",
         "body": [
-            "${1:vm}.$off('${2:event}', ${3:callback})$4"
+            "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
         ],
         "description": "vm.$off( [event, callback] )"
     },
     "vm.$emit": {
         "prefix": "vmEmit",
         "body": [
-            "${1:vm}.$emit('${2:event}'${3:, […args]})$4"
+            "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
         ],
         "description": "vm.$emit( event, […args] )"
     },
@@ -445,28 +471,28 @@
     "vm.$mount": {
         "prefix": "vmMount",
         "body": [
-            "${1:vm}.$mount$2"
+            "${1:vm}.\\$mount$2"
         ],
         "description": "vm.$mount( [elementOrSelector] )"
     },
     "vm.$forceUpdate": {
         "prefix": "vmForceUpdate",
         "body": [
-            "${1:vm}.$forceUpdate()"
+            "${1:vm}.\\$forceUpdate()"
         ],
         "description": "vm.$forceUpdate()"
     },
     "vm.$nextTick": {
         "prefix": "vmNextTick",
         "body": [
-            "${1:vm}.$nextTick(${2:callback})"
+            "${1:vm}.\\$nextTick(${2:callback})"
         ],
         "description": "vm.$nextTick( callback )"
     },
     "vm.$destroy": {
         "prefix": "vmDestroy",
         "body": [
-            "${1:vm}.$destroy()$2"
+            "${1:vm}.\\$destroy()$2"
         ],
         "description": "vm.$destroy()"
     },
@@ -484,8 +510,8 @@
         "body": [
             "stopPropagation();",
             "$1"
-        ]
-    },
-    "description":"stopPropagation()"
+        ],
+        "description":"stopPropagation()"
+    }
 
 }
