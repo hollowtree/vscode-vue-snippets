@@ -111,6 +111,7 @@
     "component": {
         "prefix": "VueComponent",
         "body": [
+            "Vue.component(${1:id}${2:, [definition]})$0"
         ],
         "description": "Vue.component( id, [definition] )"
     },
