@@ -6,7 +6,7 @@
             "\t$1",
             "</template>"
         ],
-        "description": "Vue element"
+        "description": "template element"
     },
     "script": {
         "prefix": "script",
@@ -15,15 +15,15 @@
             "\t$1",
             "</script>"
         ],
-        "description": "Vue element"
+        "description": "script element"
     },
-    "style": {
-        "prefix": "style",
+    "styleLang": {
+        "prefix": "styleLang",
         "body": [
-            "<style>",
-            "\t$1",
+            "<style lang=\"$1\">",
+            "\t$0",
             "</style>"
         ],
-        "description": "Vue element"
+        "description": "style element with lang attribute"
     }
 }

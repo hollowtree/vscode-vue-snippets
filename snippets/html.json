@@ -154,5 +154,41 @@
             "</transition-group>"
         ],
         "description": "transition-group element"
+    },
+
+    "routerLink": {
+        "prefix": "routerLink",
+        "body": [
+            "<router-link $1>$2</router-link>$0"
+        ],
+        "description": "router-link element"
+    },
+    "routerLinkTo": {
+        "prefix": "routerLinkTo",
+        "body": [
+            "<router-link to=\"$1\">$2</router-link>$0"
+        ],
+        "description": "<router-link to=''></router-link>. router-link element"
+    },
+    "to": {
+        "prefix": "to",
+        "body": [
+            "to=\"$1\"$0"
+        ],
+        "description": "to=''"
+    },
+    "tag": {
+        "prefix": "tag",
+        "body": [
+            "tag=\"$1\"$0"
+        ],
+        "description": "tag=''"
+    },
+    "routerView": {
+        "prefix": "routerView",
+        "body": [
+            "<router-view>$1</router-view>$0"
+        ],
+        "description": "router-view element"
     }
 }

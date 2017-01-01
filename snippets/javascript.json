@@ -7,7 +7,7 @@
         "description": "import ... from ..."
     },
     "vue": {
-        "prefix": "Vue",
+        "prefix": "newVue",
         "body": [
             "new Vue({",
             "\t$1",
@@ -294,6 +294,13 @@
         ],
         "description": "just a word"
     },
+    "componentWord": {
+        "prefix": "component",
+        "body": [
+            "component"
+        ],
+        "description": "just a word"
+    },
     "components": {
         "prefix": "components",
         "body": [
@@ -472,7 +479,7 @@
     "vm.$mount": {
         "prefix": "vmMount",
         "body": [
-            "${1:vm}.\\$mount$2"
+            "${1:vm}.\\$mount('$2')"
         ],
         "description": "vm.$mount( [elementOrSelector] )"
     },
@@ -498,6 +505,59 @@
         "description": "vm.$destroy()"
     },
 
+    "renderer": {
+        "prefix": "renderer",
+        "body": [
+            "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
+        ],
+        "description": "require('vue-server-renderer').createRenderer()"
+    },
+    "createRenderer": {
+        "prefix": "createRenderer",
+        "body": [
+            "createRenderer({",
+            "\t$1",
+            "})"
+        ],
+        "description": "createRenderer({ })"
+    },
+    "renderToString": {
+        "prefix": "renderToString",
+        "body": [
+            "renderToString"
+        ],
+        "description": "just a word"
+    },
+    "renderToStream": {
+        "prefix": "renderToStream",
+        "body": [
+            "renderToStream"
+        ],
+        "description": "just a word"
+    },
+    "createBundleRenderer": {
+        "prefix": "createBundleRenderer",
+        "body": [
+            "createBundleRenderer"
+        ],
+        "description": "just a word"
+    },
+    "bundleRenderer.renderToString": {
+        "prefix": "bundleRenderer.renderToString",
+        "body": [
+            "bundleRenderer.renderToString"
+        ],
+        "description": "just a word"
+    },
+    "bundleRenderer.renderToStream": {
+        "prefix": "bundleRenderer.renderToStream",
+        "body": [
+            "bundleRenderer.renderToStream"
+        ],
+        "description": "just a word"
+    },
+
+
     "preventDefault":{
         "prefix":"preventDefault",
         "body":[
@@ -513,6 +573,252 @@
             "$1"
         ],
         "description":"stopPropagation()"
-    }
+    },
 
+    "newVueRouter": {
+        "prefix": "newVueRouter",
+        "body": [
+            "const ${1:router} = new VueRouter({",
+            "\t$2",
+            "})$0"
+        ],
+        "description": "const router = newVueRouter({ })"
+    },
+    "routerBeforeEach": {
+        "prefix": "routerBeforeEach",
+        "body": [
+            "${1:router}.beforeEach((to, from, next) => {",
+            "\t${2:// to and from are both route objects}",
+            "})$0"
+        ],
+        "description": "router.beforeEach"
+    },
+    "routerReplace": {
+        "prefix": "routerReplace",
+        "body": [
+            "${1:router}.replace($2)$0"
+        ],
+        "description": "router.replace()"
+    },
+    "routerGo": {
+        "prefix": "routerGo",
+        "body": [
+            "${1:router}.go($2)$0"
+        ],
+        "description": "router.go()"
+    },
+    "routerPush": {
+        "prefix": "routerPush",
+        "body": [
+            "${1:router}.push($2)$0"
+        ],
+        "description": "router.push()"
+    },
+    "routes": {
+        "prefix": "routes",
+        "body": [
+            "routes: [$1]$0"
+        ],
+        "description": "routes: []"
+    },
+    "beforeEnter": {
+        "prefix": "beforeEnter",
+        "body": [
+            "beforeEnter: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeEnter: (to, from, next) => { }"
+    },
+    "beforeRouteEnter": {
+        "prefix": "beforeRouteEnter",
+        "body": [
+            "beforeRouteEnter: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteEnter: (to, from, next) => { }"
+    },
+    "beforeRouteLeave": {
+        "prefix": "beforeRouteLeave",
+        "body": [
+            "beforeRouteLeave: (to, from, next) => {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "beforeRouteLeave: (to, from, next) => { }"
+    },
+    "scrollBehavior": {
+        "prefix": "scrollBehavior",
+        "body": [
+            "scrollBehavior (to, from, savedPosition) {",
+            "\t${1:// ...}",
+            "}"
+        ],
+        "description": "scrollBehavior (to, from, savedPosition) { }"
+    },
+    "path": {
+        "prefix": "path",
+        "body": [
+            "path"
+        ],
+        "description": "just a word"
+    },
+    "alias": {
+        "prefix": "alias",
+        "body": [
+            "alias"
+        ],
+        "description": "just a word"
+    },
+    "mode": {
+        "prefix": "mode",
+        "body": [
+            "mode"
+        ],
+        "description": "just a word"
+    },
+    "children": {
+        "prefix": "children",
+        "body": [
+            "children"
+        ],
+        "description": "just a word"
+    },
+    "meta": {
+        "prefix": "meta",
+        "body": [
+            "meta"
+        ],
+        "description": "just a word"
+    },
+
+    "newVuexStore": {
+        "prefix": "newVuexStore",
+        "body": [
+            "const ${1:store} = new Vuex.Store({",
+            "\t${2:// ...}",
+            "})"
+        ],
+        "description": "const store = new Vuex.Store({ })"
+    },
+    "state": {
+        "prefix": "state",
+        "body": [
+            "state"
+        ],
+        "description": "just a word"
+    },
+    "getters": {
+        "prefix": "getters",
+        "body": [
+            "getters"
+        ],
+        "description": "just a word"
+    },
+    "mutations": {
+        "prefix": "mutations",
+        "body": [
+            "mutations"
+        ],
+        "description": "just a word"
+    },
+    "actions": {
+        "prefix": "actions",
+        "body": [
+            "actions"
+        ],
+        "description": "just a word"
+    },
+    "modules": {
+        "prefix": "modules",
+        "body": [
+            "modules"
+        ],
+        "description": "just a word"
+    },
+    "plugins": {
+        "prefix": "plugins",
+        "body": [
+            "plugins"
+        ],
+        "description": "just a word"
+    },
+    "commit": {
+        "prefix": "commit",
+        "body": [
+            "commit"
+        ],
+        "description": "just a word"
+    },
+    "dispatch": {
+        "prefix": "dispatch",
+        "body": [
+            "dispatch"
+        ],
+        "description": "just a word"
+    },
+    "replaceState": {
+        "prefix": "replaceState",
+        "body": [
+            "replaceState"
+        ],
+        "description": "just a word"
+    },
+    "subscribe": {
+        "prefix": "subscribe",
+        "body": [
+            "subscribe"
+        ],
+        "description": "just a word"
+    },
+    "registerModule": {
+        "prefix": "registerModule",
+        "body": [
+            "registerModule"
+        ],
+        "description": "just a word"
+    },
+    "unregisterModule": {
+        "prefix": "unregisterModule",
+        "body": [
+            "unregisterModule"
+        ],
+        "description": "just a word"
+    },
+    "hotUpdate": {
+        "prefix": "hotUpdate",
+        "body": [
+            "hotUpdate"
+        ],
+        "description": "just a word"
+    },
+    "mapState": {
+        "prefix": "mapState",
+        "body": [
+            "mapState"
+        ],
+        "description": "just a word"
+    },
+    "mapGetters": {
+        "prefix": "mapGetters",
+        "body": [
+            "mapGetters"
+        ],
+        "description": "just a word"
+    },
+    "mapActions": {
+        "prefix": "mapActions",
+        "body": [
+            "mapActions"
+        ],
+        "description": "just a word"
+    },
+    "mapMutations": {
+        "prefix": "mapMutations",
+        "body": [
+            "mapMutations"
+        ],
+        "description": "just a word"
+    }
 }

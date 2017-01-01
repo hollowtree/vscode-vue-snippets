@@ -5,17 +5,21 @@ This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio 
 这个插件基于最新的 [Vue 官方语法高亮文件](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)添加了Syntax Highlight，并且依据 Vue 2 的 API 添加了Code Snippets。
 
 
+### important!!
+If you have add .vue file extension to the vue identifier in configure settings, please **remove** it. In version 1.8.0, VS Code have improve JavaScript/CSS language support in HTML ([Reference](https://code.visualstudio.com/updates#_javascript-language-support-in-html)). So these settings are no longer useful. And if you don't remove these settings, JavaScript and CSS intelliSense can't work in the `.vue` file.
+如果你在设置中添加了如下设置，请移除这些设置，在1.8.0版本中，VS Code 增强了对 HTML 的内嵌语言（JS、CSS）的支持。因此这些设置现在是无用的了，而且如果不移除这些设置的话，JS 和 CSS 的智能提示无法在`.vue`文件中起作用。
+```
+// if your VS code's version number is greater than 1.8.0, please remove these settings.
+"files.associations": {
+        "*.vue": "vue"
+    }
+```
+
 ### It looks like:
 ![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show1.png)
 
 ![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show2.png)
 
-The menu under **File > Preferences (Code > Preferences on Mac)** provides entries to configure settings([Reference](https://code.visualstudio.com/docs/languages/overview#_adding-a-file-extension-to-a-language)). Please add the .vue file extension to the vue identifier like this:
-```
-"files.associations": {
-        "*.vue": "vue"
-    }
-```
 
 ### Snippets
 Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOptionMergeStrategies`, and press ENTER, then `Vue.config.optionMergeStrategies` appear on the screen.
@@ -25,7 +29,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | Prefix | JavaScript Snippet Content |
 | ------ | ------------ |
 | `import` | `import ... from ...` |
-| `Vue` | `new Vue({...})` |
+| `newVue` | `new Vue({...})` |
 | `VueConfigSilent` | `Vue.config.silent = true` |
 | `VueConfigOptionMergeStrategies` | `Vue.config.optionMergeStrategies` |
 | `VueConfigDevtools` | `Vue.config.devtools = true` |
@@ -63,8 +67,11 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `vmForceUpdate` | `vm.$forceUpdate()` |
 | `vmNextTick` | `vm.$nextTick( callback )` |
 | `vmDestroy` | `vm.$destroy()` |
+| `renderer` | `const renderer = require('vue-server-renderer').createRenderer()` |
+| `createRenderer` | `createRenderer({ })` |
 | `preventDefault` | `preventDefault();` |
 | `stopPropagation` | `stopPropagation();` |
+
 
 | Prefix | HTML Snippet Content |
 | ------ | ------------ |
@@ -92,7 +99,30 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `keepAlive` | `<keep-alive></keep-alive>` |
 | `transition` | `<transition></transition>` |
 | `transitionGroup` | `<transition-group></transition-group>` |
-| `` | ``|
+
+
+| Prefix | Vue Router Snippet Content |
+| ------ | ------------ |
+| `routerLink` | `<router-link></router-link>` |
+| `routerView` | `<router-view></router-view>` |
+| `to` | `to=""` |
+| `tag` | `tag=""` |
+| `newVueRouter` | `const router = newVueRouter({ })` |
+| `routerBeforeEach` | `router.beforeEach((to, from, next) => { }` |
+| `routerReplace` | `router.replace()` |
+| `routerGo` | `router.go()` |
+| `routerPush` | `router.push()` |
+| `routes` | `routes: []` |
+| `beforeEnter` | `beforeEnter: (to, from, next) => { }` |
+| `beforeRouteEnter` | `beforeRouteEnter: (to, from, next) => { }` |
+| `beforeRouteLeave` | `beforeRouteLeave: (to, from, next) => { }` |
+| `scrollBehavior` | `scrollBehavior (to, from, savedPosition) { }` |
+
+
+| Prefix | Vuex Snippet Content |
+| ------ | ------------ |
+| `newVuexStore` | `const store = new Vuex.Store({ })` |
+
 
 ### Supported languages
 * vue(.vue)
@@ -104,6 +134,9 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2017/01/01 (0.1.0)
+* Update some sinppets
+
 ##### 2016/12/31 (0.0.10)
 * Update newest api sinppets (like `v-else-if` / `Vue.config.ignoredElements` and so on)
 * fix a bug (before: `vm.off`,after:`vm.$off`)
@@ -117,7 +150,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 * Update readme
 
 ##### 2016/10/18 (0.0.7)
-* Fix `v-for` snippet
+* Fix `v-for` snippet (thanks to [Daniel D](https://github.com/djx339))
 
 ##### 2016/10/18 (0.0.6)
 * Publish failed
