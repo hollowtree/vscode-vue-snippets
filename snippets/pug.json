@@ -115,7 +115,7 @@
     "slotE": {
         "prefix": "slotE",
         "body": [
-            "<slot$1>$2</slot>$0"
+            "slot"
         ],
         "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
     },
@@ -123,7 +123,7 @@
     "component": {
         "prefix": "component",
         "body": [
-            "<component :is=\"${1:componentId}\"></component>$0"
+            "component(:is=\"${1:componentId}\") $0"
 
         ],
         "description": "component element"
@@ -131,27 +131,21 @@
     "keep-alive": {
         "prefix": "keepAlive",
         "body": [
-            "<keep-alive$1>",
-            "$2",
-            "</keep-alive>$0"
+            "keep-alive$0"
         ],
         "description": "keep-alive element"
     },
     "transition": {
         "prefix": "transition",
         "body": [
-            "<transition$1>",
-            "$2",
-            "</transition>$0"
+            "transition$0"
         ],
         "description": "transition element"
     },
     "transition-group": {
         "prefix": "transitionGroup",
         "body": [
-            "<transition-group$1>",
-            "$2",
-            "</transition-group>"
+            "transition-group$0"
         ],
         "description": "transition-group element"
     },
@@ -159,16 +153,16 @@
     "routerLink": {
         "prefix": "routerLink",
         "body": [
-            "<router-link $1>$2</router-link>$0"
+            "router-link $0"
         ],
         "description": "router-link element"
     },
     "routerLinkTo": {
         "prefix": "routerLinkTo",
         "body": [
-            "<router-link to=\"$1\">$2</router-link>$0"
+            "router-link (to=\"$1\") $0"
         ],
-        "description": "<router-link to=''></router-link>. router-link element"
+        "description": "router-link (to='') . router-link element"
     },
     "to": {
         "prefix": "to",
@@ -187,7 +181,7 @@
     "routerView": {
         "prefix": "routerView",
         "body": [
-            "<router-view>$1</router-view>$0"
+            "router-view $0"
         ],
         "description": "router-view element"
     }

@@ -5,16 +5,6 @@ This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio 
 这个插件基于最新的 [Vue 官方语法高亮文件](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)添加了Syntax Highlight，并且依据 Vue 2 的 API 添加了Code Snippets。
 
 
-### important!!
-If you have add .vue file extension to the vue identifier in configure settings, please **remove** it. In version 1.8.0, VS Code have improve JavaScript/CSS language support in HTML ([Reference](https://code.visualstudio.com/updates#_javascript-language-support-in-html)). So these settings are no longer useful. And if you don't remove these settings, JavaScript and CSS intelliSense can't work in the `.vue` file.
-如果你在设置中添加了如下设置，请移除这些设置，在1.8.0版本中，VS Code 增强了对 HTML 的内嵌语言（JS、CSS）的支持。因此这些设置现在是无用的了，而且如果不移除这些设置的话，JS 和 CSS 的智能提示无法在`.vue`文件中起作用。
-```
-// if your VS code's version number is greater than 1.8.0, please remove these settings.
-"files.associations": {
-        "*.vue": "vue"
-    }
-```
-
 ### It looks like:
 ![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show1.png)
 
@@ -129,17 +119,21 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 * HTML(.html)
 * javascript(.js)
 * typescript(.ts)
+* pug(.pug)
 
 ### Base on
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2017/03/12 (0.1.1)
+* Add support .pug files (thanks to [Gregory Bass](https://github.com/GriNAME))
+
 ##### 2017/01/01 (0.1.0)
 * Update some sinppets
 
 ##### 2016/12/31 (0.0.10)
 * Update newest api sinppets (like `v-else-if` / `Vue.config.ignoredElements` and so on)
-* fix a bug (before: `vm.off`,after:`vm.$off`)
+* Fix a bug (before: `vm.off`,after:`vm.$off`)
 
 ##### 2016/12/15 (0.0.9)
 * Update newest syntax highlight file
