@@ -1,95 +1,99 @@
 {
-    "name": "vue-snippets",
-    "displayName": "Vue 2 Snippets",
-    "author": "hollowtree",
-    "publisher": "hollowtree",
-    "icon": "img/logo.png",
-    "description": "A Vue.js 2 Extension",
-    "license": "MIT",
-    "version": "0.1.1",
-    "engines": {
-        "vscode": "^1.5.0"
-    },
-    "keywords": [
-        "javascript",
-        "snippet",
-        "vue",
-        "vue 2"
-    ],
-    "categories": [
-        "Languages",
-        "Snippets"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/hollowtree/vscode-vue-snippets"
-    },
-    "bugs": {
-        "url": "https://github.com/hollowtree/vscode-vue-snippets/issues",
-        "email": "smalltree@outlook.com"
-    },
-    "contributes": {
-        "languages": [
-            {
-                "id": "vue",
-                "aliases": [
-                    "Vue",
-                    "vue"
-                ],
-                "extensions": [
-                    ".vue"
-                ],
-                "configuration": "./syntaxes/vue.configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "vue",
-                "scopeName": "text.html.vue",
-                "path": "./syntaxes/vue.tmLanguage"
-            }
-        ],
-        "snippets": [
-            {
-                "language": "javascript",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "typescript",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": "html",
-                "path": "./snippets/vue.json"
-            },
-            {
-                "language": "vue",
-                "path": "./snippets/javascript.json"
-            },
-            {
-                "language": "vue",
-                "path": "./snippets/html.json"
-            },
-            {
-                "language": "vue",
-                "path": "./snippets/vue.json"
-            },
-            {
-                "language": "jade",
-                "path": "./snippets/pug.json"
-            },
-            {
-                "language": "pug",
-                "path": "./snippets/pug.json"
-            }
-        ]
-    }
+	"name": "vue-snippets",
+	"displayName": "Vue 2 Snippets",
+	"author": "hollowtree",
+	"publisher": "hollowtree",
+	"icon": "img/logo.png",
+	"description": "A Vue.js 2 Extension",
+	"license": "MIT",
+	"version": "0.1.4",
+	"engines": {
+		"vscode": "^1.5.0"
+	},
+	"keywords": [
+		"javascript",
+		"snippet",
+		"vue",
+		"vue 2"
+	],
+	"categories": [
+		"Languages",
+		"Snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/hollowtree/vscode-vue-snippets"
+	},
+	"bugs": {
+		"url": "https://github.com/hollowtree/vscode-vue-snippets/issues",
+		"email": "smalltree@outlook.com"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue",
+				"aliases": [
+					"Vue",
+					"vue"
+				],
+				"extensions": [
+					".vue"
+				],
+				"configuration": "./syntaxes/vue.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "vue",
+				"scopeName": "text.html.vue",
+				"path": "./syntaxes/vue.tmLanguage"
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "typescript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "html",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/html.json"
+			},
+			{
+				"language": "vue",
+				"path": "./snippets/vue.json"
+			},
+			{
+				"language": "jade",
+				"path": "./snippets/pug.json"
+			},
+			{
+				"language": "pug",
+				"path": "./snippets/pug.json"
+			}
+		]
+	}
 }

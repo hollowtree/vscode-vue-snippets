@@ -1,4 +1,4 @@
-# Vue 2 Snippets for Visual Studio code
+# Vue 2 Snippets for Visual Studio Code
 
 This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio Code.
 
@@ -9,9 +9,9 @@ This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio 
 
 
 ### It looks like:
-![](img/show1.png)
+![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show1.png)
 
-![](img/show2.png)
+![](https://raw.githubusercontent.com/hollowtree/vscode-vue-snippets/master/img/show2.png)
 
 
 ### Snippets
@@ -126,7 +126,6 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 ### Base on
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
-
 --------------------------------------
 ##### 2017/03/12 (0.1.1)
 * Add support .pug files (thanks to [Gregory Bass](https://github.com/GriNAME))
@@ -136,7 +135,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 
 ##### 2016/12/31 (0.0.10)
 * Update newest api sinppets (like `v-else-if` / `Vue.config.ignoredElements` and so on)
-* fix a bug (before: `vm.off`,after:`vm.$off`)
+* Fix a bug (before: `vm.off`,after:`vm.$off`)
 
 ##### 2016/12/15 (0.0.9)
 * Update newest syntax highlight file
@@ -147,7 +146,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 * Update readme
 
 ##### 2016/10/18 (0.0.7)
-* Fix `v-for` snippet
+* Fix `v-for` snippet (thanks to [Daniel D](https://github.com/djx339))
 
 ##### 2016/10/18 (0.0.6)
 * Publish failed
