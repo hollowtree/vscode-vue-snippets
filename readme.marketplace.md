@@ -23,20 +23,25 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `VueConfigSilent` | `Vue.config.silent = true` |
 | `VueConfigOptionMergeStrategies` | `Vue.config.optionMergeStrategies` |
 | `VueConfigDevtools` | `Vue.config.devtools = true` |
-| `VueConfigErrorHandler` | `Vue.config.errorHandler = function (err, vm) {...}` |
+| `VueConfigErrorHandler` | `Vue.config.errorHandler = function (err, vm, info) {...}` |
+| `VueConfigWarnHandler` | `Vue.config.warnHandler = function (msg, vm, trace) {...}` |
 | `VueConfigIgnoredElements` | `Vue.config.ignoredElements = ['']` \
 | `VueConfigKeyCodes` | `Vue.config.keyCodes` |
+| `VueConfigPerformance` | `Vue.config.performance = true` |
+| `VueConfigProductionTip` | `Vue.config.productionTip = false` |
 | `vueExtend` | `Vue.extend( options )` |
 | `VueNextTick` | `Vue.nextTick( callback, [context] )` |
-| `VueSet` | `Vue.set( object, key, value )` |
-| `VueDelete` | `Vue.delete( object, key )` |
+| `VueSet` | `Vue.set( target, key, value )` |
+| `VueDelete` | `Vue.delete( target, key )` |
 | `VueDirective` | `Vue.directive( id, [definition] )` |
 | `VueFilter` | `Vue.filter( id, [definition] )` |
 | `VueComponent` | `Vue.component( id, [definition] )` |
 | `VueUse` | `Vue.use( plugin )` |
 | `VueMixin` | `Vue.mixin( mixin )` |
 | `VueCompile` | `Vue.compile( template )` |
+| `VueVersion` | `Vue.version.split('.')[]` |
 | `vmData` | `vm.$data` |
+| `vmProps` | `vm.$props` |
 | `vmEl` | `vm.$el` |
 | `vmOptions` | `vm.$options` |
 | `vmParent` | `vm.$parent` |
@@ -46,6 +51,8 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `vmScopedSlots` | `this.$scopedSlots.default({})` |
 | `vmRefs` | `vm.$refs` |
 | `vmIsServer` | `vm.$isServer` |
+| `vmAttrs` | `vm.$attrs`|
+| `vmListeners` | `vm.listeners`|
 | `vmWatch` | `vm.$watch( expOrFn, callback, [options] )` |
 | `vmSet` | `vm.$set( object, key, value )` |
 | `vmDelete` | `vm.$delete( object, key )` |
@@ -75,6 +82,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `vElse` | `v-else` |
 | `vElseIf` | `v-else-if` |
 | `vFor` | `v-for` |
+| `vForWithKey` | `v-for="" :key=""` |
 | `vOn` | `v-on` |
 | `vBind` | `v-bind` |
 | `vModel` | `v-model` |
@@ -89,6 +97,27 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `keepAlive` | `<keep-alive></keep-alive>` |
 | `transition` | `<transition></transition>` |
 | `transitionGroup` | `<transition-group></transition-group>` |
+| `enterClass` | `enter-class=''`|
+| `leaveClass` | `leave-class=''`|
+| `appearClass` | `appear-class=''`|
+| `enterToClass` | `enter-to-class=''`|
+| `leaveToClass` | `leave-to-class=''`|
+| `appearToClass` | `appear-to-class=''`|
+| `enterActiveClass` | `enter-active-class=''`|
+| `leaveActiveClass` | `leave-active-class=''`|
+| `appearActiveClass` | `appear-active-class=''`|
+| `beforeEnterEvent` | `@before-enter=''`|
+| `beforeLeaveEvent` | `@before-leave=''`|
+| `beforeAppearEvent` | `@before-appear=''`|
+| `enterEvent` | `@enter=''`|
+| `leaveEvent` | `@leave=''`|
+| `appearEvent` | `@appear=''`|
+| `afterEnterEvent` | `@after-enter=''`|
+| `afterLeaveEvent` | `@after-leave=''`|
+| `afterAppearEvent` | `@after-appear=''`|
+| `enterCancelledEvent` | `@enter-cancelled=''`|
+| `leaveCancelledEvent` | `@leave-cancelled=''`|
+| `appearCancelledEvent` | `@appear-cancelled=''`|
 
 
 | Prefix | Vue Router Snippet Content |
@@ -112,7 +141,6 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | Prefix | Vuex Snippet Content |
 | ------ | ------------ |
 | `newVuexStore` | `const store = new Vuex.Store({ })` |
-
 
 ### Supported languages
 * vue(.vue)

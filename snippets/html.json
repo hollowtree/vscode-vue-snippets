@@ -48,6 +48,13 @@
         ],
         "description": "Expects: Array | Object | number | string"
     },
+    "v-for-with-key": {
+        "prefix": "vForWithKey",
+        "body": [
+            "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
+        ],
+        "description": "Expects: Array | Object | number | string"
+    },
     "v-on": {
         "prefix": "vOn",
         "body": [
@@ -154,6 +161,153 @@
             "</transition-group>"
         ],
         "description": "transition-group element"
+    },
+    "enter-class": {
+        "prefix": "enterClass",
+        "body": [
+            "enter-class=\"$1\"$0"
+        ],
+        "description": "enter-class=''. Expects: string."
+    },
+    "leave-class": {
+        "prefix": "leaveClass",
+        "body": [
+            "leave-class=\"$1\"$0"
+        ],
+        "description": "leave-class=''. Expects: string."
+    },
+    "appear-class": {
+        "prefix": "appearClass",
+        "body": [
+            "appear-class=\"$1\"$0"
+        ],
+        "description": "appear-class=''. Expects: string."
+    },
+    "enter-to-class": {
+        "prefix": "enterToClass",
+        "body": [
+            "enter-to-class=\"$1\"$0"
+        ],
+        "description": "enter-to-class=''. Expects: string."
+    },
+    "leave-to-class": {
+        "prefix": "leaveToClass",
+        "body": [
+            "leave-to-class=\"$1\"$0"
+        ],
+        "description": "leave-to-class=''. Expects: string."
+    },
+    "appear-to-class": {
+        "prefix": "appearToClass",
+        "body": [
+            "appear-to-class=\"$1\"$0"
+        ],
+        "description": "appear-to-class=''. Expects: string."
+    },
+    "enter-active-class": {
+        "prefix": "enterActiveClass",
+        "body": [
+            "enter-active-class=\"$1\"$0"
+        ],
+        "description": "enter-active-class=''. Expects: string."
+    },
+    "leave-active-class": {
+        "prefix": "leaveActiveClass",
+        "body": [
+            "leave-active-class=\"$1\"$0"
+        ],
+        "description": "leave-active-class=''. Expects: string."
+    },
+    "appear-active-class": {
+        "prefix": "appearActiveClass",
+        "body": [
+            "appear-active-class=\"$1\"$0"
+        ],
+        "description": "appear-active-class=''. Expects: string."
+    },
+    "before-enter": {
+        "prefix": "beforeEnterEvent",
+        "body": [
+            "@before-enter=\"$1\"$0"
+        ],
+        "description": "@before-enter=''"
+    },
+    "before-leave": {
+        "prefix": "beforeLeaveEvent",
+        "body": [
+            "@before-leave=\"$1\"$0"
+        ],
+        "description": "@before-leave=''"
+    },
+    "before-appear": {
+        "prefix": "beforeAppearEvent",
+        "body": [
+            "@before-appear=\"$1\"$0"
+        ],
+        "description": "@before-appear=''"
+    },
+    "enter": {
+        "prefix": "enterEvent",
+        "body": [
+            "@enter=\"$1\"$0"
+        ],
+        "description": "@enter=''"
+    },
+    "leave": {
+        "prefix": "leaveEvent",
+        "body": [
+            "@leave=\"$1\"$0"
+        ],
+        "description": "@leave=''"
+    },
+    "appear": {
+        "prefix": "appearEvent",
+        "body": [
+            "@appear=\"$1\"$0"
+        ],
+        "description": "@appear=''"
+    },
+    "after-enter": {
+        "prefix": "afterEnterEvent",
+        "body": [
+            "@after-enter=\"$1\"$0"
+        ],
+        "description": "@after-enter=''"
+    },
+    "after-leave": {
+        "prefix": "afterLeaveEvent",
+        "body": [
+            "@after-leave=\"$1\"$0"
+        ],
+        "description": "@after-leave=''"
+    },
+    "after-appear": {
+        "prefix": "afterAppearEvent",
+        "body": [
+            "@after-appear=\"$1\"$0"
+        ],
+        "description": "@after-appear=''"
+    },
+    "enter-cancelled": {
+        "prefix": "enterCancelledEvent",
+        "body": [
+            "@enter-cancelled=\"$1\"$0"
+        ],
+        "description": "@enter-cancelled=''"
+    },
+    "leave-cancelled": {
+        "prefix": "leaveCancelledEvent",
+        "body": [
+            "@leave-cancelled=\"$1\"$0"
+        ],
+        "description": "@leave-cancelled='' (v-show only)"
+    },
+    "appear-cancelled": {
+        "prefix": "appearCancelledEvent",
+        "body": [
+            "@appear-cancelled=\"$1\"$0"
+        ],
+        "description": "@appear-cancelled=''"
     },
 
     "routerLink": {

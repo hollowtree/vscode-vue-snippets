@@ -39,11 +39,20 @@
     "errorHandler": {
         "prefix": "VueConfigErrorHandler",
         "body": [
-            "Vue.config.errorHandler = function (err, vm) {",
+            "Vue.config.errorHandler = function (err, vm, info) {",
             "\t${1:// handle error}",
             "}"
         ],
         "description": "Vue.config.errorHandler"
+    },
+    "warnHandler": {
+        "prefix": "VueConfigWarnHandler",
+        "body": [
+            "Vue.config.warnHandler = function (msg, vm, trace) {",
+            "\t${1:// handle error}",
+            "}"
+        ],
+        "description": "Vue.config.warnHandler"
     },
     "ignoredElements": {
         "prefix": "VueConfigIgnoredElements",
@@ -57,9 +66,25 @@
     "keyCodes": {
         "prefix": "VueConfigKeyCodes",
         "body": [
-            "Vue.config.keyCodes = {$1}"
+            "Vue.config.keyCodes = {",
+            "\t${1:// camelCase won`t work}",
+            "}"
         ],
         "description": "Vue.config.keyCodes"
+    },
+    "performance": {
+        "prefix": "VueConfigPerformance",
+        "body": [
+            "Vue.config.performance = ${1:true}"
+        ],
+        "description": "Vue.config.performance"
+    },
+    "productionTip": {
+        "prefix": "VueConfigProductionTip",
+        "body": [
+            "Vue.config.productionTip = ${1:false}"
+        ],
+        "description": "Vue.config.productionTip"
     },
 
     "extend": {
@@ -83,16 +108,16 @@
     "set": {
         "prefix": "VueSet",
         "body": [
-            "Vue.set({$1, $2, $3})"
+            "Vue.set(${1:target}, ${2:key}, ${3:value})"
         ],
-        "description": "Vue.set( object, key, value )"
+        "description": "Vue.set( target, key, value )"
     },
     "delete": {
         "prefix": "VueDelete",
         "body": [
-            "Vue.delete($1, $2)"
+            "Vue.delete(${1:target}, ${2:key})"
         ],
-        "description": "Vue.delete( object, key )"
+        "description": "Vue.delete( target, key )"
     },
     "directive": {
         "prefix": "VueDirective",
@@ -135,6 +160,13 @@
             "Vue.compile(${1:template})"
         ],
         "description": "Vue.compile( template )"
+    },
+    "version": {
+        "prefix": "VueVersion",
+        "body": [
+            "Vue.version.split('.')[$1]$0"
+        ],
+        "description": "Vue.version.split('.')[]"
     },
 
     "data": {
@@ -205,6 +237,13 @@
         "prefix": "render",
         "body": [
             "render"
+        ],
+        "description": "just a word"
+    },
+    "renderError": {
+        "prefix": "renderError",
+        "body": [
+            "renderError"
         ],
         "description": "just a word"
     },
@@ -323,17 +362,32 @@
         ],
         "description": "just a word"
     },
-    "name": {
-        "prefix": "name",
-        "body": [
-            "name"
-        ],
-        "description": "just a word"
-    },
     "extends": {
         "prefix": "extends",
         "body": [
             "extends"
+        ],
+        "description": "just a word"
+    },
+    "provide": {
+        "prefix": "provide",
+        "body": [
+            "provide"
+        ],
+        "description": "just a word"
+    },
+    "inject": {
+        "prefix": "inject",
+        "body": [
+            "inject"
+        ],
+        "description": "just a word"
+    },
+
+    "name": {
+        "prefix": "name",
+        "body": [
+            "name"
         ],
         "description": "just a word"
     },
@@ -351,11 +405,39 @@
         ],
         "description": "just a word"
     },
+    "model": {
+        "prefix": "model",
+        "body": [
+            "model"
+        ],
+        "description": "just a word"
+    },
+    "inheritAttrs": {
+        "prefix": "inheritAttrs",
+        "body": [
+            "inheritAttrs"
+        ],
+        "description": "just a word"
+    },
+    "comments": {
+        "prefix": "comments",
+        "body": [
+            "comments"
+        ],
+        "description": "just a word"
+    },
 
     "vm.$data": {
         "prefix": "vmData",
         "body": [
             "${1:vm}.\\$data$2"
+        ],
+        "description": "Type: Object"
+    },
+    "vm.$props": {
+        "prefix": "vmProps",
+        "body": [
+            "${1:vm}.\\$props$2"
         ],
         "description": "Type: Object"
     },
@@ -423,6 +505,20 @@
             "${1:vm}.\\$isServer$2"
         ],
         "description": "Type: boolean"
+    },
+    "vm.$attrs": {
+        "prefix": "vmAttrs",
+        "body": [
+            "${1:vm}.\\$attrs$2"
+        ],
+        "description": "Type: { [key: string]: string }"
+    },
+    "vm.$listeners": {
+        "prefix": "vmListeners",
+        "body": [
+            "${1:vm}.\\$listeners$2"
+        ],
+        "description": "Type: { [key: string]: Function | Array<Function> }"
     },
 
     "vm.$watch": {
