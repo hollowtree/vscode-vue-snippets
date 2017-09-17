@@ -4,8 +4,8 @@ This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio 
 
 这个插件基于最新的 [Vue 官方语法高亮文件](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)添加了Syntax Highlight，并且依据 Vue 2 的 API 添加了Code Snippets。
 
-[![](http://vsmarketplacebadge.apphb.com/version/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
-[![](http://vsmarketplacebadge.apphb.com/installs/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
+[![](https://vsmarketplacebadge.apphb.com/version/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
+[![](https://vsmarketplacebadge.apphb.com/installs/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 
 
 ### It looks like:
@@ -156,6 +156,9 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2017/09/17 (0.1.5)
+* Fix and update sinppets
+
 ##### 2017/03/12 (0.1.1)
 * Add support .pug files (thanks to [Gregory Bass](https://github.com/GriNAME))
 
