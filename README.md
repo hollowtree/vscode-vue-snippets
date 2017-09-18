@@ -55,7 +55,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `vmRefs` | `vm.$refs` |
 | `vmIsServer` | `vm.$isServer` |
 | `vmAttrs` | `vm.$attrs`|
-| `vmListeners` | `vm.listeners`|
+| `vmListeners` | `vm.$listeners`|
 | `vmWatch` | `vm.$watch( expOrFn, callback, [options] )` |
 | `vmSet` | `vm.$set( object, key, value )` |
 | `vmDelete` | `vm.$delete( object, key )` |
