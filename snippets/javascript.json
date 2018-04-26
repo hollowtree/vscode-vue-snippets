@@ -1,920 +1,1362 @@
 {
-    "import": {
-        "prefix": "import",
-        "body": [
-            "import $1 from '$2'"
-        ],
-        "description": "import ... from ..."
-    },
-    "vue": {
-        "prefix": "newVue",
-        "body": [
-            "new Vue({",
-            "\t$1",
-            "})"
-        ],
-        "description": "new Vue()"
-    },
-    "silent": {
-        "prefix": "VueConfigSilent",
-        "body": [
-            "Vue.config.silent = ${1:true}"
-        ],
-        "description": "Vue.config.silent"
-    },
-    "optionMergeStrategies": {
-        "prefix": "VueConfigOptionMergeStrategies",
-        "body": [
-            "Vue.config.optionMergeStrategies$1"
-        ],
-        "description": "Vue.config.optionMergeStrategies"
-    },
-    "devtools": {
-        "prefix": "VueConfigDevtools",
-        "body": [
-            "Vue.config.devtools = ${1:true}"
-        ],
-        "description": "Vue.config.devtools"
-    },
-    "errorHandler": {
-        "prefix": "VueConfigErrorHandler",
-        "body": [
-            "Vue.config.errorHandler = function (err, vm, info) {",
-            "\t${1:// handle error}",
-            "}"
-        ],
-        "description": "Vue.config.errorHandler"
-    },
-    "warnHandler": {
-        "prefix": "VueConfigWarnHandler",
-        "body": [
-            "Vue.config.warnHandler = function (msg, vm, trace) {",
-            "\t${1:// handle error}",
-            "}"
-        ],
-        "description": "Vue.config.warnHandler"
-    },
-    "ignoredElements": {
-        "prefix": "VueConfigIgnoredElements",
-        "body": [
-            "Vue.config.ignoredElements = [",
-            "\t'${1}'",
-            "]$0"
-        ],
-        "description": "Vue.config.ignoredElements"
-    },
-    "keyCodes": {
-        "prefix": "VueConfigKeyCodes",
-        "body": [
-            "Vue.config.keyCodes = {",
-            "\t${1:// camelCase won`t work}",
-            "}"
-        ],
-        "description": "Vue.config.keyCodes"
-    },
-    "performance": {
-        "prefix": "VueConfigPerformance",
-        "body": [
-            "Vue.config.performance = ${1:true}"
-        ],
-        "description": "Vue.config.performance"
-    },
-    "productionTip": {
-        "prefix": "VueConfigProductionTip",
-        "body": [
-            "Vue.config.productionTip = ${1:false}"
-        ],
-        "description": "Vue.config.productionTip"
-    },
-
-    "extend": {
-        "prefix": "vueExtend",
-        "body": [
-            "Vue.extend({",
-            "\ttemplate:${1:template}",
-            "})"
-        ],
-        "description": "Vue.extend( options )"
-    },
-    "nextTick": {
-        "prefix": "VueNextTick",
-        "body": [
-            "Vue.nextTick({",
-            "\t$1",
-            "})"
-        ],
-        "description": "Vue.nextTick( callback, [context] )"
-    },
-    "set": {
-        "prefix": "VueSet",
-        "body": [
-            "Vue.set(${1:target}, ${2:key}, ${3:value})"
-        ],
-        "description": "Vue.set( target, key, value )"
-    },
-    "delete": {
-        "prefix": "VueDelete",
-        "body": [
-            "Vue.delete(${1:target}, ${2:key})"
-        ],
-        "description": "Vue.delete( target, key )"
-    },
-    "directive": {
-        "prefix": "VueDirective",
-        "body": [
-            "Vue.directive(${1:id}${2:, [definition]})"
-        ],
-        "description": "Vue.directive( id, [definition] )"
-    },
-    "filter": {
-        "prefix": "VueFilter",
-        "body": [
-            "Vue.filter(${1:id}${2:, [definition]})"
-        ],
-        "description": "Vue.filter( id, [definition] )"
-    },
-    "component": {
-        "prefix": "VueComponent",
-        "body": [
-            "Vue.component(${1:id}${2:, [definition]})$0"
-        ],
-        "description": "Vue.component( id, [definition] )"
-    },
-    "use": {
-        "prefix": "VueUse",
-        "body": [
-            "Vue.use(${1:plugin})$0"
-        ],
-        "description": "Vue.use( plugin )"
-    },
-    "mixin": {
-        "prefix": "VueMixin",
-        "body": [
-            "Vue.mixin(${1:mixin})"
-        ],
-        "description": "Vue.mixin( mixin )"
-    },
-    "compile": {
-        "prefix": "VueCompile",
-        "body": [
-            "Vue.compile(${1:template})"
-        ],
-        "description": "Vue.compile( template )"
-    },
-    "version": {
-        "prefix": "VueVersion",
-        "body": [
-            "Vue.version.split('.')[$1]$0"
-        ],
-        "description": "Vue.version.split('.')[]"
-    },
-
-    "data": {
-        "prefix": "data",
-        "body": [
-            "data"
-        ],
-        "description": "just a word"
-    },
-    "props": {
-        "prefix": "props",
-        "body": [
-            "props"
-        ],
-        "description": "just a word"
-    },
-    "propsData": {
-        "prefix": "propsData",
-        "body": [
-            "propsData"
-        ],
-        "description": "just a word"
-    },
-    "scopedSlots": {
-        "prefix": "scopedSlots",
-        "body": [
-            "scopedSlots"
-        ],
-        "description": "just a word"
-    },
-    "computed": {
-        "prefix": "computed",
-        "body": [
-            "computed"
-        ],
-        "description": "just a word"
-    },
-    "methods": {
-        "prefix": "methods",
-        "body": [
-            "methods"
-        ],
-        "description": "just a word"
-    },
-    "watch": {
-        "prefix": "watch",
-        "body": [
-            "watch"
-        ],
-        "description": "just a word"
-    },
-
-    "el": {
-        "prefix": "el",
-        "body": [
-            "el"
-        ],
-        "description": "just a word"
-    },
-    "template": {
-        "prefix": "template",
-        "body": [
-            "template"
-        ],
-        "description": "just a word"
-    },
-    "render": {
-        "prefix": "render",
-        "body": [
-            "render"
-        ],
-        "description": "just a word"
-    },
-    "renderError": {
-        "prefix": "renderError",
-        "body": [
-            "renderError"
-        ],
-        "description": "just a word"
-    },
-
-    "beforeCreate": {
-        "prefix": "beforeCreate",
-        "body": [
-            "beforeCreate"
-        ],
-        "description": "just a word"
-    },
-    "created": {
-        "prefix": "created",
-        "body": [
-            "created"
-        ],
-        "description": "just a word"
-    },
-    "beforeMount": {
-        "prefix": "beforeMount",
-        "body": [
-            "beforeMount"
-        ],
-        "description": "just a word"
-    },
-    "mounted": {
-        "prefix": "mounted",
-        "body": [
-            "mounted"
-        ],
-        "description": "just a word"
-    },
-    "beforeUpdate": {
-        "prefix": "beforeUpdate",
-        "body": [
-            "beforeUpdate"
-        ],
-        "description": "just a word"
-    },
-    "updated": {
-        "prefix": "updated",
-        "body": [
-            "updated"
-        ],
-        "description": "just a word"
-    },
-    "activated": {
-        "prefix": "activated",
-        "body": [
-            "activated"
-        ],
-        "description": "just a word"
-    },
-    "deactivated": {
-        "prefix": "deactivated",
-        "body": [
-            "deactivated"
-        ],
-        "description": "just a word"
-    },
-    "beforeDestroy": {
-        "prefix": "beforeDestroy",
-        "body": [
-            "beforeDestroy"
-        ],
-        "description": "just a word"
-    },
-    "destroyed": {
-        "prefix": "destroyed",
-        "body": [
-            "destroyed"
-        ],
-        "description": "just a word"
-    },
-
-    "directives": {
-        "prefix": "directives",
-        "body": [
-            "directives"
-        ],
-        "description": "just a word"
-    },
-    "filters": {
-        "prefix": "filters",
-        "body": [
-            "filters"
-        ],
-        "description": "just a word"
-    },
-    "componentWord": {
-        "prefix": "component",
-        "body": [
-            "component"
-        ],
-        "description": "just a word"
-    },
-    "components": {
-        "prefix": "components",
-        "body": [
-            "components"
-        ],
-        "description": "just a word"
-    },
-
-    "parent": {
-        "prefix": "parent",
-        "body": [
-            "parent"
-        ],
-        "description": "just a word"
-    },
-    "mixins": {
-        "prefix": "mixins",
-        "body": [
-            "mixins"
-        ],
-        "description": "just a word"
-    },
-    "extends": {
-        "prefix": "extends",
-        "body": [
-            "extends"
-        ],
-        "description": "just a word"
-    },
-    "provide": {
-        "prefix": "provide",
-        "body": [
-            "provide"
-        ],
-        "description": "just a word"
-    },
-    "inject": {
-        "prefix": "inject",
-        "body": [
-            "inject"
-        ],
-        "description": "just a word"
-    },
-
-    "name": {
-        "prefix": "name",
-        "body": [
-            "name"
-        ],
-        "description": "just a word"
-    },
-    "delimiters": {
-        "prefix": "delimiters",
-        "body": [
-            "delimiters"
-        ],
-        "description": "just a word"
-    },
-    "functional": {
-        "prefix": "functional",
-        "body": [
-            "functional"
-        ],
-        "description": "just a word"
-    },
-    "model": {
-        "prefix": "model",
-        "body": [
-            "model"
-        ],
-        "description": "just a word"
-    },
-    "inheritAttrs": {
-        "prefix": "inheritAttrs",
-        "body": [
-            "inheritAttrs"
-        ],
-        "description": "just a word"
-    },
-    "comments": {
-        "prefix": "comments",
-        "body": [
-            "comments"
-        ],
-        "description": "just a word"
-    },
-
-    "vm.$data": {
-        "prefix": "vmData",
-        "body": [
-            "${1:vm}.\\$data$2"
-        ],
-        "description": "Type: Object"
-    },
-    "vm.$props": {
-        "prefix": "vmProps",
-        "body": [
-            "${1:vm}.\\$props$2"
-        ],
-        "description": "Type: Object"
-    },
-    "vm.$el": {
-        "prefix": "vmEl",
-        "body": [
-            "${1:vm}.\\$el$2"
-        ],
-        "description": "Type: HTMLElement"
-    },
-    "vm.$options": {
-        "prefix": "vmOptions",
-        "body": [
-            "${1:vm}.\\$options$2"
-        ],
-        "description": "Type: Object"
-    },
-    "vm.$parent": {
-        "prefix": "vmParent",
-        "body": [
-            "${1:vm}.\\$parent$2"
-        ],
-        "description": "Type: Vue instance"
-    },
-    "vm.$root": {
-        "prefix": "vmRoot",
-        "body": [
-            "${1:vm}.\\$root$2"
-        ],
-        "description": "Type: Vue instance"
-    },
-    "vm.$children": {
-        "prefix": "vmChildren",
-        "body": [
-            "${1:vm}.\\$children$2"
-        ],
-        "description": "Type: Array<Vue instance>"
-    },
-    "vm.$slots": {
-        "prefix": "vmSlots",
-        "body": [
-            "${1:vm}.\\$slots$2"
-        ],
-        "description": "Type: Object"
-    },
-    "vm.$scopedSlots": {
-        "prefix": "vmScopedSlots",
-        "body": [
-            "$this.\\$scopedSlots.default({",
-            "\t",
-            "})"
-        ],
-        "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
-    },
-    "vm.$refs": {
-        "prefix": "vmRefs",
-        "body": [
-            "${1:vm}.\\$refs$2"
-        ],
-        "description": "Type: Object"
-    },
-    "vm.$isServer": {
-        "prefix": "vmIsServer",
-        "body": [
-            "${1:vm}.\\$isServer$2"
-        ],
-        "description": "Type: boolean"
-    },
-    "vm.$attrs": {
-        "prefix": "vmAttrs",
-        "body": [
-            "${1:vm}.\\$attrs$2"
-        ],
-        "description": "Type: { [key: string]: string }"
-    },
-    "vm.$listeners": {
-        "prefix": "vmListeners",
-        "body": [
-            "${1:vm}.\\$listeners$2"
-        ],
-        "description": "Type: { [key: string]: Function | Array<Function> }"
-    },
-
-    "vm.$watch": {
-        "prefix": "vmWatch",
-        "body": [
-            "${1:vm}.\\$watch(${2:expOrFn}, ${3:callback})"
-        ],
-        "description": "vm.$watch( expOrFn, callback, [options] )"
-    },
-    "vm.$set": {
-        "prefix": "vmSet",
-        "body": [
-            "${1:vm}.\\$set(${2:object}, ${3:key}, ${4:value})"
-        ],
-        "description": "vm.$set( object, key, value )"
-    },
-    "vm.$delete": {
-        "prefix": "vmDelete",
-        "body": [
-            "${1:vm}.\\$delete(${2:object}, ${3:key})"
-        ],
-        "description": "vm.$delete( object, key )"
-    },
-
-    "vm.$on": {
-        "prefix": "vmOn",
-        "body": [
-            "${1:vm}.\\$on('${2:event}', ${3:callback})$4"
-        ],
-        "description": "vm.$on( event, callback )"
-    },
-    "vm.$once": {
-        "prefix": "vmOnce",
-        "body": [
-            "${1:vm}.\\$once('${2:event}', ${3:callback})$4"
-        ],
-        "description": "vm.$once( event, callback )"
-    },
-    "vm.$off": {
-        "prefix": "vmOff",
-        "body": [
-            "${1:vm}.\\$off('${2:event}', ${3:callback})$4"
-        ],
-        "description": "vm.$off( [event, callback] )"
-    },
-    "vm.$emit": {
-        "prefix": "vmEmit",
-        "body": [
-            "${1:vm}.\\$emit('${2:event}'${3:, […args]})$4"
-        ],
-        "description": "vm.$emit( event, […args] )"
-    },
-
-    "vm.$mount": {
-        "prefix": "vmMount",
-        "body": [
-            "${1:vm}.\\$mount('$2')"
-        ],
-        "description": "vm.$mount( [elementOrSelector] )"
-    },
-    "vm.$forceUpdate": {
-        "prefix": "vmForceUpdate",
-        "body": [
-            "${1:vm}.\\$forceUpdate()"
-        ],
-        "description": "vm.$forceUpdate()"
-    },
-    "vm.$nextTick": {
-        "prefix": "vmNextTick",
-        "body": [
-            "${1:vm}.\\$nextTick(${2:callback})"
-        ],
-        "description": "vm.$nextTick( callback )"
-    },
-    "vm.$destroy": {
-        "prefix": "vmDestroy",
-        "body": [
-            "${1:vm}.\\$destroy()$2"
-        ],
-        "description": "vm.$destroy()"
-    },
-
-    "renderer": {
-        "prefix": "renderer",
-        "body": [
-            "const ${1:renderer} = require('vue-server-renderer').createRenderer()$0"
-        ],
-        "description": "require('vue-server-renderer').createRenderer()"
-    },
-    "createRenderer": {
-        "prefix": "createRenderer",
-        "body": [
-            "createRenderer({",
-            "\t$1",
-            "})"
-        ],
-        "description": "createRenderer({ })"
-    },
-    "renderToString": {
-        "prefix": "renderToString",
-        "body": [
-            "renderToString"
-        ],
-        "description": "just a word"
-    },
-    "renderToStream": {
-        "prefix": "renderToStream",
-        "body": [
-            "renderToStream"
-        ],
-        "description": "just a word"
-    },
-    "createBundleRenderer": {
-        "prefix": "createBundleRenderer",
-        "body": [
-            "createBundleRenderer"
-        ],
-        "description": "just a word"
-    },
-    "bundleRenderer.renderToString": {
-        "prefix": "bundleRenderer.renderToString",
-        "body": [
-            "bundleRenderer.renderToString"
-        ],
-        "description": "just a word"
-    },
-    "bundleRenderer.renderToStream": {
-        "prefix": "bundleRenderer.renderToStream",
-        "body": [
-            "bundleRenderer.renderToStream"
-        ],
-        "description": "just a word"
-    },
-
-
-    "preventDefault":{
-        "prefix":"preventDefault",
-        "body":[
-            "preventDefault();",
-            "$1"
-        ],
-        "description":"preventDefault()"
-    },
-    "stopPropagation": {
-        "prefix": "stopPropagation",
-        "body": [
-            "stopPropagation();",
-            "$1"
-        ],
-        "description":"stopPropagation()"
-    },
-
-    "newVueRouter": {
-        "prefix": "newVueRouter",
-        "body": [
-            "const ${1:router} = new VueRouter({",
-            "\t$2",
-            "})$0"
-        ],
-        "description": "const router = newVueRouter({ })"
-    },
-    "routerBeforeEach": {
-        "prefix": "routerBeforeEach",
-        "body": [
-            "${1:router}.beforeEach((to, from, next) => {",
-            "\t${2:// to and from are both route objects}",
-            "})$0"
-        ],
-        "description": "router.beforeEach"
-    },
-    "routerReplace": {
-        "prefix": "routerReplace",
-        "body": [
-            "${1:router}.replace($2)$0"
-        ],
-        "description": "router.replace()"
-    },
-    "routerGo": {
-        "prefix": "routerGo",
-        "body": [
-            "${1:router}.go($2)$0"
-        ],
-        "description": "router.go()"
-    },
-    "routerPush": {
-        "prefix": "routerPush",
-        "body": [
-            "${1:router}.push($2)$0"
-        ],
-        "description": "router.push()"
-    },
-    "routes": {
-        "prefix": "routes",
-        "body": [
-            "routes: [$1]$0"
-        ],
-        "description": "routes: []"
-    },
-    "beforeEnter": {
-        "prefix": "beforeEnter",
-        "body": [
-            "beforeEnter: (to, from, next) => {",
-            "\t${1:// ...}",
-            "}"
-        ],
-        "description": "beforeEnter: (to, from, next) => { }"
-    },
-    "beforeRouteEnter": {
-        "prefix": "beforeRouteEnter",
-        "body": [
-            "beforeRouteEnter: (to, from, next) => {",
-            "\t${1:// ...}",
-            "}"
-        ],
-        "description": "beforeRouteEnter: (to, from, next) => { }"
-    },
-    "beforeRouteLeave": {
-        "prefix": "beforeRouteLeave",
-        "body": [
-            "beforeRouteLeave: (to, from, next) => {",
-            "\t${1:// ...}",
-            "}"
-        ],
-        "description": "beforeRouteLeave: (to, from, next) => { }"
-    },
-    "scrollBehavior": {
-        "prefix": "scrollBehavior",
-        "body": [
-            "scrollBehavior (to, from, savedPosition) {",
-            "\t${1:// ...}",
-            "}"
-        ],
-        "description": "scrollBehavior (to, from, savedPosition) { }"
-    },
-    "path": {
-        "prefix": "path",
-        "body": [
-            "path"
-        ],
-        "description": "just a word"
-    },
-    "alias": {
-        "prefix": "alias",
-        "body": [
-            "alias"
-        ],
-        "description": "just a word"
-    },
-    "mode": {
-        "prefix": "mode",
-        "body": [
-            "mode"
-        ],
-        "description": "just a word"
-    },
-    "children": {
-        "prefix": "children",
-        "body": [
-            "children"
-        ],
-        "description": "just a word"
-    },
-    "meta": {
-        "prefix": "meta",
-        "body": [
-            "meta"
-        ],
-        "description": "just a word"
-    },
-
-    "newVuexStore": {
-        "prefix": "newVuexStore",
-        "body": [
-            "const ${1:store} = new Vuex.Store({",
-            "\t${2:// ...}",
-            "})"
-        ],
-        "description": "const store = new Vuex.Store({ })"
-    },
-    "state": {
-        "prefix": "state",
-        "body": [
-            "state"
-        ],
-        "description": "just a word"
-    },
-    "getters": {
-        "prefix": "getters",
-        "body": [
-            "getters"
-        ],
-        "description": "just a word"
-    },
-    "mutations": {
-        "prefix": "mutations",
-        "body": [
-            "mutations"
-        ],
-        "description": "just a word"
-    },
-    "actions": {
-        "prefix": "actions",
-        "body": [
-            "actions"
-        ],
-        "description": "just a word"
-    },
-    "modules": {
-        "prefix": "modules",
-        "body": [
-            "modules"
-        ],
-        "description": "just a word"
-    },
-    "plugins": {
-        "prefix": "plugins",
-        "body": [
-            "plugins"
-        ],
-        "description": "just a word"
-    },
-    "commit": {
-        "prefix": "commit",
-        "body": [
-            "commit"
-        ],
-        "description": "just a word"
-    },
-    "dispatch": {
-        "prefix": "dispatch",
-        "body": [
-            "dispatch"
-        ],
-        "description": "just a word"
-    },
-    "replaceState": {
-        "prefix": "replaceState",
-        "body": [
-            "replaceState"
-        ],
-        "description": "just a word"
-    },
-    "subscribe": {
-        "prefix": "subscribe",
-        "body": [
-            "subscribe"
-        ],
-        "description": "just a word"
-    },
-    "registerModule": {
-        "prefix": "registerModule",
-        "body": [
-            "registerModule"
-        ],
-        "description": "just a word"
-    },
-    "unregisterModule": {
-        "prefix": "unregisterModule",
-        "body": [
-            "unregisterModule"
-        ],
-        "description": "just a word"
-    },
-    "hotUpdate": {
-        "prefix": "hotUpdate",
-        "body": [
-            "hotUpdate"
-        ],
-        "description": "just a word"
-    },
-    "mapState": {
-        "prefix": "mapState",
-        "body": [
-            "mapState"
-        ],
-        "description": "just a word"
-    },
-    "mapGetters": {
-        "prefix": "mapGetters",
-        "body": [
-            "mapGetters"
-        ],
-        "description": "just a word"
-    },
-    "mapActions": {
-        "prefix": "mapActions",
-        "body": [
-            "mapActions"
-        ],
-        "description": "just a word"
-    },
-    "mapMutations": {
-        "prefix": "mapMutations",
-        "body": [
-            "mapMutations"
-        ],
-        "description": "just a word"
-    }
+  // Misc
+  "method-with-comma": {
+    "prefix": "method-with-comma",
+    "body": [
+      "${1:key}(${2:params}) {",
+      "\t$3",
+      "},"
+    ],
+    "description": "method with comma"
+  },
+  "watcher-with-handler": {
+    "prefix": "watcher-with-handler-and-immediate-and-deep",
+    "body": [
+      "${1:key}: {",
+      "\thandler(${2:value, old}) {",
+      "\t\t$3",
+      "\t},",
+      "\timmediate: ${4:true},",
+      "\tdeep: ${5:false},",
+      "},"
+    ],
+    "description": "Vue component watcher"
+  },
+  "new Vue": {
+    "prefix": "new Vue",
+    "body": [
+      "new Vue({",
+      "\t$1",
+      "})"
+    ],
+    "description": "new Vue()"
+  },
+  // Vue Global Config
+  "Vue.config.silent": {
+    "prefix": "Vue.config.silent",
+    "body": [
+      "Vue.config.silent = ${true}"
+    ],
+    "description": "Type: boolean.\n\nDefault: false.\n\nSuppress all Vue logs and warnings.\n\n"
+  },
+  "Vue.config.optionMergeStrategies": {
+    "prefix": "Vue.config.optionMergeStrategies",
+    "body": [
+      "Vue.config.optionMergeStrategies$1"
+    ],
+    "description": "Type: { [key: string]: Function }.\n\nDefault: {}.\n\nDefine custom merging strategies for options.\n\nThe merge strategy receives the value of that option defined on the parent and child instances as the first and second arguments, respectively.\n\nThe context Vue instance is passed as the third argument.\n\n"
+  },
+  "Vue.config.devtools": {
+    "prefix": "Vue.config.devtools",
+    "body": [
+      "Vue.config.devtools = ${true}"
+    ],
+    "description": "Type: boolean.\n\nDefault: true (false in production builds).\n\nConfigure whether to allow vue-devtools inspection.\n\nThis option’s default value is true in development builds and false in production builds.\n\nYou can set it to true to enable inspection for production builds"
+  },
+  "Vue.config.errorHandler": {
+    "prefix": "Vue.config.errorHandler",
+    "body": [
+      "Vue.config.errorHandler = function (err, vm, info) {",
+      "\t${1:// handle error}",
+      "}"
+    ],
+    "description": "Type: Function.\n\nDefault: undefined.\n\nAssign a handler for uncaught errors during component render and watchers.\n\nThe handler gets called with the error and the Vue instance.\n\n"
+  },
+  "Vue.config.warnHandler": {
+    "prefix": "Vue.config.warnHandler",
+    "body": [
+      "Vue.config.warnHandler = function (msg, vm, trace) {",
+      "\t${1:// handle warning}",
+      "}"
+    ],
+    "description": "Type: Function.\n\nDefault: undefined.\n\nAssign a custom handler for runtime Vue warnings.\n\nNote this only works during development and is ignored in production.\n\n"
+  },
+  "Vue.config.ignoredElements": {
+    "prefix": "Vue.config.ignoredElements",
+    "body": [
+      "Vue.config.ignoredElements = [",
+      "\t'${1}'",
+      "]$0"
+    ],
+    "description": "Type: Array<string | RegExp>.\n\nDefault: [].\n\nMake Vue ignore custom elements defined outside of Vue (e.g., using the Web Components APIs).\n\nOtherwise, it will throw a warning about an Unknown custom element, assuming that you forgot to register a global component or misspelled a component name.\n\n"
+  },
+  "Vue.config.keyCodes": {
+    "prefix": "Vue.config.keyCodes",
+    "body": [
+      "Vue.config.keyCodes = {",
+      "\t${1:// camelCase won`t work}",
+      "}"
+    ],
+    "description": "Type: { [key: string]: number | Array<number> }.\n\nDefault: {}.\n\nDefine custom key alias(es) for v-on.\n\n"
+  },
+  "Vue.config.performance": {
+    "prefix": "Vue.config.performance",
+    "body": [
+      "Vue.config.performance = ${true}"
+    ],
+    "description": "Type: boolean.\n\nDefault: false (from 2.2.3+).\n\nSet this to true to enable component init, compile, render and patch performance tracing in the browser devtool timeline.\n\nOnly works in development mode and in browsers that support the performance.mark API.\n\n"
+  },
+  "Vue.config.productionTip": {
+    "prefix": "Vue.config.productionTip",
+    "body": [
+      "Vue.config.productionTip = ${false}"
+    ],
+    "description": "Type: boolean.\n\nDefault: true.\n\nSet this to false to prevent the production tip on Vue startup.\n\n"
+  },
+  // Vue Global API
+  "Vue.extend": {
+    "prefix": "Vue.extend",
+    "body": [
+      "Vue.extend({",
+      "\ttemplate:${template}",
+      "})"
+    ],
+    "description": "Vue.extend( options ).\n\nCreate a “subclass” of the base Vue constructor.\n\nThe argument should be an object containing component options.\n\nThe special case to note here is the data option - it must be a function when used with Vue.extend().\n\n"
+  },
+  "Vue.nextTick": {
+    "prefix": "Vue.next.tick",
+    "body": [
+      "Vue.nextTick({",
+      "\t$1",
+      "})"
+    ],
+    "description": "Vue.nextTick( [callback, context] ).\n\nDefer the callback to be executed after the next DOM update cycle.\n\nUse it immediately after you’ve changed some data to wait for the DOM update.\n\nReturns a Promise if no callback is provided and Promise is supported in the execution environment.\n\n"
+  },
+  "Vue.set": {
+    "prefix": "Vue.set",
+    "body": [
+      "Vue.set(${target}, ${key}, ${value})"
+    ],
+    "description": "Vue.set( target, key, value ).\n\nSet a property on an object.\n\nIf the object is reactive, ensure the property is created as a reactive property and trigger view updates.\n\nThis is primarily used to get around the limitation that Vue cannot detect property additions.\n\nNote the object cannot be a Vue instance, or the root data object of a Vue instance.\n\n"
+  },
+  "Vue.delete": {
+    "prefix": "Vue.delete",
+    "body": [
+      "Vue.delete(${target}, ${key})"
+    ],
+    "description": "Vue.delete( target, key ).\n\nDelete a property on an object.\n\nIf the object is reactive, ensure the deletion triggers view updates.\n\nThis is primarily used to get around the limitation that Vue cannot detect property deletions, but you should rarely need to use it.\n\n"
+  },
+  "Vue.directive": {
+    "prefix": "Vue.directive",
+    "body": [
+      "Vue.directive(${1:id}${2:, [definition]})"
+    ],
+    "description": "Vue.directive( id, [definition] ).\n\nRegister or retrieve a global directive.\n\n"
+  },
+  "Vue.filter": {
+    "prefix": "Vue.filter",
+    "body": [
+      "Vue.filter(${1:id}${2:, [definition]})"
+    ],
+    "description": "Vue.filter( id, [definition] ).\n\nRegister or retrieve a global filter.\n\n"
+  },
+  "Vue.component": {
+    "prefix": "Vue.component",
+    "body": [
+      "Vue.component(${1:id}${2:, [definition]})$0"
+    ],
+    "description": "Vue.component( id, [definition] ).\n\nRegister or retrieve a global component.\n\nRegistration also automatically sets the component’s name with the given id.\n\n"
+  },
+  "Vue.use": {
+    "prefix": "Vue.use",
+    "body": [
+      "Vue.use(${plugin})$0"
+    ],
+    "description": "Vue.use( plugin ).\n\nInstall a Vue.js plugin.\n\nIf the plugin is an Object, it must expose an install method.\n\nIf it is a function itself, it will be treated as the install method.\n\nThe install method will be called with Vue as the argument.\n\n"
+  },
+  "Vue.mixin": {
+    "prefix": "Vue.mixin",
+    "body": [
+      "Vue.mixin(${mixin})"
+    ],
+    "description": "Vue.mixin( mixin ).\n\nApply a mixin globally, which affects every Vue instance created afterwards.\n\nThis can be used by plugin authors to inject custom behavior into components.\n\nNot recommended in application code.\n\n"
+  },
+  "Vue.compile": {
+    "prefix": "Vue.compile",
+    "body": [
+      "Vue.compile(${template})"
+    ],
+    "description": "Vue.compile( template ).\n\nCompiles a template string into a render function.\n\nOnly available in the full build.\n\n"
+  },
+  "Vue.version": {
+    "prefix": "Vue.version",
+    "body": [
+      "Vue.version.split('.')[$1]$0"
+    ],
+    "description": "Vue.version.split('.')[].\n\nProvides the installed version of Vue as a string.\n\nThis is especially useful for community plugins and components, where you might use different strategies for different versions.\n\n"
+  },
+  // Vue Options / Data
+  "data": {
+    "prefix": "data",
+    "body": [
+      "data() {",
+      "\treturn {",
+      "\t\t${1:key}: ${2:value},$3",
+      "\t}",
+      "},"
+    ],
+    "description": "Type: Object | Function.\n\nRestriction: Only accepts Function when used in a component definition.\n\nThe data object for the Vue instance.\n\nVue will recursively convert its properties into getter/setters to make it “reactive”.\n\n"
+  },
+  "vdata": {
+    "prefix": "vdata",
+    "body": [
+      "data() {",
+      "\treturn {",
+      "\t\t${1:key}: ${2:value},$3",
+      "\t}",
+      "},"
+    ],
+    "description": "Type: Object | Function.\n\nRestriction: Only accepts Function when used in a component definition.\n\nThe data object for the Vue instance.\n\nVue will recursively convert its properties into getter/setters to make it “reactive”.\n\n"
+  },
+  "props": {
+    "prefix": "props",
+    "body": [
+      "props: {",
+      "\t${1:key}: ${2:value},$3",
+      "},"
+    ],
+    "description": "Type: Array<string> | Object.\n\nA list/hash of attributes that are exposed to accept data from the parent component.\n\nIt has an Array-based simple syntax and an alternative Object-based syntax that allows advanced configurations such as type checking, custom validation and default values.\n\n"
+  },
+  "vprops": {
+    "prefix": "vprops",
+    "body": [
+      "props: {",
+      "\t${1:key}: ${2:value},$3",
+      "},"
+    ],
+    "description": "Type: Array<string> | Object.\n\nA list/hash of attributes that are exposed to accept data from the parent component.\n\nIt has an Array-based simple syntax and an alternative Object-based syntax that allows advanced configurations such as type checking, custom validation and default values.\n\n"
+  },
+  "propsData": {
+    "prefix": "propsData",
+    "body": [
+      "propsData: {",
+      "\t${1:key}: ${2:value},$3",
+      "},"
+    ],
+    "description": "Type: { [key: string]: any }.\n\nRestriction: only respected in instance creation via new.\n\nPass props to an instance during its creation.\n\nThis is primarily intended to make unit testing easier.\n\n"
+  },
+  "computed": {
+    "prefix": "computed",
+    "body": [
+      "computed: {",
+      "\t${1:key}() {",
+      "\t\t$2return ${3:value}",
+      "\t},$4",
+      "},"
+    ],
+    "description": "Type: { [key: string]: Function | { get: Function, set: Function } }.\n\nComputed properties to be mixed into the Vue instance.\n\nAll getters and setters have their this context automatically bound to the Vue instance.\n\n"
+  },
+  "methods": {
+    "prefix": "methods",
+    "body": [
+      "methods: {",
+      "\t${1:key}() {",
+      "\t\t${0}",
+      "\t},$3",
+      "},"
+    ],
+    "description": "Type: { [key: string]: Function }.\n\nMethods to be mixed into the Vue instance.\n\nYou can access these methods directly on the VM instance, or use them in directive expressions.\n\nAll methods will have their this context automatically bound to the Vue instance.\n\n"
+  },
+  "vmethods": {
+    "prefix": "vm.$ethods",
+    "body": [
+      "methods: {",
+      "\t${1:key}() {",
+      "\t\t${0}",
+      "\t},$3",
+      "},"
+    ],
+    "description": "Type: { [key: string]: Function }.\n\nMethods to be mixed into the Vue instance.\n\nYou can access these methods directly on the VM instance, or use them in directive expressions.\n\nAll methods will have their this context automatically bound to the Vue instance.\n\n"
+  },
+  "watch": {
+    "prefix": "watch",
+    "body": [
+      "watch: {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: { [key: string]: string | Function | Object }.\n\nAn object where keys are expressions to watch and values are the corresponding callbacks.\n\nThe value can also be a string of a method name, or an Object that contains additional options.\n\nThe Vue instance will call $watch() for each entry in the object at instantiation.\n\n"
+  },
+  // Vue Options / DOM
+  "el": {
+    "prefix": "el",
+    "body": [
+      "el: '$1',"
+    ],
+    "description": "Type: string | HTMLElement.\n\nRestriction: only respected in instance creation via new.\n\nProvide the Vue instance an existing DOM element to mount on.\n\nIt can be a CSS selector string or an actual HTMLElement.\n\n"
+  },
+  "template": {
+    "prefix": "template",
+    "body": [
+      "template: `$1`,"
+    ],
+    "description": "Type: string.\n\nA string template to be used as the markup for the Vue instance.\n\nThe template will replace the mounted element.\n\nAny existing markup inside the mounted element will be ignored, unless content distribution slots are present in the template.\n\nIf the string starts with # it will be used as a querySelector and use the selected element’s innerHTML as the template string.\n\nThis allows the use of the common <script type=\"x-template\"> trick to include templates.\n\n"
+  },
+  "render": {
+    "prefix": "render",
+    "body": [
+      "render (h) {",
+      "\t$1return h($2)",
+      "},"
+    ],
+    "description": "Type: (createElement: () => VNode) => VNode.\n\nAn alternative to string templates allowing you to leverage the full programmatic power of JavaScript.\n\nThe render function receives a createElement method as it’s first argument used to create VNodes.\n\nIf the component is a functional component, the render function also receives an extra argument context, which provides access to contextual data since functional components are instance-less.\n\n"
+  },
+  "renderError": {
+    "prefix": "renderError",
+    "body": [
+      "renderError (h, err) {",
+      "\t$1return h($2)",
+      "},"
+    ],
+    "description": "Type: (createElement: () => VNode, error: Error) => VNode.\n\nOnly works in development mode.\n\nProvide an alternative render output when the default render function encounters an error.\n\nThe error will be passed to renderError as the second argument.\n\nThis is particularly useful when used together with hot-reload.\n\n"
+  },
+  // Vue Options / Lifecycle Hooks
+  "beforeCreate": {
+    "prefix": "beforeCreate",
+    "body": [
+      "beforeCreate() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled synchronously immediately after the instance has been initialized, before data observation and event/watcher setup.\n\n"
+  },
+  "created": {
+    "prefix": "created",
+    "body": [
+      "created() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled synchronously after the instance is created.\n\nAt this stage, the instance has finished processing the options which means the following have been set up: data observation, computed properties, methods, watch/event callbacks.\n\nHowever, the mounting phase has not been started, and the $el property will not be available yet.\n\n"
+  },
+  "beforeMount": {
+    "prefix": "beforeMount",
+    "body": [
+      "beforeMount() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled right before the mounting begins: the render function is about to be called for the first time.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "mounted": {
+    "prefix": "mounted",
+    "body": [
+      "mounted() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled after the instance has been mounted, where el is replaced by the newly created vm.$el.\n\nIf the root instance is mounted to an in-document element, vm.$el will also be in-document when mounted is called.\n\nNote that mounted does not guarantee that all child components have also been mounted.\n\nIf you want to wait until the entire view has been rendered, you can use vm.$nextTick inside of mounted.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "beforeUpdate": {
+    "prefix": "beforeUpdate",
+    "body": [
+      "beforeUpdate() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled when the data changes, before the virtual DOM is re-rendered and patched.\n\nYou can perform further state changes in this hook and they will not trigger additional re-renders.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "updated": {
+    "prefix": "updated",
+    "body": [
+      "updated() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled after a data change causes the virtual DOM to be re-rendered and patched.\n\nThe component’s DOM will have been updated when this hook is called, so you can perform DOM-dependent operations here.\n\nHowever, in most cases you should avoid changing state inside the hook.\n\nTo react to state changes, it’s usually better to use a computed property or watcher instead..\n\nNote that updated does not guarantee that all child components have also been re-rendered.\n\nIf you want to wait until the entire view has been re-rendered, you can use vm.$nextTick inside of updated.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "activated": {
+    "prefix": "activated",
+    "body": [
+      "activated() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled when a kept-alive component is activated.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "deactivated": {
+    "prefix": "deactivated",
+    "body": [
+      "deactivated() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled when a kept-alive component is deactivated.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "beforeDestroy": {
+    "prefix": "beforeDestroy",
+    "body": [
+      "beforeDestroy() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled right before a Vue instance is destroyed.\n\nAt this stage the instance is still fully functional.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "destroyed": {
+    "prefix": "destroyed",
+    "body": [
+      "destroyed() {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: Function.\n\nCalled after a Vue instance has been destroyed.\n\nWhen this hook is called, all directives of the Vue instance have been unbound, all event listeners have been removed, and all child Vue instances have also been destroyed.\n\nThis hook is not called during server-side rendering.\n\n"
+  },
+  "errorCaptured ": {
+    "prefix": "errorCaptured ",
+    "body": [
+      "errorCaptured (err, vm, info) {",
+      "\t$1",
+      "},"
+    ],
+    "description": "Type: (err: Error, vm: Component, info: string) => ?boolean.\n\nCalled when an error from any descendent component is captured.\n\nThe hook receives three arguments: the error, the component instance that triggered the error, and a string containing information on where the error was captured.\n\nThe hook can return false to stop the error from propagating further.\n\n"
+  },
+  // Vue Options / Assets
+  "directives": {
+    "prefix": "directives",
+    "body": [
+      "directives: { $1 },"
+    ],
+    "description": "Type: Object.\n\nA hash of directives to be made available to the Vue instance.\n\n"
+  },
+  "filters": {
+    "prefix": "filters",
+    "body": [
+      "filters: { $1 },"
+    ],
+    "description": "Type: Object.\n\nA hash of filters to be made available to the Vue instance.\n\n"
+  },
+  "components": {
+    "prefix": "components",
+    "body": [
+      "components: { $1 },"
+    ],
+    "description": "Type: Object.\n\nA hash of components to be made available to the Vue instance.\n\n"
+  },
+  // Vue Options / Composition
+  "parent": {
+    "prefix": "parent",
+    "body": [
+      "parent: $1,"
+    ],
+    "description": "Type: Vue instance.\n\nSpecify the parent instance for the instance to be created.\n\nEstablishes a parent-child relationship between the two.\n\nThe parent will be accessible as this.$parent for the child, and the child will be pushed into the parent’s $children array.\n\n"
+  },
+  "mixins": {
+    "prefix": "mixins",
+    "body": [
+      "mixins: [$1],"
+    ],
+    "description": "Type: Array<Object>.\n\nThe mixins option accepts an array of mixin objects.\n\nThese mixin objects can contain instance options like normal instance objects, and they will be merged against the eventual options using the same option merging logic in Vue.extend().\n\ne.g.\n\nIf your mixin contains a created hook and the component itself also has one, both functions will be called.\n\nMixin hooks are called in the order they are provided, and called before the component’s own hooks.\n\n"
+  },
+  "extends": {
+    "prefix": "extends",
+    "body": [
+      "extends: $1,"
+    ],
+    "description": "Type: Object | Function.\n\nAllows declaratively extending another component (could be either a plain options object or a constructor) without having to use Vue.extend.\n\nThis is primarily intended to make it easier to extend between single file components.\n\nThis is similar to mixins, the difference being that the component’s own options takes higher priority than the source component being extended.\n\n"
+  },
+  "provide": {
+    "prefix": "provide",
+    "body": [
+      "provide: $1,"
+    ],
+    "description": "Type: Object | () => Object.\n\nThe provide option should be an object or a function that returns an object.\n\nThis object contains the properties that are available for injection into its descendants.\n\nNote: the provide and inject bindings are NOT reactive.\n\nThis is intentional.\n\nHowever, if you pass down an observed object, properties on that object do remain reactive.\n\n"
+  },
+  "inject": {
+    "prefix": "inject",
+    "body": [
+      "inject: $1,"
+    ],
+    "description": "Type: Array<string> | { [key: string]: string | Symbol | Object }.\n\nThe inject options should be either an Array of strings or an object where the keys stand for the local binding name, and the value being the key (string or Symbol) to search for in available injections.\n\nNote: the provide and inject bindings are NOT reactive.\n\nThis is intentional.\n\nHowever, if you pass down an observed object, properties on that object do remain reactive.\n\n"
+  },
+  // Vue Options / Misc
+  "name": {
+    "prefix": "name",
+    "body": [
+      "name: '$1',"
+    ],
+    "description": "Type: string.\n\nRestriction: only respected when used as a component option.\n\nAllow the component to recursively invoke itself in its template.\n\nNote that when a component is registered globally with Vue.component(), the global ID is automatically set as its name.\n\n"
+  },
+  "delimiters": {
+    "prefix": "delimiters",
+    "body": [
+      "delimiters: ['${1:{{}', '${2:}}}'],"
+    ],
+    "description": "Type: Array<string>.\n\nDefault: [\"{{\", \"}}\"].\n\nThis option is only available in the full build, with in-browser compilation.\n\nChange the plain text interpolation delimiters.\n\n"
+  },
+  "functional": {
+    "prefix": "functional",
+    "body": [
+      "functional: ${true},"
+    ],
+    "description": "Type: boolean.\n\nCauses a component to be stateless (no data) and instanceless (no this context).\n\nThey are only a render function that returns virtual nodes making them much cheaper to render.\n\n"
+  },
+  "model": {
+    "prefix": "model",
+    "body": [
+      "model: { prop: '${value}', event: '${input}' },"
+    ],
+    "description": "Type: { prop?: string, event?: string }.\n\nAllows a custom component to customize the prop and event used when it’s used with v-model.\n\nBy default, v-model on a component uses value as the prop and input as the event, but some input types such as checkboxes and radio buttons may want to use the value prop for a different purpose.\n\nUsing the model option can avoid the conflict in such cases.\n\n"
+  },
+  "inheritAttrs": {
+    "prefix": "inheritAttrs",
+    "body": [
+      "inheritAttrs: ${false},"
+    ],
+    "description": "Type: boolean.\n\nDefault: true.\n\nBy default, parent scope attribute bindings that are not recognized as props will “fallthrough” and be applied to the root element of the child component as normal HTML attributes.\n\nWhen authoring a component that wraps a target element or another component, this may not always be the desired behavior.\n\nBy setting inheritAttrs to false, this default behavior can be disabled.\n\nThe attributes are available via the $attrs instance property (also new in 2.4) and can be explicitly bound to a non-root element using v-bind.\n\nNote: this option does not affect class and style bindings.\n\n"
+  },
+  "comments": {
+    "prefix": "comments",
+    "body": [
+      "comments: ${true},"
+    ],
+    "description": "Type: boolean.\n\nDefault: false.\n\nThis option is only available in the full build, with in-browser compilation.\n\nWhen set to true, will preserve and render HTML comments found in templates.\n\nThe default behavior is discarding them.\n\n"
+  },
+  // Vue Instance Properties
+  "vm.$data": {
+    "prefix": "vm.$data",
+    "body": [
+      "${vm}.\\$data"
+    ],
+    "description": "Type: Object.\n\nThe data object that the Vue instance is observing.\n\nThe Vue instance proxies access to the properties on its data object.\n\n"
+  },
+  "vm.$props": {
+    "prefix": "vm.$props",
+    "body": [
+      "${vm}.\\$props"
+    ],
+    "description": "Type: Object.\n\nAn object representing the current props a component has received.\n\nThe Vue instance proxies access to the properties on its props object.\n\n"
+  },
+  "vm.$el": {
+    "prefix": "vm.$el",
+    "body": [
+      "${vm}.\\$el"
+    ],
+    "description": "Type: HTMLElement.\n\nRead only.\n\nThe root DOM element that the Vue instance is managing.\n\n"
+  },
+  "vm.$options": {
+    "prefix": "vm.$options",
+    "body": [
+      "${vm}.\\$options"
+    ],
+    "description": "Type: Object.\n\nRead only.\n\nThe instantiation options used for the current Vue instance.\n\nThis is useful when you want to include custom properties in the options.\n\n"
+  },
+  "vm.$parent": {
+    "prefix": "vm.$parent",
+    "body": [
+      "${vm}.\\$parent"
+    ],
+    "description": "Type: Vue instance.\n\nRead only.\n\nThe parent instance, if the current instance has one.\n\n"
+  },
+  "vm.$root": {
+    "prefix": "vm.$root",
+    "body": [
+      "${vm}.\\$root"
+    ],
+    "description": "Type: Vue instance.\n\nRead only.\n\nThe root Vue instance of the current component tree.\n\nIf the current instance has no parents this value will be itself.\n\n"
+  },
+  "vm.$children": {
+    "prefix": "vm.$children",
+    "body": [
+      "${vm}.\\$children"
+    ],
+    "description": "Type: Array<Vue instance>.\n\nRead only.\n\nThe direct child components of the current instance.\n\nNote there’s no order guarantee for $children, and it is not reactive.\n\nIf you find yourself trying to use $children for data binding, consider using an Array and v-for to generate child components, and use the Array as the source of truth.\n\n"
+  },
+  "vm.$slots": {
+    "prefix": "vm.$slots",
+    "body": [
+      "${vm}.\\$slots"
+    ],
+    "description": "Type: { [name: string]: ?Array<VNode> }.\n\nRead only.\n\nUsed to programmatically access content distributed by slots.\n\nEach named slot has its own corresponding property (e.g.\n\nthe contents of slot=\"foo\" will be found at vm.$slots.foo).\n\nThe default property contains any nodes not included in a named slot.\n\nAccessing vm.$slots is most useful when writing a component with a render function.\n\n"
+  },
+  "vm.$scopedSlots": {
+    "prefix": "vm.$scopedSlots",
+    "body": [
+      "${vm}.\\$scopedSlots"
+    ],
+    "description": "Type: { [name: string]: props => VNode | Array<VNode> }.\n\nRead only.\n\nUsed to programmatically access scoped slots.\n\nFor each slot, including the default one, the object contains a corresponding function that returns VNodes.\n\nAccessing vm.$scopedSlots is most useful when writing a component with a render function.\n\n"
+  },
+  "vm.$refs": {
+    "prefix": "vm.$refs",
+    "body": [
+      "${vm}.\\$refs"
+    ],
+    "description": "Type: Object.\n\nRead only.\n\nAn object that holds child components that have ref registered.\n\n"
+  },
+  "vm.$isServer": {
+    "prefix": "vm.$isServer",
+    "body": [
+      "${vm}.\\$isServer"
+    ],
+    "description": "Type: boolean.\n\nRead only.\n\nWhether the current Vue instance is running on the server.\n\n"
+  },
+  "vm.$attrs": {
+    "prefix": "vm.$attrs",
+    "body": [
+      "${vm}.\\$attrs"
+    ],
+    "description": "Type: { [key: string]: string }.\n\nRead only.\n\nContains parent-scope attribute bindings (except for class and style) that are not recognized (and extracted) as props.\n\nWhen a component doesn’t have any declared props, this essentially contains all parent-scope bindings (except for class and style), and can be passed down to an inner component via v-bind=\"$attrs\" - useful when creating higher-order components.\n\n"
+  },
+  "vm.$listeners": {
+    "prefix": "vm.$listeners",
+    "body": [
+      "${vm}.\\$listeners"
+    ],
+    "description": "Type: { [key: string]: Function | Array<Function> }.\n\nRead only.\n\nContains parent-scope v-on event listeners (without .native modifiers).\n\nThis can be passed down to an inner component via v-on=\"$listeners\" - useful when creating higher-order components.\n\n"
+  },
+  // Vue Instance Methods / Data
+  "vm.$watch": {
+    "prefix": "vm.$watch",
+    "body": [
+      "${vm}.\\$watch(${expOrFn}, ${callback}, {${options}})"
+    ],
+    "description": "vm.$watch( expOrFn, callback, [options] ).\n\nWatch an expression or a computed function on the Vue instance for changes.\n\nThe callback gets called with the new value and the old value.\n\nThe expression only accepts dot-delimited paths.\n\nFor more complex expressions, use a function instead.\n\nNote: when mutating (rather than replacing) an Object or an Array, the old value will be the same as new value because they reference the same Object/Array.\n\nVue doesn’t keep a copy of the pre-mutate value.\n\nOption: deep: To also detect nested value changes inside Objects, you need to pass in deep: true in the options argument.\n\nNote that you don’t need to do so to listen for Array mutations.\n\nOption: immediate: Passing in immediate: true in the option will trigger the callback immediately with the current value of the expression.\n\n"
+  },
+  "vm.$set": {
+    "prefix": "vm.$set",
+    "body": [
+      "${vm}.\\$set(${object}, ${key}, ${value})"
+    ],
+    "description": "vm.$set( object, key, value ).\n\nReturns: the set value.\n\nThis is the alias of the global Vue.set.\n\n"
+  },
+  "vm.$delete": {
+    "prefix": "vm.$delete",
+    "body": [
+      "${vm}.\\$delete(${object}, ${key})"
+    ],
+    "description": "vm.$delete( object, key ).\n\nThis is the alias of the global Vue.delete.\n\n"
+  },
+  // Vue Instance Methods / Events
+  "vm.$on": {
+    "prefix": "vm.$on",
+    "body": [
+      "${vm}.\\$on('${event}', ${callback})"
+    ],
+    "description": "vm.$on( event, callback ).\n\nListen for a custom event on the current vm.\n\nEvents can be triggered by vm.$emit.\n\nThe callback will receive all the additional arguments passed into these event-triggering methods.\n\n"
+  },
+  "vm.$once": {
+    "prefix": "vm.$once",
+    "body": [
+      "${vm}.\\$once('${event}', ${callback})"
+    ],
+    "description": "vm.$once( event, callback ).\n\nListen for a custom event, but only once.\n\nThe listener will be removed once it triggers for the first time.\n\n"
+  },
+  "vm.$off": {
+    "prefix": "vm.$off",
+    "body": [
+      "${vm}.\\$off('${event}', ${callback})"
+    ],
+    "description": "vm.$off( [event, callback] ).\n\nRemove custom event listener(s).\n\nIf no arguments are provided, remove all event listeners; If only the event is provided, remove all listeners for that event; If both event and callback are given, remove the listener for that specific callback only.\n\n"
+  },
+  "vm.$emit": {
+    "prefix": "vm.$emit",
+    "body": [
+      "${vm}.\\$emit('${event}', ${payload})"
+    ],
+    "description": "vm.$emit( event, [...args] ).\n\nTrigger an event on the current instance.\n\nAny additional arguments will be passed into the listener’s callback function.\n\n"
+  },
+  // Vue Instance Methods / Lifecycle
+  "vm.$mount": {
+    "prefix": "vm.$mount",
+    "body": [
+      "${vm}.\\$mount(${elementOrSelector})"
+    ],
+    "description": "vm.$mount( [elementOrSelector] ).\n\nIf a Vue instance didn’t receive the el option at instantiation, it will be in “unmounted” state, without an associated DOM element.\n\nvm.$mount() can be used to manually start the mounting of an unmounted Vue instance.\n\nIf elementOrSelector argument is not provided, the template will be rendered as an off-document element, and you will have to use native DOM API to insert it into the document yourself.\n\nThe method returns the instance itself so you can chain other instance methods after it.\n\n"
+  },
+  "vm.$forceUpdate": {
+    "prefix": "vm.$forceUpdate",
+    "body": [
+      "${vm}.\\$forceUpdate()"
+    ],
+    "description": "vm.$forceUpdate().\n\nForce the Vue instance to re-render.\n\nNote it does not affect all child components, only the instance itself and child components with inserted slot content.\n\n"
+  },
+  "vm.$nextTick": {
+    "prefix": "vm.$nextTick",
+    "body": [
+      "${vm}.\\$nextTick(${callback})"
+    ],
+    "description": "vm.$nextTick( callback ).\n\nDefer the callback to be executed after the next DOM update cycle.\n\nUse it immediately after you’ve changed some data to wait for the DOM update.\n\nThis is the same as the global Vue.nextTick, except that the callback’s this context is automatically bound to the instance calling this method.\n\nNew in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment.\n\n"
+  },
+  "vm.$destroy": {
+    "prefix": "vm.$destroy",
+    "body": [
+      "${vm}.\\$destroy()"
+    ],
+    "description": "vm.$destroy().\n\nCompletely destroy a vm.\n\nClean up its connections with other existing vms, unbind all its directives, turn off all event listeners.\n\nTriggers the beforeDestroy and destroyed hooks.\n\n"
+  },
+  // this Properties
+  "this.$data": {
+    "prefix": "this.$data",
+    "body": [
+      "this.\\$data"
+    ],
+    "description": "Type: Object.\n\nThe data object that the Vue instance is observing.\n\nThe Vue instance proxies access to the properties on its data object.\n\n"
+  },
+  "this.$props": {
+    "prefix": "this.$props",
+    "body": [
+      "this.\\$props"
+    ],
+    "description": "Type: Object.\n\nAn object representing the current props a component has received.\n\nThe Vue instance proxies access to the properties on its props object.\n\n"
+  },
+  "this.$el": {
+    "prefix": "this.$el",
+    "body": [
+      "this.\\$el"
+    ],
+    "description": "Type: HTMLElement.\n\nRead only.\n\nThe root DOM element that the Vue instance is managing.\n\n"
+  },
+  "this.$options": {
+    "prefix": "this.$options",
+    "body": [
+      "this.\\$options"
+    ],
+    "description": "Type: Object.\n\nRead only.\n\nThe instantiation options used for the current Vue instance.\n\nThis is useful when you want to include custom properties in the options.\n\n"
+  },
+  "this.$parent": {
+    "prefix": "this.$parent",
+    "body": [
+      "this.\\$parent"
+    ],
+    "description": "Type: Vue instance.\n\nRead only.\n\nThe parent instance, if the current instance has one.\n\n"
+  },
+  "this.$root": {
+    "prefix": "this.$root",
+    "body": [
+      "this.\\$root"
+    ],
+    "description": "Type: Vue instance.\n\nRead only.\n\nThe root Vue instance of the current component tree.\n\nIf the current instance has no parents this value will be itself.\n\n"
+  },
+  "this.$children": {
+    "prefix": "this.$children",
+    "body": [
+      "this.\\$children"
+    ],
+    "description": "Type: Array<Vue instance>.\n\nRead only.\n\nThe direct child components of the current instance.\n\nNote there’s no order guarantee for $children, and it is not reactive.\n\nIf you find yourself trying to use $children for data binding, consider using an Array and v-for to generate child components, and use the Array as the source of truth.\n\n"
+  },
+  "this.$slots": {
+    "prefix": "this.$slots",
+    "body": [
+      "this.\\$slots"
+    ],
+    "description": "Type: { [name: string]: ?Array<VNode> }.\n\nRead only.\n\nUsed to programmatically access content distributed by slots.\n\nEach named slot has its own corresponding property (e.g.\n\nthe contents of slot=\"foo\" will be found at this.$slots.foo).\n\nThe default property contains any nodes not included in a named slot.\n\nAccessing this.$slots is most useful when writing a component with a render function.\n\n"
+  },
+  "this.$scopedSlots": {
+    "prefix": "this.$scopedSlots",
+    "body": [
+      "this.\\$scopedSlots"
+    ],
+    "description": "Type: { [name: string]: props => VNode | Array<VNode> }.\n\nRead only.\n\nUsed to programmatically access scoped slots.\n\nFor each slot, including the default one, the object contains a corresponding function that returns VNodes.\n\nAccessing this.$scopedSlots is most useful when writing a component with a render function.\n\n"
+  },
+  "this.$refs": {
+    "prefix": "this.$refs",
+    "body": [
+      "this.\\$refs"
+    ],
+    "description": "Type: Object.\n\nRead only.\n\nAn object that holds child components that have ref registered.\n\n"
+  },
+  "this.$isServer": {
+    "prefix": "this.$isServer",
+    "body": [
+      "this.\\$isServer"
+    ],
+    "description": "Type: boolean.\n\nRead only.\n\nWhether the current Vue instance is running on the server.\n\n"
+  },
+  "this.$attrs": {
+    "prefix": "this.$attrs",
+    "body": [
+      "this.\\$attrs"
+    ],
+    "description": "Type: { [key: string]: string }.\n\nRead only.\n\nContains parent-scope attribute bindings (except for class and style) that are not recognized (and extracted) as props.\n\nWhen a component doesn’t have any declared props, this essentially contains all parent-scope bindings (except for class and style), and can be passed down to an inner component via v-bind=\"$attrs\" - useful when creating higher-order components.\n\n"
+  },
+  "this.$listeners": {
+    "prefix": "this.$listeners",
+    "body": [
+      "this.\\$listeners"
+    ],
+    "description": "Type: { [key: string]: Function | Array<Function> }.\n\nRead only.\n\nContains parent-scope v-on event listeners (without .native modifiers).\n\nThis can be passed down to an inner component via v-on=\"$listeners\" - useful when creating higher-order components.\n\n"
+  },
+  // this Methods / Data
+  "this.$watch": {
+    "prefix": "this.$watch",
+    "body": [
+      "this.\\$watch(${expOrFn}, ${callback}, {${options}})"
+    ],
+    "description": "this.$watch( expOrFn, callback, [options] ).\n\nWatch an expression or a computed function on the Vue instance for changes.\n\nThe callback gets called with the new value and the old value.\n\nThe expression only accepts dot-delimited paths.\n\nFor more complex expressions, use a function instead.\n\nNote: when mutating (rather than replacing) an Object or an Array, the old value will be the same as new value because they reference the same Object/Array.\n\nVue doesn’t keep a copy of the pre-mutate value.\n\nOption: deep: To also detect nested value changes inside Objects, you need to pass in deep: true in the options argument.\n\nNote that you don’t need to do so to listen for Array mutations.\n\nOption: immediate: Passing in immediate: true in the option will trigger the callback immediately with the current value of the expression.\n\n"
+  },
+  "this.$set": {
+    "prefix": "this.$set",
+    "body": [
+      "this.\\$set(${object}, ${key}, ${value})"
+    ],
+    "description": "this.$set( object, key, value ).\n\nReturns: the set value.\n\nThis is the alias of the global Vue.set.\n\n"
+  },
+  "this.$delete": {
+    "prefix": "this.$delete",
+    "body": [
+      "this.\\$delete(${object}, ${key})"
+    ],
+    "description": "this.$delete( object, key ).\n\nThis is the alias of the global Vue.delete.\n\n"
+  },
+  // this Methods / Events
+  "this.$on": {
+    "prefix": "this.$on",
+    "body": [
+      "this.\\$on('${event}', ${callback})"
+    ],
+    "description": "this.$on( event, callback ).\n\nListen for a custom event on the current this.\n\nEvents can be triggered by this.$emit.\n\nThe callback will receive all the additional arguments passed into these event-triggering methods.\n\n"
+  },
+  "this.$once": {
+    "prefix": "this.$once",
+    "body": [
+      "this.\\$once('${event}', ${callback})"
+    ],
+    "description": "this.$once( event, callback ).\n\nListen for a custom event, but only once.\n\nThe listener will be removed once it triggers for the first time.\n\n"
+  },
+  "this.$off": {
+    "prefix": "this.$off",
+    "body": [
+      "this.\\$off('${event}', ${callback})"
+    ],
+    "description": "this.$off( [event, callback] ).\n\nRemove custom event listener(s).\n\nIf no arguments are provided, remove all event listeners; If only the event is provided, remove all listeners for that event; If both event and callback are given, remove the listener for that specific callback only.\n\n"
+  },
+  "this.$emit": {
+    "prefix": "this.$emit",
+    "body": [
+      "this.\\$emit('${event}', ${payload})"
+    ],
+    "description": "this.$emit( event, [...args] ).\n\nTrigger an event on the current instance.\n\nAny additional arguments will be passed into the listener’s callback function.\n\n"
+  },
+  // this Methods / Lifecycle
+  "this.$mount": {
+    "prefix": "this.$mount",
+    "body": [
+      "this.\\$mount(${elementOrSelector})"
+    ],
+    "description": "this.$mount( [elementOrSelector] ).\n\nIf a Vue instance didn’t receive the el option at instantiation, it will be in “unmounted” state, without an associated DOM element.\n\nthis.$mount() can be used to manually start the mounting of an unmounted Vue instance.\n\nIf elementOrSelector argument is not provided, the template will be rendered as an off-document element, and you will have to use native DOM API to insert it into the document yourself.\n\nThe method returns the instance itself so you can chain other instance methods after it.\n\n"
+  },
+  "this.$forceUpdate": {
+    "prefix": "this.$forceUpdate",
+    "body": [
+      "this.\\$forceUpdate()"
+    ],
+    "description": "this.$forceUpdate().\n\nForce the Vue instance to re-render.\n\nNote it does not affect all child components, only the instance itself and child components with inserted slot content.\n\n"
+  },
+  "this.$nextTick": {
+    "prefix": "this.$nextTick",
+    "body": [
+      "this.\\$nextTick(${callback})"
+    ],
+    "description": "this.$nextTick( callback ).\n\nDefer the callback to be executed after the next DOM update cycle.\n\nUse it immediately after you’ve changed some data to wait for the DOM update.\n\nThis is the same as the global Vue.nextTick, except that the callback’s this context is automatically bound to the instance calling this method.\n\nNew in 2.1.0+: returns a Promise if no callback is provided and Promise is supported in the execution environment.\n\n"
+  },
+  "this.$destroy": {
+    "prefix": "this.$destroy",
+    "body": [
+      "this.\\$destroy()"
+    ],
+    "description": "this.$destroy().\n\nCompletely destroy a vm.\n\nClean up its connections with other existing vms, unbind all its directives, turn off all event listeners.\n\nTriggers the beforeDestroy and destroyed hooks.\n\n"
+  },
+  // Vue Router
+  "new VueRouter": {
+    "prefix": "new VueRouter",
+    "body": [
+      "const ${1:router} = new VueRouter({",
+      "\t$2",
+      "})$0"
+    ],
+    "description": "const router = newVueRouter({ })"
+  },
+  // Vue Router Constructor Options
+  "scrollBehavior": {
+    "prefix": "scrollBehavior",
+    "body": [
+      "scrollBehavior(to, from, savedPosition) {",
+      "\t${1:return { x: 0, y: 0 }}",
+      "},"
+    ],
+    "description": "scrollBehavior(to, from, savedPosition) { }"
+  },
+  "beforeEnter": {
+    "prefix": "beforeEnter",
+    "body": [
+      "beforeEnter(to, from, next) {",
+      "\t${1:// ...}",
+      "},"
+    ],
+    "description": "beforeEnter(to, from, next) { }"
+  },
+  // Vue Router Navigation Guards
+  "beforeRouteEnter": {
+    "prefix": "beforeRouteEnter",
+    "body": [
+      "beforeRouteEnter(to, from, next) {",
+      "\t$1next(vm => {",
+      "\t\t${2:// access to component instance via `vm`}",
+      "\t})",
+      "},"
+    ],
+    "description": "beforeRouteEnter(to, from, next) { }.\n\nCalled before the route that renders this component is confirmed.\n\nDoes NOT have access to `this` component instance, because it has not been created yet when this guard is called! However, you can access the instance by passing a callback to next.\n\nThe callback will be called when the navigation is confirmed, and the component instance will be passed to the callback as the argument:"
+  },
+  "beforeRouteUpdate": {
+    "prefix": "beforeRouteUpdate",
+    "body": [
+      "beforeRouteUpdate(to, from, next) {",
+      "\t$1next()",
+      "},"
+    ],
+    "description": "beforeRouteUpdate(to, from, next) { }.\n\nCalled when the route that renders this component has changed, but this component is reused in the new route.\n\nFor example, for a route with dynamic params `/foo/:id`, when we navigate between `/foo/1` and `/foo/2`, the same `Foo` component instance will be reused, and this hook will be called when that happens.\n\nHas access to `this` component instance.\n\n"
+  },
+  "beforeRouteLeave": {
+    "prefix": "beforeRouteLeave",
+    "body": [
+      "beforeRouteLeave(to, from, next) {",
+      "\t$1next()",
+      "},"
+    ],
+    "description": "beforeRouteLeave(to, from, next) { }.\n\nCalled when the route that renders this component is about to be navigated away from.\n\nHas access to `this` component instance.\n\n"
+  },
+  // Router Instance
+  "router.app": {
+    "prefix": "router.app",
+    "body": [
+      "router.app"
+    ],
+    "description": "Type: Vue instance.\n\nThe root Vue instance the router was injected into.\n\n"
+  },
+  "router.mode": {
+    "prefix": "router.mode",
+    "body": [
+      "router.mode"
+    ],
+    "description": "Type: string.\n\nThe mode the router is using.\n\n"
+  },
+  "router.currentRoute": {
+    "prefix": "router.currentRoute",
+    "body": [
+      "router.currentRoute"
+    ],
+    "description": "Type: Route.\n\nThe current route represented as a Route Object.\n\n"
+  },
+  "router.beforeEach": {
+    "prefix": "router.beforeEach",
+    "body": [
+      "router.beforeEach((to, from, next) => {\n\t${//to and from are Route Object,next() must be called to resolve the hook}\n\t$0\n})"
+    ],
+    "description": "router.beforeEach(guard).\n\nRegister global before guards"
+  },
+  "router.beforeResolve": {
+    "prefix": "router.beforeResolve",
+    "body": [
+      "router.beforeResolve((to, from, next) => {\n\t${//to and from are Route Object,next() must be called to resolve the hook}\n\t$0\n})"
+    ],
+    "description": "router.beforeResolve(guard).\n\nRegister global before resolve guards.\n\nThis is similar to router.beforeEach, with the difference that resolve guards will be called right before the navigation is confirmed, after all in-component guards and async route components are resolved.\n\n"
+  },
+  "router.afterEach": {
+    "prefix": "router.afterEach",
+    "body": [
+      "router.afterEach( ${route} => {\n\t${//these hooks do not get a next function and cannot affect the navigation}\n\t$0\n})"
+    ],
+    "description": "router.afterEach(guard).\n\nRegister global after guards"
+  },
+  "router.push": {
+    "prefix": "router.push",
+    "body": [
+      "router.push(${path})"
+    ],
+    "description": "router.push(location, onComplete?, onAbort?).\n\nTo navigate to a different URL.\n\nThis method pushes a new entry into the history stack.\n\n"
+  },
+  "router.replace": {
+    "prefix": "router.replace",
+    "body": [
+      "router.replace(${path})"
+    ],
+    "description": "router.replace(location, onComplete?, onAbort?).\n\nTo replaces the current URL.\n\n"
+  },
+  "router.go": {
+    "prefix": "router.go",
+    "body": [
+      "router.go(${number})"
+    ],
+    "description": "router.go(n).\n\nThis method takes a single integer as parameter that indicates by how many steps to go forwards or go backwards in the history stack, similar to window.history.go(n).\n\n"
+  },
+  "router.getMatchedComponents": {
+    "prefix": "router.getMatchedComponents",
+    "body": [
+      "router.getMatchedComponents(${path})"
+    ],
+    "description": "router.getMatchedComponents(location?).\n\nReturns an Array of the components (definition/constructor, not instances) matched by the provided location or the current route.\n\n"
+  },
+  "router.resolve": {
+    "prefix": "router.resolve",
+    "body": [
+      "router.resolve(${path})"
+    ],
+    "description": "router.resolve(location, current?, append?).\n\nReverse URL resolving.\n\nGiven location in form same as used in <router-link/>, returns object with the following resolved properties: { location: Location; route: Route; href: string; }.\n\n`current` is the current Route by default (most of the time you don't need to change this).\n\n`append` allows you to append the path to the current route (as with router-link).\n\n"
+  },
+  "router.addRoutes": {
+    "prefix": "router.addRoutes",
+    "body": [
+      "router.addRoutes(${routes})"
+    ],
+    "description": "router.addRoutes(routes).\n\nDynamically add more routes to the router.\n\nThe argument must be an Array using the same route config format with the routes constructor option.\n\n"
+  },
+  "router.onReady": {
+    "prefix": "router.onReady",
+    "body": [
+      "router.onReady(${callback}, #{errorCallback})"
+    ],
+    "description": "router.onReady(callback, [errorCallback]).\n\nThis method queues a callback to be called when the router has completed the initial navigation, which means it has resolved all async enter hooks and async components that are associated with the initial route.\n\nThis is useful in server-side rendering to ensure consistent output on both the server and the client.\n\nThe second argument errorCallback is only supported in 2.4+.\n\nIt will be called when the initial route resolution runs into an error (e.g.\n\nfailed to resolve an async component).\n\n"
+  },
+  "router.onError": {
+    "prefix": "router.onError",
+    "body": [
+      "router.onError(${callback})"
+    ],
+    "description": "router.onError(callback).\n\nRegister a callback which will be called when an error is caught during a route navigation.\n\nNote for an error to be called, it must be one of the following scenarios: The error is thrown synchronously inside a route guard function; The error is caught and asynchronously handled by calling next(err) inside a route guard function; An error occurred when trying to resolve an async component that is required to render a route.\n\n"
+  },
+  // this.$router
+  "this.$router.app": {
+    "prefix": "this.$router.app",
+    "body": [
+      "this.$router.app"
+    ],
+    "description": "Type: Vue instance.\n\nThe root Vue instance the router was injected into.\n\n"
+  },
+  "this.$router.mode": {
+    "prefix": "this.$router.mode",
+    "body": [
+      "this.$router.mode"
+    ],
+    "description": "Type: string.\n\nThe mode the router is using.\n\n"
+  },
+  "this.$router.currentRoute": {
+    "prefix": "this.$router.currentRoute",
+    "body": [
+      "this.$router.currentRoute"
+    ],
+    "description": "Type: Route.\n\nThe current route represented as a Route Object.\n\n"
+  },
+  "this.$router.beforeEach": {
+    "prefix": "this.$router.beforeEach",
+    "body": [
+      "this.$router.beforeEach((to, from, next) => {\n\t${//to and from are Route Object,next() must be called to resolve the hook}\n\t$0\n})"
+    ],
+    "description": "this.$router.beforeEach(guard).\n\nRegister global before guards"
+  },
+  "this.$router.beforeResolve": {
+    "prefix": "this.$router.beforeResolve",
+    "body": [
+      "this.$router.beforeResolve((to, from, next) => {\n\t${//to and from are Route Object,next() must be called to resolve the hook}\n\t$0\n})"
+    ],
+    "description": "this.$router.beforeResolve(guard).\n\nRegister global before resolve guards.\n\nThis is similar to router.beforeEach, with the difference that resolve guards will be called right before the navigation is confirmed, after all in-component guards and async route components are resolved.\n\n"
+  },
+  "this.$router.afterEach": {
+    "prefix": "this.$router.afterEach",
+    "body": [
+      "this.$router.afterEach( ${route} => {\n\t${//these hooks do not get a next function and cannot affect the navigation}\n\t$0\n})"
+    ],
+    "description": "this.$router.afterEach(guard).\n\nRegister global after guards"
+  },
+  "this.$router.push": {
+    "prefix": "this.$router.push",
+    "body": [
+      "this.$router.push(${path})"
+    ],
+    "description": "this.$router.push(location, onComplete?, onAbort?).\n\nTo navigate to a different URL.\n\nThis method pushes a new entry into the history stack.\n\n"
+  },
+  "this.$router.replace": {
+    "prefix": "this.$router.replace",
+    "body": [
+      "this.$router.replace(${path})"
+    ],
+    "description": "this.$router.replace(location, onComplete?, onAbort?).\n\nTo replaces the current URL.\n\n"
+  },
+  "this.$router.go": {
+    "prefix": "this.$router.go",
+    "body": [
+      "this.$router.go(${number})"
+    ],
+    "description": "this.$router.go(n).\n\nThis method takes a single integer as parameter that indicates by how many steps to go forwards or go backwards in the history stack, similar to window.history.go(n).\n\n"
+  },
+  "this.$router.getMatchedComponents": {
+    "prefix": "this.$router.getMatchedComponents",
+    "body": [
+      "this.$router.getMatchedComponents(${path})"
+    ],
+    "description": "this.$router.getMatchedComponents(location?).\n\nReturns an Array of the components (definition/constructor, not instances) matched by the provided location or the current route.\n\n"
+  },
+  "this.$router.resolve": {
+    "prefix": "this.$router.resolve",
+    "body": [
+      "this.$router.resolve(${path})"
+    ],
+    "description": "this.$router.resolve(location, current?, append?).\n\nReverse URL resolving.\n\nGiven location in form same as used in <router-link/>, returns object with the following resolved properties: { location: Location; route: Route; href: string; }.\n\n`current` is the current Route by default (most of the time you don't need to change this).\n\n`append` allows you to append the path to the current route (as with router-link).\n\n"
+  },
+  "this.$router.addRoutes": {
+    "prefix": "this.$router.addRoutes",
+    "body": [
+      "this.$router.addRoutes(${routes})"
+    ],
+    "description": "this.$router.addRoutes(routes).\n\nDynamically add more routes to the router.\n\nThe argument must be an Array using the same route config format with the routes constructor option.\n\n"
+  },
+  "this.$router.onReady": {
+    "prefix": "this.$router.onReady",
+    "body": [
+      "this.$router.onReady(${callback}, #{errorCallback})"
+    ],
+    "description": "this.$router.onReady(callback, [errorCallback]).\n\nThis method queues a callback to be called when the router has completed the initial navigation, which means it has resolved all async enter hooks and async components that are associated with the initial route.\n\nThis is useful in server-side rendering to ensure consistent output on both the server and the client.\n\nThe second argument errorCallback is only supported in 2.4+.\n\nIt will be called when the initial route resolution runs into an error (e.g.\n\nfailed to resolve an async component).\n\n"
+  },
+  "this.$router.onError": {
+    "prefix": "this.$router.onError",
+    "body": [
+      "this.$router.onError(${callback})"
+    ],
+    "description": "this.$router.onError(callback).\n\nRegister a callback which will be called when an error is caught during a route navigation.\n\nNote for an error to be called, it must be one of the following scenarios: The error is thrown synchronously inside a route guard function; The error is caught and asynchronously handled by calling next(err) inside a route guard function; An error occurred when trying to resolve an async component that is required to render a route.\n\n"
+  },
+  // this.$route
+  "this.$route.path": {
+    "prefix": "this.$route.path",
+    "body": [
+      "this.\\$route.path"
+    ],
+    "description": "Type: string.\n\nA string that equals the path of the current route, always resolved as an absolute path.\n\n"
+  },
+  "this.$route.params": {
+    "prefix": "this.$route.params",
+    "body": [
+      "this.\\$route.params"
+    ],
+    "description": "Type: Object.\n\nAn object that contains key/value pairs of dynamic segments and star segments.\n\nIf there are no params the value will be an empty object.\n\n"
+  },
+  "this.$route.query": {
+    "prefix": "this.$route.query",
+    "body": [
+      "this.\\$route.query"
+    ],
+    "description": "Type: Object.\n\nAn object that contains key/value pairs of the query string.\n\n"
+  },
+  "this.$route.hash": {
+    "prefix": "this.$route.hash",
+    "body": [
+      "this.\\$route.hash"
+    ],
+    "description": "Type: string.\n\nThe hash of the current route (without #), if it has one.\n\nIf no hash is present the value will be an empty string.\n\n"
+  },
+  "this.$route.fullPath": {
+    "prefix": "this.$route.fullPath",
+    "body": [
+      "this.\\$route.fullPath"
+    ],
+    "description": "Type: string.\n\nThe full resolved URL including query and hash.\n\n"
+  },
+  "this.$route.matched": {
+    "prefix": "this.$route.matched",
+    "body": [
+      "this.\\$route.matched"
+    ],
+    "description": "Type: Array<RouteRecord>.\n\nAn Array containing route records for all nested path segments of the current route.\n\nRoute records are the copies of the objects in the routes configuration Array.\n\n"
+  },
+  "this.$route.name": {
+    "prefix": "this.$route.name",
+    "body": [
+      "this.\\$route.name"
+    ],
+    "description": "Type: string.\n\n.\n\nThe name of the current route, if it has one.\n\n"
+  },
+  // Vuex (undone)
+  "newVuexStore": {
+    "prefix": "newVuexStore",
+    "body": [
+      "const ${1:store} = new Vuex.Store({",
+      "\t${2:// ...}",
+      "})"
+    ],
+    "description": "const store = new Vuex.Store({ })"
+  },
+  "state": {
+    "prefix": "state",
+    "body": [
+      "state"
+    ],
+    "description": "just a word"
+  },
+  "getters": {
+    "prefix": "getters",
+    "body": [
+      "getters"
+    ],
+    "description": "just a word"
+  },
+  "mutations": {
+    "prefix": "mutations",
+    "body": [
+      "mutations"
+    ],
+    "description": "just a word"
+  },
+  "actions": {
+    "prefix": "actions",
+    "body": [
+      "actions"
+    ],
+    "description": "just a word"
+  },
+  "modules": {
+    "prefix": "modules",
+    "body": [
+      "modules"
+    ],
+    "description": "just a word"
+  },
+  "plugins": {
+    "prefix": "plugins",
+    "body": [
+      "plugins"
+    ],
+    "description": "just a word"
+  },
+  "commit": {
+    "prefix": "commit",
+    "body": [
+      "commit"
+    ],
+    "description": "just a word"
+  },
+  "dispatch": {
+    "prefix": "dispatch",
+    "body": [
+      "dispatch"
+    ],
+    "description": "just a word"
+  },
+  "replaceState": {
+    "prefix": "replaceState",
+    "body": [
+      "replaceState"
+    ],
+    "description": "just a word"
+  },
+  "subscribe": {
+    "prefix": "subscribe",
+    "body": [
+      "subscribe"
+    ],
+    "description": "just a word"
+  },
+  "registerModule": {
+    "prefix": "registerModule",
+    "body": [
+      "registerModule"
+    ],
+    "description": "just a word"
+  },
+  "unregisterModule": {
+    "prefix": "unregisterModule",
+    "body": [
+      "unregisterModule"
+    ],
+    "description": "just a word"
+  },
+  "hotUpdate": {
+    "prefix": "hotUpdate",
+    "body": [
+      "hotUpdate"
+    ],
+    "description": "just a word"
+  },
+  "mapState": {
+    "prefix": "mapState",
+    "body": [
+      "mapState"
+    ],
+    "description": "just a word"
+  },
+  "mapGetters": {
+    "prefix": "mapGetters",
+    "body": [
+      "mapGetters"
+    ],
+    "description": "just a word"
+  },
+  "mapActions": {
+    "prefix": "mapActions",
+    "body": [
+      "mapActions"
+    ],
+    "description": "just a word"
+  },
+  "mapMutations": {
+    "prefix": "mapMutations",
+    "body": [
+      "mapMutations"
+    ],
+    "description": "just a word"
+  },
+  // Vue Server-Side Rendering
+  "renderer": {
+    "prefix": "renderer",
+    "body": [
+      "const ${renderer} = require('vue-server-renderer').createRenderer()"
+    ],
+    "description": "require('vue-server-renderer').createRenderer()"
+  },
+  "createRenderer": {
+    "prefix": "createRenderer",
+    "body": [
+      "createRenderer({",
+      "\t$1",
+      "})"
+    ],
+    "description": "createRenderer({ })"
+  },
+  "renderToString": {
+    "prefix": "renderToString",
+    "body": [
+      "renderToString"
+    ],
+    "description": "just a word"
+  },
+  "renderToStream": {
+    "prefix": "renderToStream",
+    "body": [
+      "renderToStream"
+    ],
+    "description": "just a word"
+  },
+  "createBundleRenderer": {
+    "prefix": "createBundleRenderer",
+    "body": [
+      "createBundleRenderer"
+    ],
+    "description": "just a word"
+  },
+  "bundleRenderer.renderToString": {
+    "prefix": "bundleRenderer.renderToString",
+    "body": [
+      "bundleRenderer.renderToString"
+    ],
+    "description": "just a word"
+  },
+  "bundleRenderer.renderToStream": {
+    "prefix": "bundleRenderer.renderToStream",
+    "body": [
+      "bundleRenderer.renderToStream"
+    ],
+    "description": "just a word"
+  },
+  "preventDefault": {
+    "prefix": "preventDefault",
+    "body": [
+      "preventDefault();",
+      "$1"
+    ],
+    "description": "preventDefault()"
+  },
+  "stopPropagation": {
+    "prefix": "stopPropagation",
+    "body": [
+      "stopPropagation();",
+      "$1"
+    ],
+    "description": "stopPropagation()"
+  }
 }
