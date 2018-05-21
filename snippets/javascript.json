@@ -49,7 +49,7 @@
         "prefix": "VueConfigWarnHandler",
         "body": [
             "Vue.config.warnHandler = function (msg, vm, trace) {",
-            "\t${1:// handle error}",
+            "\t${1:// handle warn}",
             "}"
         ],
         "description": "Vue.config.warnHandler"
@@ -86,7 +86,6 @@
         ],
         "description": "Vue.config.productionTip"
     },
-
     "extend": {
         "prefix": "vueExtend",
         "body": [
@@ -104,6 +103,17 @@
             "})"
         ],
         "description": "Vue.nextTick( callback, [context] )"
+    },
+    "nextTickThen": {
+        "prefix": "VueNextTickThen",
+        "body": [
+            "Vue.nextTick({",
+            "\t$1",
+            "}).then(function($2){",
+            "\t$3",
+            "})"
+        ],
+        "description": "Vue.nextTick( callback, [context] ).then(function(){ })"
     },
     "set": {
         "prefix": "VueSet",
@@ -150,7 +160,7 @@
     "mixin": {
         "prefix": "VueMixin",
         "body": [
-            "Vue.mixin(${1:mixin})"
+            "Vue.mixin({${1:mixin}})"
         ],
         "description": "Vue.mixin( mixin )"
     },
@@ -164,11 +174,10 @@
     "version": {
         "prefix": "VueVersion",
         "body": [
-            "Vue.version.split('.')[$1]$0"
+            "Vue.version$0"
         ],
         "description": "Vue.version.split('.')[]"
     },
-
     "data": {
         "prefix": "data",
         "body": [
@@ -218,7 +227,6 @@
         ],
         "description": "just a word"
     },
-
     "el": {
         "prefix": "el",
         "body": [
@@ -247,7 +255,6 @@
         ],
         "description": "just a word"
     },
-
     "beforeCreate": {
         "prefix": "beforeCreate",
         "body": [
@@ -318,7 +325,13 @@
         ],
         "description": "just a word"
     },
-
+    "errorCaptured": {
+        "prefix": "errorCaptured",
+        "body": [
+            "errorCaptured"
+        ],
+        "description": "just a word"
+    },
     "directives": {
         "prefix": "directives",
         "body": [
@@ -347,7 +360,6 @@
         ],
         "description": "just a word"
     },
-
     "parent": {
         "prefix": "parent",
         "body": [
@@ -383,7 +395,6 @@
         ],
         "description": "just a word"
     },
-
     "name": {
         "prefix": "name",
         "body": [
@@ -426,7 +437,6 @@
         ],
         "description": "just a word"
     },
-
     "vm.$data": {
         "prefix": "vmData",
         "body": [
@@ -520,7 +530,6 @@
         ],
         "description": "Type: { [key: string]: Function | Array<Function> }"
     },
-
     "vm.$watch": {
         "prefix": "vmWatch",
         "body": [
@@ -542,7 +551,6 @@
         ],
         "description": "vm.$delete( object, key )"
     },
-
     "vm.$on": {
         "prefix": "vmOn",
         "body": [
@@ -571,7 +579,6 @@
         ],
         "description": "vm.$emit( event, […args] )"
     },
-
     "vm.$mount": {
         "prefix": "vmMount",
         "body": [
@@ -600,7 +607,6 @@
         ],
         "description": "vm.$destroy()"
     },
-
     "renderer": {
         "prefix": "renderer",
         "body": [
@@ -652,15 +658,13 @@
         ],
         "description": "just a word"
     },
-
-
-    "preventDefault":{
-        "prefix":"preventDefault",
-        "body":[
+    "preventDefault": {
+        "prefix": "preventDefault",
+        "body": [
             "preventDefault();",
             "$1"
         ],
-        "description":"preventDefault()"
+        "description": "preventDefault()"
     },
     "stopPropagation": {
         "prefix": "stopPropagation",
@@ -668,9 +672,8 @@
             "stopPropagation();",
             "$1"
         ],
-        "description":"stopPropagation()"
+        "description": "stopPropagation()"
     },
-
     "newVueRouter": {
         "prefix": "newVueRouter",
         "body": [
@@ -788,7 +791,6 @@
         ],
         "description": "just a word"
     },
-
     "newVuexStore": {
         "prefix": "newVuexStore",
         "body": [

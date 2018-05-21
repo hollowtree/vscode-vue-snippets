@@ -34,15 +34,16 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `VueConfigProductionTip` | `Vue.config.productionTip = false` |
 | `vueExtend` | `Vue.extend( options )` |
 | `VueNextTick` | `Vue.nextTick( callback, [context] )` |
+| `VueNextTickThen` | `Vue.nextTick( callback, [context] ).then(function(){ })` |
 | `VueSet` | `Vue.set( target, key, value )` |
 | `VueDelete` | `Vue.delete( target, key )` |
 | `VueDirective` | `Vue.directive( id, [definition] )` |
 | `VueFilter` | `Vue.filter( id, [definition] )` |
 | `VueComponent` | `Vue.component( id, [definition] )` |
 | `VueUse` | `Vue.use( plugin )` |
-| `VueMixin` | `Vue.mixin( mixin )` |
+| `VueMixin` | `Vue.mixin({ mixin })` |
 | `VueCompile` | `Vue.compile( template )` |
-| `VueVersion` | `Vue.version.split('.')[]` |
+| `VueVersion` | `Vue.version` |
 | `vmData` | `vm.$data` |
 | `vmProps` | `vm.$props` |
 | `vmEl` | `vm.$el` |
@@ -55,7 +56,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `vmRefs` | `vm.$refs` |
 | `vmIsServer` | `vm.$isServer` |
 | `vmAttrs` | `vm.$attrs`|
-| `vmListeners` | `vm.$listeners`|
+| `vmListeners` | `vm.listeners`|
 | `vmWatch` | `vm.$watch( expOrFn, callback, [options] )` |
 | `vmSet` | `vm.$set( object, key, value )` |
 | `vmDelete` | `vm.$delete( object, key )` |
@@ -72,6 +73,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `preventDefault` | `preventDefault();` |
 | `stopPropagation` | `stopPropagation();` |
 
+<br />
 
 | Prefix | HTML Snippet Content |
 | ------ | ------------ |
@@ -80,12 +82,12 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `style` | `<style></style>` |
 | `vText` | `v-text=msg` |
 | `vHtml` | `v-html=html` |
-| `vIf` | `v-if` |
 | `vShow` | `v-show` |
+| `vIf` | `v-if` |
 | `vElse` | `v-else` |
 | `vElseIf` | `v-else-if` |
-| `vFor` | `v-for` |
-| `vForWithKey` | `v-for="" :key=""` |
+| `vForWithoutKey` | `v-for` |
+| `vFor` | `v-for="" :key=""` |
 | `vOn` | `v-on` |
 | `vBind` | `v-bind` |
 | `vModel` | `v-model` |
@@ -96,6 +98,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `ref` | `ref`|
 | `slotA` | `slot=""`|
 | `slotE` | `<slot></slot>`|
+| `slotScope` | `slot-scope=""`|
 | `component` | `<component :is=''></component>`|
 | `keepAlive` | `<keep-alive></keep-alive>` |
 | `transition` | `<transition></transition>` |
@@ -122,6 +125,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `leaveCancelledEvent` | `@leave-cancelled=''`|
 | `appearCancelledEvent` | `@appear-cancelled=''`|
 
+<br />
 
 | Prefix | Vue Router Snippet Content |
 | ------ | ------------ |
@@ -140,6 +144,7 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `beforeRouteLeave` | `beforeRouteLeave: (to, from, next) => { }` |
 | `scrollBehavior` | `scrollBehavior (to, from, savedPosition) { }` |
 
+<br />
 
 | Prefix | Vuex Snippet Content |
 | ------ | ------------ |
@@ -156,6 +161,9 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2018/05/22 (0.1.6)
+* Update sinppets
+
 ##### 2017/09/17 (0.1.5)
 * Fix and update sinppets
 

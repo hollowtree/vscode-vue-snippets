@@ -529,10 +529,6 @@
 							<key>include</key>
 							<string>source.sass</string>
 						</dict>
-						<dict>
-							<key>include</key>
-							<string>source.scss</string>
-						</dict>
 					</array>
 				</dict>
 			</array>
@@ -583,10 +579,6 @@
 					<string>(?=&lt;/(?i:style))</string>
 					<key>patterns</key>
 					<array>
-						<dict>
-							<key>include</key>
-							<string>source.sass</string>
-						</dict>
 						<dict>
 							<key>include</key>
 							<string>source.scss</string>
@@ -643,7 +635,7 @@
 					<array>
 						<dict>
 							<key>include</key>
-							<string>source.less</string>
+							<string>source.css.less</string>
 						</dict>
 					</array>
 				</dict>
@@ -829,7 +821,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?![^&gt;]*(?i:type.?=.?text/((?!javascript|babel).*)))</string>
+			<string>(&lt;)((?i:script))\b(?![^&gt;]*/&gt;)(?![^&gt;]*(?i:type.?=.?text/((?!javascript|babel|ecmascript).*)))</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
