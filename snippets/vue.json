@@ -8,6 +8,15 @@
         ],
         "description": "template element"
     },
+    "templateLang": {
+        "prefix": "templateLang",
+        "body": [
+            "<template lang=\"$1\">",
+            "\t$1",
+            "</template>"
+        ],
+        "description": "template element"
+    },
     "script": {
         "prefix": "script",
         "body": [

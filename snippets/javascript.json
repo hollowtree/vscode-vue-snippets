@@ -732,20 +732,20 @@
     "beforeRouteEnter": {
         "prefix": "beforeRouteEnter",
         "body": [
-            "beforeRouteEnter: (to, from, next) => {",
+            "beforeRouteEnter (to, from, next) {",
             "\t${1:// ...}",
             "}"
         ],
-        "description": "beforeRouteEnter: (to, from, next) => { }"
+        "description": "beforeRouteEnter (to, from, next) { }"
     },
     "beforeRouteLeave": {
         "prefix": "beforeRouteLeave",
         "body": [
-            "beforeRouteLeave: (to, from, next) => {",
+            "beforeRouteLeave (to, from, next) {",
             "\t${1:// ...}",
             "}"
         ],
-        "description": "beforeRouteLeave: (to, from, next) => { }"
+        "description": "beforeRouteLeave (to, from, next) { }"
     },
     "scrollBehavior": {
         "prefix": "scrollBehavior",

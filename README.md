@@ -140,8 +140,8 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `routerPush` | `router.push()` |
 | `routes` | `routes: []` |
 | `beforeEnter` | `beforeEnter: (to, from, next) => { }` |
-| `beforeRouteEnter` | `beforeRouteEnter: (to, from, next) => { }` |
-| `beforeRouteLeave` | `beforeRouteLeave: (to, from, next) => { }` |
+| `beforeRouteEnter` | `beforeRouteEnter (to, from, next) { }` |
+| `beforeRouteLeave` | `beforeRouteLeave (to, from, next) { }` |
 | `scrollBehavior` | `scrollBehavior (to, from, savedPosition) { }` |
 
 <br />
