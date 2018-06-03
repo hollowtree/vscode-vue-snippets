@@ -258,7 +258,7 @@
         "description": "Type: { [key: string]: Function }.\n\nMethods to be mixed into the Vue instance.\n\nYou can access these methods directly on the VM instance, or use them in directive expressions.\n\nAll methods will have their this context automatically bound to the Vue instance.\n\n"
     },
     "vmethods": {
-        "prefix": "vm.$ethods",
+        "prefix": "vm.$methods",
         "body": [
             "methods: {",
             "\t${1:key}() {",
