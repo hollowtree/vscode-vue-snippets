@@ -141,6 +141,13 @@
         ],
         "description": "component element"
     },
+    "is": {
+        "prefix": "is",
+        "body": [
+            "is=\"$1\"$0"
+        ],
+        "description": "is=''"
+    },
     "keep-alive": {
         "prefix": "keepAlive",
         "body": [
@@ -344,13 +351,6 @@
             "tag=\"$1\"$0"
         ],
         "description": "tag=''"
-    },
-    "is": {
-        "prefix": "is",
-        "body": [
-            "is=\"$1\"$0"
-        ],
-        "description": "is=''"
     },
     "type": {
         "prefix": "type",
