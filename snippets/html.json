@@ -1,34 +1,155 @@
 {
   // Vue Directives Enhanced
-  "v-for": {
-    "prefix": "v-for",
+  "v-text": {
+    "prefix": "vText",
     "body": [
-      "v-for=\"(${1:item}, ${2:index}) in ${3:items}\""
+      "v-text=\"${1:msg}\""
+    ],
+    "description": "Expects: string"
+  },
+  "v-html": {
+    "prefix": "vHtml",
+    "body": [
+      "v-html=\"${1:html}\""
+    ],
+    "description": "Expects: string"
+  },
+  "v-show": {
+    "prefix": "vShow",
+    "body": [
+      "v-show=\"${1:condition}\""
+    ],
+    "description": "Expects: any"
+  },
+  "v-if": {
+    "prefix": "vIf",
+    "body": [
+      "v-if=\"${1:condition}\""
+    ],
+    "description": "Expects: any"
+  },
+  "v-else": {
+    "prefix": "vElse",
+    "body": [
+      "v-else"
+    ],
+    "description": "Does not expect expression. previous sibling element must have v-if or v-else-if."
+  },
+  "v-else-if": {
+    "prefix": "vElseIf",
+    "body": [
+      "v-else-if=\"${1:condition}\""
+    ],
+    "description": "Expects: any. previous sibling element must have v-if or v-else-if."
+  },
+  "v-for": {
+    "prefix": "vFor",
+    "body": [
+      "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
     ],
     "description": "Expects: Array | Object | number | string"
   },
-  "v-for-with-key": {
-    "prefix": "v-for-with-key",
+  "v-for-with-index": {
+    "prefix": "vForWithIndex",
     "body": [
       "v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\""
     ],
     "description": "Expects: Array | Object | number | string"
   },
   "v-on": {
-    "prefix": "v-on",
+    "prefix": "vOn",
     "body": [
       "v-on:${1:event}=\"${2:handler}\""
     ],
     "description": "Expects: Function | Inline Statement"
   },
   "v-bind": {
-    "prefix": "v-bind",
+    "prefix": "vBind",
     "body": [
       "v-bind:${1:prop}=\"${2:value}\""
     ],
     "description": "Expects: any (with argument) | Object (without argument)"
   },
+  "v-model": {
+    "prefix": "vModel",
+    "body": [
+      "v-model=\"${1:something}\""
+    ],
+    "description": "Expects: varies based on value of form inputs element or output of components"
+  },
+  "v-pre": {
+    "prefix": "vPre",
+    "body": [
+      "v-pre"
+    ],
+    "description": "Does not expect expression"
+  },
+  "v-cloak": {
+    "prefix": "vCloak",
+    "body": [
+      "v-cloak"
+    ],
+    "description": "Does not expect expression"
+  },
+  "v-once": {
+    "prefix": "vOnce",
+    "body": [
+      "v-once"
+    ],
+    "description": "Does not expect expression"
+  },
   // Vue Common Attrs
+  "key": {
+    "prefix": "key",
+    "body": [
+      ":key=\"${1:key}\""
+    ],
+    "description": "Expects: string. The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+  },
+  "ref": {
+    "prefix": "ref",
+    "body": [
+      "ref=\"${1:reference}\"$0"
+    ],
+    "description": "Expects: string. ref is used to register a reference to an element or a child component. The reference will be registered under the parent component’s $refs object. If used on a plain DOM element, the reference will be that element; if used on a child component, the reference will be component instance."
+  },
+  "slotA": {
+    "prefix": "slotA",
+    "body": [
+      "slot=\"$1\"$0"
+    ],
+    "description": "slot=''. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+  },
+  "slotE": {
+    "prefix": "slotE",
+    "body": [
+      "<slot$1>$2</slot>$0"
+    ],
+    "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+  },
+  "slotScope": {
+    "prefix": "slotScope",
+    "body": [
+      "slot-scope=\"$1\"$0"
+    ],
+    "description": "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+."
+  },
+  "component": {
+    "prefix": "component",
+    "body": [
+      "<component :is=\"${1:componentId}\"></component>$0"
+    ],
+    "description": "component element"
+  },
+  "keep-alive": {
+    "prefix": "keepAlive",
+    "body": [
+      "<keep-alive$1>",
+      "$2",
+      "</keep-alive>$0"
+    ],
+    "description": "keep-alive element"
+  },
   "to": {
     "prefix": "to",
     "body": [
@@ -225,5 +346,27 @@
       "@appear-cancelled=\"$1\"$0"
     ],
     "description": "@appear-cancelled=''"
+  },
+  // Vue Router
+  "routerLink": {
+    "prefix": "routerLink",
+    "body": [
+      "<router-link $1>$2</router-link>$0"
+    ],
+    "description": "router-link element"
+  },
+  "routerLinkTo": {
+    "prefix": "routerLinkTo",
+    "body": [
+      "<router-link to=\"$1\">$2</router-link>$0"
+    ],
+    "description": "<router-link to=''></router-link>. router-link element"
+  },
+  "routerView": {
+    "prefix": "routerView",
+    "body": [
+      "<router-view>$1</router-view>$0"
+    ],
+    "description": "router-view element"
   }
 }
