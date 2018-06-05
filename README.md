@@ -161,6 +161,9 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2018/06/05 (0.1.7)
+* Update sinppets, add choices(`this` and `vm`) to snippets that begin with `vm`.
+
 ##### 2018/05/22 (0.1.6)
 * Update sinppets
 

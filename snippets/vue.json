@@ -12,7 +12,7 @@
         "prefix": "templateLang",
         "body": [
             "<template lang=\"$1\">",
-            "\t$1",
+            "\t$0",
             "</template>"
         ],
         "description": "template element"

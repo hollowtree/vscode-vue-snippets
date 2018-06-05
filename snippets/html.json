@@ -51,7 +51,7 @@
     "v-for": {
         "prefix": "vFor",
         "body": [
-            "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
+            "v-for=\"(${1:item}, ${2:index}) in ${3:items}\" :key=\"${4:index}\""
         ],
         "description": "Expects: Array | Object | number | string"
     },

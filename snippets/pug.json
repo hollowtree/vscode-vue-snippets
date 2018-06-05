@@ -41,10 +41,17 @@
         ],
         "description": "Expects: any. previous sibling element must have v-if or v-else-if."
     },
+    "v-for-without-key": {
+        "prefix": "vForWithoutKey",
+        "body": [
+            "v-for=\"${1:item} in ${2:items}\""
+        ],
+        "description": "Expects: Array | Object | number | string"
+    },
     "v-for": {
         "prefix": "vFor",
         "body": [
-            "v-for=\"${1:item} in ${2:items}\""
+            "v-for=\"${1:item} in ${2:items}\" :key=\"${3:item.id}\""
         ],
         "description": "Expects: Array | Object | number | string"
     },
@@ -90,13 +97,12 @@
         ],
         "description": "Does not expect expression"
     },
-
     "key": {
         "prefix": "key",
         "body": [
             ":key=\"${1:key}\""
         ],
-        "description":"Expects: string. The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+        "description": "Expects: string. The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
     },
     "ref": {
         "prefix": "ref",
@@ -119,12 +125,10 @@
         ],
         "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
     },
-
     "component": {
         "prefix": "component",
         "body": [
             "component(:is=\"${1:componentId}\") $0"
-
         ],
         "description": "component element"
     },
@@ -149,7 +153,6 @@
         ],
         "description": "transition-group element"
     },
-
     "routerLink": {
         "prefix": "routerLink",
         "body": [
