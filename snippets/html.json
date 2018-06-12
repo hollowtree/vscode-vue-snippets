@@ -1,4 +1,13 @@
 {
+    "template": {
+        "prefix": "template",
+        "body": [
+            "<template>",
+            "\t$1",
+            "</template>"
+        ],
+        "description": "template element"
+    },
     "v-text": {
         "prefix": "vText",
         "body": [

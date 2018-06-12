@@ -1,13 +1,4 @@
 {
-    "template": {
-        "prefix": "template",
-        "body": [
-            "<template>",
-            "\t$1",
-            "</template>"
-        ],
-        "description": "template element"
-    },
     "templateLang": {
         "prefix": "templateLang",
         "body": [
