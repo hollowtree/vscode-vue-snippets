@@ -19,6 +19,10 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 
 插件的 Snippets 如下表格所示，比如你可以键入 `vcom` 然后按上下键选中 `VueConfigOptionMergeStrategies` 再按Enter键，就输入了`Vue.config.optionMergeStrategies`了。
 
+As shown in the table below, snippet `vmData` has body like `|this, vm|.$data` will provides choice `this.$data` and `vm.$data` to you.
+
+如下表所示，`vmData` 的内容是 `|this, vm|.$data`，这表明这个 snippet 会提供 `this.$data` and `vm.$data` 两种选项供你选择。
+
 | Prefix | JavaScript Snippet Content |
 | ------ | ------------ |
 | `import` | `import ... from ...` |
@@ -44,30 +48,30 @@ Including most of the API of Vue.js 2. You can type `vcom`, choose `VueConfigOpt
 | `VueMixin` | `Vue.mixin({ mixin })` |
 | `VueCompile` | `Vue.compile( template )` |
 | `VueVersion` | `Vue.version` |
-| `vmData` | `vm.$data` |
-| `vmProps` | `vm.$props` |
-| `vmEl` | `vm.$el` |
-| `vmOptions` | `vm.$options` |
-| `vmParent` | `vm.$parent` |
-| `vmRoot` | `vm.$root` |
-| `vmChildren` | `vm.$children` |
-| `vmSlots` | `vm.$slots` |
-| `vmScopedSlots` | `this.$scopedSlots.default({})` |
-| `vmRefs` | `vm.$refs` |
-| `vmIsServer` | `vm.$isServer` |
-| `vmAttrs` | `vm.$attrs`|
-| `vmListeners` | `vm.listeners`|
-| `vmWatch` | `vm.$watch( expOrFn, callback, [options] )` |
-| `vmSet` | `vm.$set( object, key, value )` |
-| `vmDelete` | `vm.$delete( object, key )` |
-| `vmOn` | `vm.$on( event, callback )` |
-| `vmOnce` | `vm.$once( event, callback )` |
-| `vmOff` | `vm.$off( [event, callback] )` |
-| `vmEmit` | `vm.$emit( event, […args] )` |
-| `vmMount` | `vm.$mount( [elementOrSelector] )` |
-| `vmForceUpdate` | `vm.$forceUpdate()` |
-| `vmNextTick` | `vm.$nextTick( callback )` |
-| `vmDestroy` | `vm.$destroy()` |
+| `vmData` | `|this, vm|.$data` |
+| `vmProps` | `|this, vm|.$props` |
+| `vmEl` | `|this, vm|.$el` |
+| `vmOptions` | `|this, vm|.$options` |
+| `vmParent` | `|this, vm|.$parent` |
+| `vmRoot` | `|this, vm|.$root` |
+| `vmChildren` | `|this, vm|.$children` |
+| `vmSlots` | `|this, vm|.$slots` |
+| `vmScopedSlots` | `|this, vm|.$scopedSlots.default({})` |
+| `vmRefs` | `|this, vm|.$refs` |
+| `vmIsServer` | `|this, vm|.$isServer` |
+| `vmAttrs` | `|this, vm|.$attrs`|
+| `vmListeners` | `|this, vm|.listeners`|
+| `vmWatch` | `|this, vm|.$watch( expOrFn, callback, [options] )` |
+| `vmSet` | `|this, vm|.$set( object, key, value )` |
+| `vmDelete` | `|this, vm|.$delete( object, key )` |
+| `vmOn` | `|this, vm|.$on( event, callback )` |
+| `vmOnce` | `|this, vm|.$once( event, callback )` |
+| `vmOff` | `|this, vm|.$off( [event, callback] )` |
+| `vmEmit` | `|this, vm|.$emit( event, […args] )` |
+| `vmMount` | `|this, vm|.$mount( [elementOrSelector] )` |
+| `vmForceUpdate` | `|this, vm|.$forceUpdate()` |
+| `vmNextTick` | `|this, vm|.$nextTick( callback )` |
+| `vmDestroy` | `|this, vm|.$destroy()` |
 | `renderer` | `const renderer = require('vue-server-renderer').createRenderer()` |
 | `createRenderer` | `createRenderer({ })` |
 | `preventDefault` | `preventDefault();` |
