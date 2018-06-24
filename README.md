@@ -56,8 +56,8 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 | `vmRoot` | `${this, vm}.$root` |
 | `vmChildren` | `${this, vm}.$children` |
 | `vmSlots` | `${this, vm}.$slots` |
-| `vmScopedSlots` | `|\this, vm\|.$scopedSlots.default({})` |
-| `vmRefs` | `\|this, vm\|.$refs` |
+| `vmScopedSlots` | `${this, vm}.$scopedSlots.default({})` |
+| `vmRefs` | `${this, vm}.$refs` |
 | `vmIsServer` | `${this, vm}.$isServer` |
 | `vmAttrs` | `${this, vm}.$attrs`|
 | `vmListeners` | `${this, vm}.listeners`|

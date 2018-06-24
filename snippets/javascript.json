@@ -258,79 +258,101 @@
     "beforeCreate": {
         "prefix": "beforeCreate",
         "body": [
-            "beforeCreate"
+            "beforeCreate() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "created": {
         "prefix": "created",
         "body": [
-            "created"
+            "created() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "beforeMount": {
         "prefix": "beforeMount",
         "body": [
-            "beforeMount"
+            "beforeMount() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "mounted": {
         "prefix": "mounted",
         "body": [
-            "mounted"
+            "mounted() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "beforeUpdate": {
         "prefix": "beforeUpdate",
         "body": [
-            "beforeUpdate"
+            "beforeUpdate() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "updated": {
         "prefix": "updated",
         "body": [
-            "updated"
+            "updated() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "activated": {
         "prefix": "activated",
         "body": [
-            "activated"
+            "activated() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "deactivated": {
         "prefix": "deactivated",
         "body": [
-            "deactivated"
+            "deactivated() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "beforeDestroy": {
         "prefix": "beforeDestroy",
         "body": [
-            "beforeDestroy"
+            "beforeDestroy() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "destroyed": {
         "prefix": "destroyed",
         "body": [
-            "destroyed"
+            "destroyed() {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: Function."
     },
     "errorCaptured": {
         "prefix": "errorCaptured",
         "body": [
-            "errorCaptured"
+            "errorCaptured: (err, vm, info) => {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Type: (err: Error, vm: Component, info: string) => ?boolean"
     },
     "directives": {
         "prefix": "directives",
@@ -442,56 +464,56 @@
         "body": [
             "${1|this,vm|}.\\$data$2"
         ],
-        "description": "Type: Object"
+        "description": "Type: Object. Read only."
     },
     "vm.$props": {
         "prefix": "vmProps",
         "body": [
             "${1|this,vm|}.\\$props$2"
         ],
-        "description": "Type: Object"
+        "description": "Type: Object. Read only."
     },
     "vm.$el": {
         "prefix": "vmEl",
         "body": [
             "${1|this,vm|}.\\$el$2"
         ],
-        "description": "Type: HTMLElement"
+        "description": "Type: HTMLElement. Read only."
     },
     "vm.$options": {
         "prefix": "vmOptions",
         "body": [
             "${1|this,vm|}.\\$options$2"
         ],
-        "description": "Type: Object"
+        "description": "Type: Object. Read only."
     },
     "vm.$parent": {
         "prefix": "vmParent",
         "body": [
             "${1|this,vm|}.\\$parent$2"
         ],
-        "description": "Type: Vue instance"
+        "description": "Type: Vue instance. Read only."
     },
     "vm.$root": {
         "prefix": "vmRoot",
         "body": [
             "${1|this,vm|}.\\$root$2"
         ],
-        "description": "Type: Vue instance"
+        "description": "Type: Vue instance. Read only."
     },
     "vm.$children": {
         "prefix": "vmChildren",
         "body": [
             "${1|this,vm|}.\\$children$2"
         ],
-        "description": "Type: Array<Vue instance>"
+        "description": "Type: Array<Vue instance>. Read only."
     },
     "vm.$slots": {
         "prefix": "vmSlots",
         "body": [
             "${1|this,vm|}.\\$slots$2"
         ],
-        "description": "Type: Object"
+        "description": "Type: Object. Read only."
     },
     "vm.$scopedSlots": {
         "prefix": "vmScopedSlots",
@@ -500,56 +522,56 @@
             "\t$2",
             "})"
         ],
-        "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only. Used to programmatically access scoped slots. For each slot, including the default one, the object contains a corresponding function that returns VNodes. Accessing vm.$scopedSlots is most useful when writing a component with a render function."
+        "description": "Type: { [name: string]: props => VNode | Array<VNode> }. Read only."
     },
     "vm.$refs": {
         "prefix": "vmRefs",
         "body": [
             "${1|this,vm|}.\\$refs$2"
         ],
-        "description": "Type: Object"
+        "description": "Type: Object. Read only."
     },
     "vm.$isServer": {
         "prefix": "vmIsServer",
         "body": [
             "${1|this,vm|}.\\$isServer$2"
         ],
-        "description": "Type: boolean"
+        "description": "Type: boolean. Read only."
     },
     "vm.$attrs": {
         "prefix": "vmAttrs",
         "body": [
             "${1|this,vm|}.\\$attrs$2"
         ],
-        "description": "Type: { [key: string]: string }"
+        "description": "Type: { [key: string]: string }. Read only."
     },
     "vm.$listeners": {
         "prefix": "vmListeners",
         "body": [
             "${1|this,vm|}.\\$listeners$2"
         ],
-        "description": "Type: { [key: string]: Function | Array<Function> }"
+        "description": "Type: { [key: string]: Function | Array<Function> }. Read only."
     },
     "vm.$watch": {
         "prefix": "vmWatch",
         "body": [
             "${1|this,vm|}.\\$watch(${2:expOrFn}, ${3:callback})"
         ],
-        "description": "vm.$watch( expOrFn, callback, [options] )"
+        "description": "vm.$watch( expOrFn, callback, [options] )\n Arguments:\n {string | Function} expOrFn\n {Function | Object} callback\n {Object} [options]\n {boolean} [options.deep]\n\t {boolean} [options.immediate]"
     },
     "vm.$set": {
         "prefix": "vmSet",
         "body": [
-            "${1|this,vm|}.\\$set(${2:object}, ${3:key}, ${4:value})"
+            "${1|this,vm|}.\\$set(${2:target}, ${3:key}, ${4:value})"
         ],
-        "description": "vm.$set( object, key, value )"
+        "description": "vm.$set( target, key, value ). This is the alias of the global Vue.set."
     },
     "vm.$delete": {
         "prefix": "vmDelete",
         "body": [
-            "${1|this,vm|}.\\$delete(${2:object}, ${3:key})"
+            "${1|this,vm|}.\\$delete(${2:target}, ${3:key}). This is the alias of the global Vue.delete."
         ],
-        "description": "vm.$delete( object, key )"
+        "description": "vm.$delete( target, key )"
     },
     "vm.$on": {
         "prefix": "vmOn",
