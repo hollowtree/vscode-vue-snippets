@@ -165,6 +165,9 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2018/06/24 (0.1.8)
+* Update sinppets
+
 ##### 2018/06/05 (0.1.7)
 * Update sinppets, add choices(`this` and `vm`) to snippets that begin with `vm`.
 
