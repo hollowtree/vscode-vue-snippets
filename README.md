@@ -1,8 +1,8 @@
 # Vue 2 Snippets for Visual Studio Code
 
-This extension adds Vue 2 Code Snippets and Syntax Highlight into Visual Studio Code.
+This extension adds Vue 2 Code Snippets into Visual Studio Code.
 
-这个插件基于最新的 [Vue 官方语法高亮文件](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)添加了Syntax Highlight，并且依据 Vue 2 的 API 添加了Code Snippets。
+这个插件基于最新的 Vue 2 的 API 添加了Code Snippets。
 
 [![](https://vsmarketplacebadge.apphb.com/version/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
 [![](https://vsmarketplacebadge.apphb.com/installs/hollowtree.vue-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=hollowtree.vue-snippets)
@@ -165,6 +165,9 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2018/09/04 (0.1.9)
+* Update sinppets
+
 ##### 2018/06/24 (0.1.8)
 * Update sinppets
 
