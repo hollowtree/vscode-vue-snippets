@@ -235,7 +235,7 @@
             "\t$1",
             "},$0"
         ],
-        "description": "An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. "
+        "description": "An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. Note that you should not use an arrow function to define a watcher."
     },
     "el": {
         "prefix": "el",
@@ -473,6 +473,20 @@
         ],
         "description": "just a word"
     },
+    "deep": {
+        "prefix": "deep",
+        "body": [
+            "deep"
+        ],
+        "description": "just a word"
+    },
+    "immediate": {
+        "prefix": "immediate",
+        "body": [
+            "immediate"
+        ],
+        "description": "just a word"
+    },
     "vm.$data": {
         "prefix": "vmData",
         "body": [
@@ -569,7 +583,7 @@
     "vm.$watch": {
         "prefix": "vmWatch",
         "body": [
-            "${1|this,vm|}.\\$watch(${2:expOrFn}, ${3:callback})"
+            "${1|this,vm|}.\\$watch(${2:expOrFn}, ${3:callback}${4:, [options]})"
         ],
         "description": "vm.$watch( expOrFn, callback, [options] )\n Arguments:\n {string | Function} expOrFn\n {Function | Object} callback\n {Object} [options]\n {boolean} [options.deep]\n\t {boolean} [options.immediate]"
     },

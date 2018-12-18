@@ -14,7 +14,9 @@
         "prefix": "script",
         "body": [
             "<script>",
+            "export default {",
             "\t$1",
+            "}",
             "</script>"
         ],
         "description": "script element"
