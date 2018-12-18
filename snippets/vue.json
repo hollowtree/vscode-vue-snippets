@@ -3,7 +3,9 @@
         "prefix": "templateLang",
         "body": [
             "<template lang=\"$1\">",
-            "\t$0",
+            "\t<div$2>",
+            "\t\t$0",
+            "\t</div>",
             "</template>"
         ],
         "description": "template element"

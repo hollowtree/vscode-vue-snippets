@@ -3,7 +3,9 @@
         "prefix": "template",
         "body": [
             "<template>",
-            "\t$1",
+            "\t<div$1>",
+            "\t\t$0",
+            "\t</div>",
             "</template>"
         ],
         "description": "template element"

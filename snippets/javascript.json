@@ -181,23 +181,27 @@
     "data": {
         "prefix": "data",
         "body": [
-            "data"
+            "data() {",
+            "\treturn {",
+            "\t\t$1",
+            "\t}",
+            "},$0"
         ],
-        "description": "just a word"
+        "description": "The data object for the Vue instance."
     },
     "props": {
         "prefix": "props",
         "body": [
             "props"
         ],
-        "description": "just a word"
+        "description": "A list/hash of attributes that are exposed to accept data from the parent component. "
     },
     "propsData": {
         "prefix": "propsData",
         "body": [
             "propsData"
         ],
-        "description": "just a word"
+        "description": "Restriction: only respected in instance creation via `new`. Pass props to an instance during its creation. This is primarily intended to make unit testing easier."
     },
     "scopedSlots": {
         "prefix": "scopedSlots",
@@ -209,23 +213,29 @@
     "computed": {
         "prefix": "computed",
         "body": [
-            "computed"
+            "computed: {",
+            "\t$1",
+            "},$0"
         ],
-        "description": "just a word"
+        "description": "Computed properties to be mixed into the Vue instance. "
     },
     "methods": {
         "prefix": "methods",
         "body": [
-            "methods"
+            "methods: {",
+            "\t$1",
+            "},$0"
         ],
-        "description": "just a word"
+        "description": "Methods to be mixed into the Vue instance."
     },
     "watch": {
         "prefix": "watch",
         "body": [
-            "watch"
+            "watch: {",
+            "\t$1",
+            "},$0"
         ],
-        "description": "just a word"
+        "description": "An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. "
     },
     "el": {
         "prefix": "el",
@@ -244,16 +254,20 @@
     "render": {
         "prefix": "render",
         "body": [
-            "render"
+            "render(h) {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "An alternative to string templates allowing you to leverage the full programmatic power of JavaScript."
     },
     "renderError": {
         "prefix": "renderError",
         "body": [
-            "renderError"
+            "renderError(h, err) {",
+            "\t$1",
+            "},"
         ],
-        "description": "just a word"
+        "description": "Provide an alternative render output when the default render function encounters an error."
     },
     "beforeCreate": {
         "prefix": "beforeCreate",
