@@ -13,17 +13,17 @@
         ],
         "description": "Expects: string"
     },
-    "v-if": {
-        "prefix": "vIf",
-        "body": [
-            "v-if=\"${1:condition}\""
-        ],
-        "description": "Expects: any"
-    },
     "v-show": {
         "prefix": "vShow",
         "body": [
             "v-show=\"${1:condition}\""
+        ],
+        "description": "Expects: any"
+    },
+    "v-if": {
+        "prefix": "vIf",
+        "body": [
+            "v-if=\"${1:condition}\""
         ],
         "description": "Expects: any"
     },
@@ -102,7 +102,7 @@
         "body": [
             ":key=\"${1:key}\""
         ],
-        "description": "Expects: string. The key special attribute is primarily used as a hint for Vue’s virtual DOM algorithm to identify VNodes when diffing the new list of nodes against the old list. Without keys, Vue uses an algorithm that minimizes element movement and tries to patch/reuse elements of the same type in-place as much as possible. With keys, it will reorder elements based on the order change of keys, and elements with keys that are no longer present will always be removed/destroyed. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
+        "description": "Expects: string. Children of the same common parent must have unique keys. Duplicate keys will cause render errors."
     },
     "ref": {
         "prefix": "ref",
@@ -124,6 +124,20 @@
             "slot"
         ],
         "description": "<slot></slot>. Expects: string. Used on content inserted into child components to indicate which named slot the content belongs to."
+    },
+    "slotScope": {
+        "prefix": "slotScope",
+        "body": [
+            "slot-scope=\"$1\"$0"
+        ],
+        "description": "Used to denote an element or component as a scoped slot. The attribute’s value should be a valid JavaScript expression that can appear in the argument position of a function signature. This means in supported environments you can also use ES2015 destructuring in the expression. Serves as a replacement for scope in 2.5.0+."
+    },
+    "scope": {
+        "prefix": "scope",
+        "body": [
+            "scope=\"${1:this api replaced by slot-scope in 2.5.0+}\"$0"
+        ],
+        "description": "Used to denote a <template> element as a scoped slot, which is replaced by `slot-scope` in 2.5.0+."
     },
     "component": {
         "prefix": "component",
@@ -152,6 +166,153 @@
             "transition-group$0"
         ],
         "description": "transition-group element"
+    },
+    "enter-class": {
+        "prefix": "enterClass",
+        "body": [
+            "enter-class=\"$1\"$0"
+        ],
+        "description": "enter-class=''. Expects: string."
+    },
+    "leave-class": {
+        "prefix": "leaveClass",
+        "body": [
+            "leave-class=\"$1\"$0"
+        ],
+        "description": "leave-class=''. Expects: string."
+    },
+    "appear-class": {
+        "prefix": "appearClass",
+        "body": [
+            "appear-class=\"$1\"$0"
+        ],
+        "description": "appear-class=''. Expects: string."
+    },
+    "enter-to-class": {
+        "prefix": "enterToClass",
+        "body": [
+            "enter-to-class=\"$1\"$0"
+        ],
+        "description": "enter-to-class=''. Expects: string."
+    },
+    "leave-to-class": {
+        "prefix": "leaveToClass",
+        "body": [
+            "leave-to-class=\"$1\"$0"
+        ],
+        "description": "leave-to-class=''. Expects: string."
+    },
+    "appear-to-class": {
+        "prefix": "appearToClass",
+        "body": [
+            "appear-to-class=\"$1\"$0"
+        ],
+        "description": "appear-to-class=''. Expects: string."
+    },
+    "enter-active-class": {
+        "prefix": "enterActiveClass",
+        "body": [
+            "enter-active-class=\"$1\"$0"
+        ],
+        "description": "enter-active-class=''. Expects: string."
+    },
+    "leave-active-class": {
+        "prefix": "leaveActiveClass",
+        "body": [
+            "leave-active-class=\"$1\"$0"
+        ],
+        "description": "leave-active-class=''. Expects: string."
+    },
+    "appear-active-class": {
+        "prefix": "appearActiveClass",
+        "body": [
+            "appear-active-class=\"$1\"$0"
+        ],
+        "description": "appear-active-class=''. Expects: string."
+    },
+    "before-enter": {
+        "prefix": "beforeEnterEvent",
+        "body": [
+            "@before-enter=\"$1\"$0"
+        ],
+        "description": "@before-enter=''"
+    },
+    "before-leave": {
+        "prefix": "beforeLeaveEvent",
+        "body": [
+            "@before-leave=\"$1\"$0"
+        ],
+        "description": "@before-leave=''"
+    },
+    "before-appear": {
+        "prefix": "beforeAppearEvent",
+        "body": [
+            "@before-appear=\"$1\"$0"
+        ],
+        "description": "@before-appear=''"
+    },
+    "enter": {
+        "prefix": "enterEvent",
+        "body": [
+            "@enter=\"$1\"$0"
+        ],
+        "description": "@enter=''"
+    },
+    "leave": {
+        "prefix": "leaveEvent",
+        "body": [
+            "@leave=\"$1\"$0"
+        ],
+        "description": "@leave=''"
+    },
+    "appear": {
+        "prefix": "appearEvent",
+        "body": [
+            "@appear=\"$1\"$0"
+        ],
+        "description": "@appear=''"
+    },
+    "after-enter": {
+        "prefix": "afterEnterEvent",
+        "body": [
+            "@after-enter=\"$1\"$0"
+        ],
+        "description": "@after-enter=''"
+    },
+    "after-leave": {
+        "prefix": "afterLeaveEvent",
+        "body": [
+            "@after-leave=\"$1\"$0"
+        ],
+        "description": "@after-leave=''"
+    },
+    "after-appear": {
+        "prefix": "afterAppearEvent",
+        "body": [
+            "@after-appear=\"$1\"$0"
+        ],
+        "description": "@after-appear=''"
+    },
+    "enter-cancelled": {
+        "prefix": "enterCancelledEvent",
+        "body": [
+            "@enter-cancelled=\"$1\"$0"
+        ],
+        "description": "@enter-cancelled=''"
+    },
+    "leave-cancelled": {
+        "prefix": "leaveCancelledEvent",
+        "body": [
+            "@leave-cancelled=\"$1\"$0"
+        ],
+        "description": "@leave-cancelled='' (v-show only)"
+    },
+    "appear-cancelled": {
+        "prefix": "appearCancelledEvent",
+        "body": [
+            "@appear-cancelled=\"$1\"$0"
+        ],
+        "description": "@appear-cancelled=''"
     },
     "routerLink": {
         "prefix": "routerLink",
