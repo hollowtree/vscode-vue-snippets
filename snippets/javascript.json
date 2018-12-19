@@ -109,7 +109,7 @@
         "body": [
             "Vue.nextTick({",
             "\t$1",
-            "}).then(function($2){",
+            "}).then(function ($2) {",
             "\t$3",
             "})"
         ],
@@ -236,6 +236,19 @@
             "},$0"
         ],
         "description": "An object where keys are expressions to watch and values are the corresponding callbacks. The value can also be a string of a method name, or an Object that contains additional options. Note that you should not use an arrow function to define a watcher."
+    },
+    "watchWithOptions": {
+        "prefix": "watchWithOptions",
+        "body": [
+            "${1:key}: {",
+            "\tdeep: ${2:true},",
+            "\timmediate: ${3:true},",
+            "\thandler: function (${4:val}, ${5:oldVal}) {",
+            "\t\t$6",
+            "\t}",
+            "},$0"
+        ],
+        "description": "Vue Watcher with options."
     },
     "el": {
         "prefix": "el",
@@ -737,10 +750,35 @@
         "prefix": "routerBeforeEach",
         "body": [
             "${1:router}.beforeEach((to, from, next) => {",
-            "\t${2:// to and from are both route objects}",
+            "\t${2:// to and from are both route objects. must call `next`.}",
             "})$0"
         ],
         "description": "router.beforeEach"
+    },
+    "routerBeforeResolve": {
+        "prefix": "routerBeforeResolve",
+        "body": [
+            "${1:router}.beforeResolve((to, from, next) => {",
+            "\t${2:// to and from are both route objects. must call `next`.}",
+            "})$0"
+        ],
+        "description": "router.beforeResolve"
+    },
+    "routerAfterEach": {
+        "prefix": "routerAfterEach",
+        "body": [
+            "${1:router}.afterEach((to, from) => {",
+            "\t${2:// to and from are both route objects.}",
+            "})$0"
+        ],
+        "description": "router.afterEach"
+    },
+    "routerPush": {
+        "prefix": "routerPush",
+        "body": [
+            "${1:router}.push($2)$0"
+        ],
+        "description": "router.push()"
     },
     "routerReplace": {
         "prefix": "routerReplace",
@@ -756,12 +794,54 @@
         ],
         "description": "router.go()"
     },
-    "routerPush": {
-        "prefix": "routerPush",
+    "routerBack": {
+        "prefix": "routerBack",
         "body": [
-            "${1:router}.push($2)$0"
+            "${1:router}.back($2)$0"
         ],
-        "description": "router.push()"
+        "description": "router.back()"
+    },
+    "routerForward": {
+        "prefix": "routerForward",
+        "body": [
+            "${1:router}.forward($2)$0"
+        ],
+        "description": "router.forward()"
+    },
+    "routerGetMatchedComponents": {
+        "prefix": "routerGetMatchedComponents",
+        "body": [
+            "${1:router}.getMatchedComponents($2)$0"
+        ],
+        "description": "router.getMatchedComponents()"
+    },
+    "routerResolve": {
+        "prefix": "routerResolve",
+        "body": [
+            "${1:router}.resolve($2)$0"
+        ],
+        "description": "router.resolve()"
+    },
+    "routerAddRoutes": {
+        "prefix": "routerAddRoutes",
+        "body": [
+            "${1:router}.addRoutes($2)$0"
+        ],
+        "description": "router.addRoutes()"
+    },
+    "routerOnReady": {
+        "prefix": "routerOnReady",
+        "body": [
+            "${1:router}.onReady($2)$0"
+        ],
+        "description": "router.onReady()"
+    },
+    "routerOnError": {
+        "prefix": "routerOnError",
+        "body": [
+            "${1:router}.onError($2)$0"
+        ],
+        "description": "router.onError()"
     },
     "routes": {
         "prefix": "routes",
@@ -968,5 +1048,14 @@
             "mapMutations"
         ],
         "description": "just a word"
+    },
+    "asyncData": {
+        "prefix": "asyncData",
+        "body": [
+            "asyncData({${1:isDev}${2:, route}${3:, store}${4:, env}${5:, params}${6:, query}${7:, req}${8:, res}${9:, redirect}${10:, error}}) {",
+            "\t$11",
+            "},"
+        ],
+        "description": "Type: Function."
     }
 }

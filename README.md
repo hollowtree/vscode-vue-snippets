@@ -48,6 +48,8 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 | `VueMixin` | `Vue.mixin({ mixin })` |
 | `VueCompile` | `Vue.compile( template )` |
 | `VueVersion` | `Vue.version` |
+| `data` | `data() { return {} }` |
+| `watchWithOptions` | `key: { deep: true, immediate: true, handler: function () { } }` |
 | `vmData` | `${this, vm}.$data` |
 | `vmProps` | `${this, vm}.$props` |
 | `vmEl` | `${this, vm}.$el` |
@@ -139,9 +141,18 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 | `tag` | `tag=""` |
 | `newVueRouter` | `const router = newVueRouter({ })` |
 | `routerBeforeEach` | `router.beforeEach((to, from, next) => { }` |
-| `routerReplace` | `router.replace()` |
-| `routerGo` | `router.go()` |
+| `routerBeforeResolve` | `router.beforeResolve((to, from, next) => { }` |
+| `routerAfterEach` | `router.afterEach((to, from) => { }` |
 | `routerPush` | `router.push()` |
+| `routerReplace` | `router.replace()` |
+| `routerGo` | `router.back()` |
+| `routerBack` | `router.push()` |
+| `routerForward` | `router.forward()` |
+| `routerGetMatchedComponents` | `router.getMatchedComponents()` |
+| `routerResolve` | `router.resolve()` |
+| `routerAddRoutes` | `router.addRoutes()` |
+| `routerOnReady` | `router.onReady()` |
+| `routerOnError` | `router.onError()` |
 | `routes` | `routes: []` |
 | `beforeEnter` | `beforeEnter: (to, from, next) => { }` |
 | `beforeRouteEnter` | `beforeRouteEnter (to, from, next) { }` |
@@ -154,6 +165,13 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 | ------ | ------------ |
 | `newVuexStore` | `const store = new Vuex.Store({ })` |
 
+| Prefix | Nuxt.js Snippet Content |
+| ------ | ------------ |
+| `nuxt` | `<nuxt/>` |
+| `nuxtChild` | `<nuxt-child/>` |
+| `nuxtLink` | `<nuxt-link to=""/>` |
+| `asyncData` | `asyncData() {}` |
+
 ### Supported languages
 * vue(.vue)
 * HTML(.html)
@@ -165,6 +183,9 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2018/12/19 (0.1.10)
+* Update sinppets (like `watchWithOptions` / `asyncData` / `nuxt` / `nuxtChild` / `nuxtLink` and so on)
+
 ##### 2018/09/04 (0.1.9)
 * Update sinppets
 

@@ -365,5 +365,26 @@
             "<router-view>$1</router-view>$0"
         ],
         "description": "router-view element"
-    }
+    },
+    "nuxt": {
+        "prefix": "nuxt",
+        "body": [
+            "<nuxt/>"
+        ],
+        "description": "This component is used only in layouts to display the page components."
+    },
+    "nuxtChild": {
+        "prefix": "nuxtChild",
+        "body": [
+            "<nuxt-child $1/>$0"
+        ],
+        "description": "This component is used for displaying the children components in a nested route."
+    },
+    "nuxtLink": {
+        "prefix": "nuxtLink",
+        "body": [
+            "<nuxt-link to=\"$1\"/>$0</nuxt-link>"
+        ],
+        "description": "This component is used to provide navigations between page components."
+    },
 }
