@@ -3,9 +3,9 @@
         "prefix": "template",
         "body": [
             "<template>",
-            "\t<div$1>",
+            "\t<${1:div}$2>",
             "\t\t$0",
-            "\t</div>",
+            "\t</${1:div}>",
             "</template>"
         ],
         "description": "template element"
@@ -383,8 +383,8 @@
     "nuxtLink": {
         "prefix": "nuxtLink",
         "body": [
-            "<nuxt-link to=\"$1\"/>$0</nuxt-link>"
+            "<nuxt-link ${1|to,:to|}=\"$2\">$0</nuxt-link>"
         ],
         "description": "This component is used to provide navigations between page components."
-    },
+    }
 }

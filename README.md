@@ -183,6 +183,9 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2019/01/27 (0.1.11)
+* Fix sinppets
+
 ##### 2018/12/19 (0.1.10)
 * Update sinppets (like `watchWithOptions` / `asyncData` / `nuxt` / `nuxtChild` / `nuxtLink` and so on)
 
