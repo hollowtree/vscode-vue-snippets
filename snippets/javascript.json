@@ -171,6 +171,13 @@
         ],
         "description": "Vue.compile( template )"
     },
+    "observable": {
+        "prefix": "VueObservable",
+        "body": [
+            "Vue.observable({${1:object}})"
+        ],
+        "description": "Vue.observable( object )"
+    },
     "version": {
         "prefix": "VueVersion",
         "body": [

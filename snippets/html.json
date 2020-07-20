@@ -87,6 +87,13 @@
         ],
         "description": "Expects: varies based on value of form inputs element or output of components"
     },
+    "v-slot": {
+        "prefix": "vSlot",
+        "body": [
+            "v-slot$1=\"${2}\""
+        ],
+        "description": "Expects: JavaScript expression that is valid in a function argument position (supports destructuring in supported environments). Optional - only needed if expecting props to be passed to the slot."
+    },
     "v-pre": {
         "prefix": "vPre",
         "body": [
