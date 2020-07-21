@@ -184,34 +184,34 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 
 --------------------------------------
 ##### 2019/01/27 (0.1.11)
-* Fix sinppets
+* Fix snippets
 
 ##### 2018/12/19 (0.1.10)
-* Update sinppets (like `watchWithOptions` / `asyncData` / `nuxt` / `nuxtChild` / `nuxtLink` and so on)
+* Update snippets (like `watchWithOptions` / `asyncData` / `nuxt` / `nuxtChild` / `nuxtLink` and so on)
 
 ##### 2018/09/04 (0.1.9)
-* Update sinppets
+* Update snippets
 
 ##### 2018/06/24 (0.1.8)
-* Update sinppets
+* Update snippets
 
 ##### 2018/06/05 (0.1.7)
-* Update sinppets, add choices(`this` and `vm`) to snippets that begin with `vm`.
+* Update snippets, add choices(`this` and `vm`) to snippets that begin with `vm`.
 
 ##### 2018/05/22 (0.1.6)
-* Update sinppets
+* Update snippets
 
 ##### 2017/09/17 (0.1.5)
-* Fix and update sinppets
+* Fix and update snippets
 
 ##### 2017/03/12 (0.1.1)
 * Add support .pug files (thanks to [Gregory Bass](https://github.com/GriNAME))
 
 ##### 2017/01/01 (0.1.0)
-* Update some sinppets
+* Update some snippets
 
 ##### 2016/12/31 (0.0.10)
-* Update newest api sinppets (like `v-else-if` / `Vue.config.ignoredElements` and so on)
+* Update newest api snippets (like `v-else-if` / `Vue.config.ignoredElements` and so on)
 * Fix a bug (before: `vm.off`,after:`vm.$off`)
 
 ##### 2016/12/15 (0.0.9)
