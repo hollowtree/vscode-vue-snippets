@@ -15,7 +15,7 @@
         "body": [
             "<script>",
             "export default {",
-            "\t$1",
+            "\t$0",
             "}",
             "</script>"
         ],
