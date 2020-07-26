@@ -715,14 +715,14 @@
         "description": "just a word"
     },
     "bundleRenderer.renderToString": {
-        "prefix": "bundleRenderer.renderToString",
+        "prefix": "bundleRendererRenderToString",
         "body": [
             "bundleRenderer.renderToString"
         ],
         "description": "just a word"
     },
     "bundleRenderer.renderToStream": {
-        "prefix": "bundleRenderer.renderToStream",
+        "prefix": "bundleRendererRenderToStream",
         "body": [
             "bundleRenderer.renderToStream"
         ],
