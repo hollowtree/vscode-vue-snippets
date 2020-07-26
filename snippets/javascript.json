@@ -744,6 +744,13 @@
         ],
         "description": "stopPropagation()"
     },
+    "importVueRouter": {
+        "prefix": "importVueRouter",
+        "body": [
+            "import VueRouter from 'vue-router'"
+        ],
+        "description": "import VueRouter from 'vue-router'"
+    },
     "newVueRouter": {
         "prefix": "newVueRouter",
         "body": [
