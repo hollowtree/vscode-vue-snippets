@@ -183,6 +183,9 @@ As shown in the table below, snippet `vmData` has body like `${this, vm}.$data` 
 [vue-syntax-highlight (vue.tmLanguage)](https://github.com/vuejs/vue-syntax-highlight/blob/master/vue.tmLanguage)
 
 --------------------------------------
+##### 2020/07/27 (0.1.12)
+* Add snippets and fix bugs
+
 ##### 2019/01/27 (0.1.11)
 * Fix snippets
 
