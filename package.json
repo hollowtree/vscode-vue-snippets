@@ -38,15 +38,7 @@
                 ],
                 "extensions": [
                     ".vue"
-                ],
-                "configuration": "./syntaxes/vue.configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "vue",
-                "scopeName": "text.html.vue",
-                "path": "./syntaxes/vue.tmLanguage"
+                ]
             }
         ],
         "snippets": [
