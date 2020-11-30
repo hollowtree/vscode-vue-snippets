@@ -324,9 +324,9 @@
     "routerLinkTo": {
         "prefix": "routerLinkTo",
         "body": [
-            "router-link (to='$1') $0"
+            "router-link(to='$1') $0"
         ],
-        "description": "router-link (to='') . router-link element"
+        "description": "router-link(to='') . router-link element"
     },
     "to": {
         "prefix": "to",
